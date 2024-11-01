@@ -7,6 +7,16 @@
       "dependencies": {},
       "hash": "f9fd769be7c634610f2a61aa914a1a55f34740e1"
     },
+    "com.singularitygroup.hotreload": {
+      "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.12",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "hash": "56b69dfe27d695bee44ce09f419003c3c4ca9731"
+    },
     "com.unity.2d.animation": {
       "version": "10.1.3",
       "depth": 1,
