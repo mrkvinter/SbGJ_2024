@@ -45,7 +45,6 @@ namespace Code.Dices
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            Debug.Log("OnBeginDrag");
             originalPosition = transform.position;
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             shift = transform.position - pos;
@@ -56,7 +55,6 @@ namespace Code.Dices
 
         public void OnDrag(PointerEventData eventData)
         {
-            Debug.Log("OnDrag");
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos + shift;
             
@@ -70,20 +68,23 @@ namespace Code.Dices
             {
                 previewDiceHolder?.OccupyPreview(null);
                 previewDiceHolder = diceHolder;
-                previewDiceHolder?.OccupyPreview(this);
             }
+            
+            previewDiceHolder?.OccupyPreview(this);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            previewDiceHolder?.OccupyPreview(null);
+            previewDiceHolder = null;
+
             var count = collider2D.Cast(Vector2.zero, hits);
             if (count > 0)
             {
                 var diceHolder = FindDiceHolderParent();
-                if (diceHolder != null)
+                if (diceHolder != null && diceHolder.Occupy(this))
                 {
                     diceHolderParent = diceHolder;
-                    diceHolder.Occupy(this);
                     return;
                 }
             }

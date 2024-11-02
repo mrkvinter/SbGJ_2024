@@ -64,6 +64,7 @@ namespace Code
             {
                 var dice = attackDiceHolder.Dices[index];
                 attackDiceHolder.DeOccupy(dice);
+                dice.transform.DOKill();
                 Destroy(dice.gameObject);
             }
         });

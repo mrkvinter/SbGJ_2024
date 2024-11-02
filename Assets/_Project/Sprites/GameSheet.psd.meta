@@ -129,7 +129,7 @@ TextureImporter:
       name: Dice_d6
       rect:
         serializedVersion: 2
-        x: 24
+        x: 23
         y: 1000
         width: 60
         height: 59
@@ -143,6 +143,50 @@ TextureImporter:
       bones: []
       spriteID: a2e0570ad83101160800000000000000
       internalID: 6994111720309722666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buddy_Heart
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 586
+        width: 138
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92f477f3089ad94c8e568403087705a
+      internalID: -298601937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dice_d4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1000
+        width: 54
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f8d789f66bbd8449a7befba1291eb4
+      internalID: -1389287989
       vertices: []
       indices: 
       edges: []
@@ -161,6 +205,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Buddy_Heart: -298601937
+      Dice_d4: -1389287989
       Dice_d6: 6994111720309722666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
