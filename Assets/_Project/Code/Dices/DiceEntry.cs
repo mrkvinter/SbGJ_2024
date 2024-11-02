@@ -16,6 +16,7 @@ namespace Code.Dices
         [field: SerializeField] public float FontSize { get; private set; }
         [field: Space, SerializeField] public bool GhostDice { get; private set; }
         [field:SerializeField] public bool Duplicator { get; set; }
+        [field:SerializeField] public bool Reroller { get; set; }
     }
     
     [Serializable]

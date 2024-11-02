@@ -84,7 +84,7 @@ namespace Code
             //показать впервый раз текст: ты опустошил мешок, я перемешаю его, но теперь ты будешь тянуть на 1 кубик меньше
             foreach (var diceState in gameState.Dices)
             {
-                if (playedDices.Contains(diceState))
+                if (!playedDices.Contains(diceState))
                 {
                     gameState.Bag.Add(diceState);
                     continue;

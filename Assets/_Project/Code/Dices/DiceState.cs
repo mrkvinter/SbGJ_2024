@@ -10,7 +10,7 @@ namespace Code.Dices
         public DiceEntry DiceEntry { get; }
         public Dice DiceView { get; private set; }
         public int Value { get; private set; }
-        public bool HaveToShowLeftIndicator => DiceEntry.Duplicator;
+        public bool HaveToShowLeftIndicator => DiceEntry.Duplicator || DiceEntry.Reroller;
 
         public DiceState(DiceEntry diceEntry)
         {
@@ -50,8 +50,24 @@ namespace Code.Dices
                     SetValue(0);
                 }
             }
+            // if (DiceEntry.Reroller)
+            // {
+            //     var index = DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1;
+            //     if (index >= 1)
+            //     {
+            //         var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
+            //         leftDice.DiceState.Reroll();
+            //     }
+            // }
         }
-        
+
+        private void Reroll()
+        {
+            var value = Random.Range(1, DiceEntry.MaxDiceValue + 1);
+            SetValue(value);
+        }
+
+
         public async UniTask DestroyDice()
         {
             var diceView = DiceView;
@@ -74,6 +90,24 @@ namespace Code.Dices
         {
             DiceView.SetDiceHolderParent(diceHandHolder);
             diceHandHolder.Occupy(DiceView);
+        }
+        
+        public async UniTask CalculateValue()
+        {
+            await DiceView.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
+            await DiceView.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
+            await UniTask.Delay(500);
+
+            if (DiceEntry.Reroller)
+            {
+                var index = DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1;
+                if (index >= 1)
+                {
+                    var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
+                    leftDice.DiceState.Reroll();
+                    await leftDice.DiceState.CalculateValue();
+                }
+            }
         }
     }
 }

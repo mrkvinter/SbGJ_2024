@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Code.Dices;
 using Code.Enemies;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
@@ -82,15 +84,16 @@ namespace Code.States
             
             var game = Game.Instance;
             var attackAmount = 0;
+            var calculatedDices = new List<DiceState>();
             for (var i = 0; i < game.attackDiceHolder.Dices.Count; i++)
             {
                 var dice = game.attackDiceHolder.Dices[i];
                 gameFlow.GameState.Hand.Remove(dice.DiceState);
-                attackAmount += dice.DiceState.Value;
+                calculatedDices.Add(dice.DiceState);
+                await dice.DiceState.CalculateValue();
+
+                attackAmount = calculatedDices.Sum(d => d.Value);
                 game.damageText.text = attackAmount.ToString();
-                await dice.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
-                await dice.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
-                await UniTask.Delay(500);
             }
             var tasks = new List<UniTask>();
             var countFX = attackAmount/4f;
