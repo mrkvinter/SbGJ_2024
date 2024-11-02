@@ -991,6 +991,8 @@ MonoBehaviour:
   attackDiceHolder: {fileID: 510392642}
   damageText: {fileID: 821950631}
   enemy: {fileID: 1524954060}
+  attackPoint: {fileID: 1036952842}
+  attackFx: {fileID: 2826429137575290816, guid: 6be21c7597d0e704399432eae65fb674, type: 3}
 --- !u!1 &950510500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1114,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 1
   maxDiceCount: -1
+--- !u!1 &1036952841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036952842}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036952842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036952841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 3.53, z: -2.9498405}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1150804925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,3 +2031,4 @@ SceneRoots:
   - {fileID: 1601219756}
   - {fileID: 1524954059}
   - {fileID: 814740364}
+  - {fileID: 1036952842}

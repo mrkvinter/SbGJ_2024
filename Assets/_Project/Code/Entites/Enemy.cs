@@ -1,23 +1,27 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Code.Entites
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] private int health;
+        [FormerlySerializedAs("health")] [SerializeField] private int maxHealth;
         [SerializeField] private int damage;
         [SerializeField] private TMP_Text healthText;
         
+        private float currentHealth;
+
         private void Start()
         {
-            healthText.text = health.ToString();
+            currentHealth = maxHealth;
+            healthText.text = maxHealth.ToString("0");
         }
         
-        public void TakeDamage(int damage)
+        public void TakeDamage(float damageAmount)
         {
-            health -= damage;
-            healthText.text = health.ToString();
+            currentHealth -= damageAmount;
+            healthText.text = currentHealth.ToString("0");
         }
     }
 }
