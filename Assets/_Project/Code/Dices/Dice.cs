@@ -31,7 +31,7 @@ namespace Code.Dices
         {
             this.diceState = diceState;
             DiceSpriteRenderer.sprite = diceState.DiceEntry.DiceSprite;
-            diceCountText.fontSize = (int)diceState.DiceEntry.FontSize;
+            diceCountText.fontSizeMax = diceState.DiceEntry.FontSize;
         }
 
         public void SetDiceHolderParent(DiceHandHolder diceHolder)
