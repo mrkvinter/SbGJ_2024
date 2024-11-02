@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
 using Code.Dices;
-using Code.Entites;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
-using DG.Tweening;
 using RG.ContentSystem.UnityAdapter;
 using TMPro;
 using UnityEngine;
@@ -17,15 +13,17 @@ namespace Code
     {
         public static Game Instance { get; private set; }
 
-        [SerializeField] public Dice dicePrefab;
         [SerializeField] public DiceHandHolder handDiceHolder;
         [SerializeField] public DiceHandHolder attackDiceHolder;
         [SerializeField] public TMP_Text damageText;
-        [SerializeField] public Enemy enemy;
         [SerializeField] public Transform attackPoint;
         [SerializeField] public GameObject attackFx;
         [SerializeField] public Transform BuddyPoint;
-        
+
+        [SerializeField] public Transform FrontEnemyPoint;
+        [SerializeField] public Transform LeftEnemyPoint;
+        [SerializeField] public Transform RightEnemyPoint;
+
         [Space]
         [SerializeField] public Button AttackButton;
         

@@ -45,5 +45,17 @@ namespace Code.Dices
             await diceView.transform.DOScale(Vector3.zero, 0.2f).ToUniTask(); 
             Object.Destroy(diceView.gameObject);
         }
+        
+        public void DeOccupy()
+        {
+            DiceView.DiceHolderParent.DeOccupy(DiceView);
+            DiceView.SetDiceHolderParent(null);
+        }
+        
+        public void Occupy(DiceHandHolder diceHandHolder)
+        {
+            DiceView.SetDiceHolderParent(diceHandHolder);
+            diceHandHolder.Occupy(DiceView);
+        }
     }
 }

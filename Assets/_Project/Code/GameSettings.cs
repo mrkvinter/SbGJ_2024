@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using Code.Enemies;
+using RG.ContentSystem.Core;
+using Sirenix.OdinInspector;
 
 namespace Code
 {
-    [CreateAssetMenu(fileName = "GameSettings", menuName = "GameSettings")]
-    public class GameSettings : ScriptableObject
+    [Serializable]
+    public class GameSettings : SettingsEntry
     {
-        public static string Path => "GameSettings";
+        public ContentRef<ChallengeEntry>[] Challenges;
+
+        [Title("===TEST===")] 
+        public bool AutoSelectHpAndShield;
     }
 }

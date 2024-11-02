@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Code.Buddies;
 using Code.Dices;
 using Code.States;
@@ -19,6 +20,7 @@ namespace Code
         public List<DiceState> Hand = new();
         public int DrawnDicesCount = 3;
         public int CurrentDrawnDicesCount = 0;
+        public int ChallengeIndex = 0;
         
         public void ShuffleBag()
         {
@@ -58,7 +60,7 @@ namespace Code
             gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
 
-            // gameState.Dices.Add(new DiceState(DiceType.D8.As<DiceEntry>()));
+            gameState.Dices.Add(new DiceState(DiceType.D8.As<DiceEntry>()));
             //
             // gameState.Dices.Add(new DiceState(DiceType.D12.As<DiceEntry>()));
             // gameState.Dices.Add(new DiceState(DiceType.D20.As<DiceEntry>()));
@@ -88,18 +90,21 @@ namespace Code
         
         private async UniTask ReturnDicesToBag(List<DiceState> playedDices)
         {
+            Debug.Log("ReturnDicesToBag");
+
             //показать впервый раз текст: ты опустошил мешок, я перемешаю его, но теперь ты будешь тянуть на 1 кубик меньше
             foreach (var diceState in gameState.Dices)
             {
+                if (playedDices.Contains(diceState))
+                {
+                    gameState.Bag.Add(diceState);
+                    continue;
+                }
+
                 if (diceState.DiceView != null)
                 {
                     Object.Destroy(diceState.DiceView.gameObject);
                     diceState.ClearView();
-                }
-                
-                if (!playedDices.Contains(diceState))
-                {
-                    gameState.Bag.Add(diceState);
                 }
             }
             
@@ -109,6 +114,7 @@ namespace Code
 
         public async UniTask RollDice(bool rollMaxValue = false)
         {
+            Debug.Log("RollDice");
             if (gameState.Bag.Count == 0)
             {
                 await ReturnDicesToBag(gameState.Hand);
@@ -136,5 +142,10 @@ namespace Code
         }
 
         public void EnterFightState() => fsm.ToState<FightState>().Forget();
+
+        public async UniTask WinState()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

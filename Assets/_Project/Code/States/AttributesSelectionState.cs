@@ -25,6 +25,7 @@ namespace Code.States
             var view = Object.Instantiate(buddyEntry.Prefab, Game.Instance.BuddyPoint);
             view.transform.localPosition = Vector3.zero;
             Buddy = new Buddy(buddyEntry, view);
+            gameFlow.GameState.Buddy = Buddy;
             
             Game.Instance.AttackButton.gameObject.SetActive(true);
             Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
@@ -35,6 +36,25 @@ namespace Code.States
             while (gameFlow.GameState.Bag.Count > 0)
             {
                 await gameFlow.RollDice(true);
+            }
+
+            if (ContentManager.GetSettings<GameSettings>().AutoSelectHpAndShield)
+            {
+                while (Buddy.BuddyView.HpDiceHandHolder.Dices.Count < Buddy.BuddyEntry.HealthDiceCount)
+                {
+                    var dice = gameFlow.GameState.Hand[^1];
+                    gameFlow.GameState.Hand.Remove(dice);
+                    dice.DeOccupy();
+                    dice.Occupy(Buddy.BuddyView.HpDiceHandHolder);
+                }
+
+                while (Buddy.BuddyView.ShieldDiceHandHolder.Dices.Count < Buddy.BuddyEntry.ShieldDiceCount)
+                {
+                    var dice = gameFlow.GameState.Hand[^1];
+                    gameFlow.GameState.Hand.Remove(dice);
+                    dice.DeOccupy();
+                    dice.Occupy(Buddy.BuddyView.ShieldDiceHandHolder);
+                }
             }
         }
 
