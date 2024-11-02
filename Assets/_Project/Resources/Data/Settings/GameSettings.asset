@@ -16,4 +16,6 @@ MonoBehaviour:
     <Id>k__BackingField: 
     Challenges:
     - id: 1
+    StartingDiceSet:
+      id: Test
     AutoSelectHpAndShield: 1

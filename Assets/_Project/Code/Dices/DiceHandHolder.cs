@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 
@@ -21,7 +21,16 @@ namespace Code.Dices
         
         public bool IsLocked { get; private set; }
 
-        public bool IsFull() => maxDiceCount >= 0 && dices.Count >= maxDiceCount;
+        public bool IsFull()
+        {
+            if (maxDiceCount < 0)
+            {
+                return false;
+            }
+
+            var count = dices.Count(e => !e.DiceState.DiceEntry.GhostDice);
+            return count >= maxDiceCount;
+        }
 
         public void DeOccupy(Dice dice)
         {
@@ -31,7 +40,7 @@ namespace Code.Dices
 
         public bool Occupy(Dice dice)
         {
-            if (dices.Contains(dice) || (maxDiceCount >= 0 && dices.Count >= maxDiceCount))
+            if (dices.Contains(dice) || (!dice.DiceState.DiceEntry.GhostDice && IsFull()) || IsLocked)
             {
                 return false;
             }

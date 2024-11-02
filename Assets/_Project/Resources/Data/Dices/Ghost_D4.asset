@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2011ea9450874706a33882774648c810, type: 3}
-  m_Name: D6
+  m_Name: Ghost_D4
   m_EditorClassIdentifier: 
   content:
-    <Id>k__BackingField: D6
-    <MaxDiceValue>k__BackingField: 6
+    <Id>k__BackingField: Ghost_D4
+    <MaxDiceValue>k__BackingField: 4
     <DicePrefab>k__BackingField: {fileID: 2396086552863000784, guid: 9bd5e1c20c415cb41a0e37b0fb66d495, type: 3}
-    <DiceSprite>k__BackingField: {fileID: 6994111720309722666, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
-    <DiceColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
-    <FontSize>k__BackingField: 45
-    <GhostDice>k__BackingField: 0
+    <DiceSprite>k__BackingField: {fileID: 4988286562539615388, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+    <DiceColor>k__BackingField: {r: 0.9245283, g: 0.8678355, b: 0.8678355, a: 0.4509804}
+    <FontSize>k__BackingField: 40
+    <GhostDice>k__BackingField: 1

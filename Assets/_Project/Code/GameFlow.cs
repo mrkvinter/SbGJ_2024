@@ -48,22 +48,11 @@ namespace Code
             fsm = new Fsm();
             fsm.RegistryState(new FightState(this));
             fsm.RegistryState(new AttributesSelectionState(this));
-
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             
-            gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
-
-            gameState.Dices.Add(new DiceState(DiceType.D8.As<DiceEntry>()));
-            //
-            // gameState.Dices.Add(new DiceState(DiceType.D12.As<DiceEntry>()));
-            // gameState.Dices.Add(new DiceState(DiceType.D20.As<DiceEntry>()));
+            foreach (var dice in ContentManager.GetSettings<GameSettings>().StartingDiceSet.Unwrap().DiceEntries)
+            {
+                gameState.Dices.Add(new DiceState(dice.Unwrap()));
+            }
 
             fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
         }

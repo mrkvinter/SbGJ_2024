@@ -9,9 +9,17 @@ namespace Code.Dices
     [WithConstants]
     public class DiceEntry : ContentEntry
     {
-        [field:SerializeField] public int MaxDiceValue { get; private set; }
-        [field:SerializeField] public Dice DicePrefab { get; private set; }
-        [field:SerializeField] public Sprite DiceSprite { get; private set; }
-        [field:SerializeField] public float FontSize { get; private set; }
+        [field: SerializeField] public int MaxDiceValue { get; private set; }
+        [field: SerializeField] public Dice DicePrefab { get; private set; }
+        [field: SerializeField] public Sprite DiceSprite { get; private set; }
+        [field: SerializeField] public Color DiceColor { get; private set; }
+        [field: SerializeField] public float FontSize { get; private set; }
+        [field: Space, SerializeField] public bool GhostDice { get; private set; }
+    }
+    
+    [Serializable]
+    public class DiceSetEntry : ContentEntry
+    {
+        [field: SerializeField] public ContentRef<DiceEntry>[] DiceEntries { get; private set; }
     }
 }

@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 1
-  maxDiceCount: 3
+  maxDiceCount: 2
 --- !u!210 &510392643
 SortingGroup:
   m_ObjectHideFlags: 0

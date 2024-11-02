@@ -15,7 +15,7 @@ namespace KvinterGames.Animations.TransformAnimations
             var y = GetSinValue(originalPosition.x) * magnitude.y;
             var z = GetSinValue(originalPosition.z) * magnitude.z;
             
-            transform.position = originalPosition + new Vector3(x, y, z);
+            transform.localPosition = new Vector3(x, y, z);
         }
     }
 }

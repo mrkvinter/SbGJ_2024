@@ -31,6 +31,7 @@ namespace Code.Dices
         {
             this.diceState = diceState;
             DiceSpriteRenderer.sprite = diceState.DiceEntry.DiceSprite;
+            DiceSpriteRenderer.color = diceState.DiceEntry.DiceColor;
             diceCountText.fontSizeMax = diceState.DiceEntry.FontSize;
         }
 

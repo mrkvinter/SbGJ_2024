@@ -8,5 +8,10 @@ namespace Code.Utilities
         {
             return ContentManager.GetContent<T>(id);
         }
+        
+        public static T Unwrap<T>(this ContentRef<T> contentRef) where T : ContentEntry
+        {
+            return ContentManager.GetContent(contentRef);
+        }
     }
 }
