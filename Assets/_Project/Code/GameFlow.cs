@@ -1,26 +1,40 @@
 ﻿using System.Collections.Generic;
+using Code.Buddies;
 using Code.Dices;
+using Code.States;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Game.Core.FinalStateMachine;
+using RG.ContentSystem.Core;
 using UnityEngine;
 
 namespace Code
 {
     public class GameState
     {
+        public Buddy Buddy;
         public List<DiceState> Dices = new();
         public List<DiceState> Bag = new();
         public List<DiceState> Hand = new();
         public int DrawnDicesCount = 3;
         public int CurrentDrawnDicesCount = 0;
+        
+        public void ShuffleBag()
+        {
+            Bag.Sort((_, _) => Random.Range(-1, 1));
+        }
     }
 
     public class GameFlow
     {
         private Game game;
         private GameState gameState;
+        private IFsm fsm;
         
+        
+        public GameState GameState => gameState;
+
         public GameFlow(Game game)
         {
             this.game = game;
@@ -29,20 +43,27 @@ namespace Code
         public void StartGame()
         {
             gameState = new GameState();
+            fsm = new Fsm();
+            fsm.RegistryState(new FightState(this));
+            fsm.RegistryState(new AttributesSelectionState(this));
+
+            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
+            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
+            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             
-            gameState.Dices.Add(new DiceState(DiceType.D4.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
             gameState.Dices.Add(new DiceState(DiceType.D6.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D8.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D12.As<DiceEntry>()));
-            gameState.Dices.Add(new DiceState(DiceType.D20.As<DiceEntry>()));
-            // gameState.Dices.Add(DiceType.D6); //D8
 
-            StartTurn().Forget();
+            // gameState.Dices.Add(new DiceState(DiceType.D8.As<DiceEntry>()));
+            //
+            // gameState.Dices.Add(new DiceState(DiceType.D12.As<DiceEntry>()));
+            // gameState.Dices.Add(new DiceState(DiceType.D20.As<DiceEntry>()));
+
+            fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
         }
 
         private async UniTask StartTurn()
@@ -57,18 +78,7 @@ namespace Code
             await DrawHand();
         }
 
-        private async UniTask EndTurn()
-        {
-            foreach (var diceState in gameState.Hand)
-            {
-                DestroyDice(diceState).Forget();
-            }
-
-            gameState.Hand.Clear();
-            await DrawHand();
-        }
-
-        private async UniTask DrawHand()
+        public async UniTask DrawHand()
         {
             for (var i = 0; i < gameState.CurrentDrawnDicesCount; i++)
             {
@@ -97,7 +107,7 @@ namespace Code
             gameState.CurrentDrawnDicesCount--;
         }
 
-        public async UniTask RollDice()
+        public async UniTask RollDice(bool rollMaxValue = false)
         {
             if (gameState.Bag.Count == 0)
             {
@@ -109,7 +119,7 @@ namespace Code
                 
             diceState.SetView(Object.Instantiate(diceState.DiceEntry.DicePrefab));
             
-            var diceValue = Random.Range(1, diceState.DiceEntry.MaxDiceValue + 1);
+            var diceValue = rollMaxValue ? diceState.DiceEntry.MaxDiceValue : Random.Range(1, diceState.DiceEntry.MaxDiceValue + 1);
             diceState.SetValue(diceValue);
                 
             diceState.DiceView.SetDiceHolderParent(game.handDiceHolder);
@@ -119,60 +129,12 @@ namespace Code
             await UniTask.Delay(100);
         }
         
-        public async UniTask Attack()
-        {
-            var attackAmount = 0;
-            for (var i = 0; i < game.attackDiceHolder.Dices.Count; i++)
-            {
-                var dice = game.attackDiceHolder.Dices[i];
-                gameState.Hand.Remove(dice.DiceState);
-                attackAmount += dice.DiceState.Value;
-                game.damageText.text = attackAmount.ToString();
-                await dice.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
-                await dice.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
-                await UniTask.Delay(500);
-            }
-            var tasks = new List<UniTask>();
-            var countFX = attackAmount/4f;
-            for (var i = 0; i < countFX; i++)
-            {
-                var fx = Object.Instantiate(game.attackFx, game.enemy.transform);
-                fx.transform.localPosition = game.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
-                var task = fx.transform.DOMove(game.enemy.transform.position, 0.25f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
-                    .ContinueWith(() =>
-                    {
-                        Object.Destroy(fx);
-                    });
-                tasks.Add(task);
-            }
-            await UniTask.WhenAll(tasks);
-            game.enemy.TakeDamage(attackAmount);
-            game.damageText.text = string.Empty;
-            
-            for (var index = game.attackDiceHolder.Dices.Count - 1; index >= 0; index--)
-            {
-                var dice = game.attackDiceHolder.Dices[index];
-                DestroyDice(dice.DiceState).Forget();
-            }
-            
-            EndTurn().Forget();
-        }
-        
-        private async UniTask DestroyDice(DiceState diceState)
-        {
-            var diceView = diceState.DiceView;
-            diceState.ClearView();
-
-            var diceHolder = diceView.DiceHolderParent;
-            diceHolder.DeOccupy(diceView);
-            diceView.transform.DOKill();
-            await diceView.transform.DOScale(Vector3.zero, 0.2f).ToUniTask(); 
-            Object.Destroy(diceView.gameObject);
-        }
 
         private void ShuffleBag()
         {
             gameState.Bag.Sort((_, _) => Random.Range(-1, 1));
         }
+
+        public void EnterFightState() => fsm.ToState<FightState>().Forget();
     }
 }

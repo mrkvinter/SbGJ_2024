@@ -46,6 +46,11 @@ namespace Code.Dices
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (diceHolderParent?.IsLocked == true)
+            {
+                return;
+            }
+
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             shift = transform.position - pos;
             
@@ -55,6 +60,11 @@ namespace Code.Dices
 
         public void OnDrag(PointerEventData eventData)
         {
+            if (diceHolderParent?.IsLocked == true)
+            {
+                return;
+            }
+
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos + shift;
             
@@ -75,6 +85,11 @@ namespace Code.Dices
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (diceHolderParent?.IsLocked == true)
+            {
+                return;
+            }
+
             previewDiceHolder?.OccupyPreview(null);
             previewDiceHolder = null;
 

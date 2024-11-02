@@ -13,11 +13,15 @@ namespace Code.Dices
     public class DiceHandHolder : MonoBehaviour, IDiceDropHandler
     {
         [SerializeField] private float offset = 0.09f;
-        [SerializeField] private int maxDiceCount = 3;
+        public int maxDiceCount = 3;
         
         private List<Dice> dices = new();
         private Dice previewDice;
         public IReadOnlyList<Dice> Dices => dices;
+        
+        public bool IsLocked { get; private set; }
+
+        public bool IsFull() => maxDiceCount >= 0 && dices.Count >= maxDiceCount;
 
         public void DeOccupy(Dice dice)
         {
@@ -89,6 +93,11 @@ namespace Code.Dices
         {
             previewDice = dice;
             ArrangeСentre();
+        }
+
+        public void Lock()
+        {
+            IsLocked = true;
         }
     }
 }

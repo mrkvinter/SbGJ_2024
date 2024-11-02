@@ -1,3 +1,7 @@
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using UnityEngine;
+
 namespace Code.Dices
 {
     public class DiceState
@@ -28,6 +32,18 @@ namespace Code.Dices
         public void ClearView()
         {
             DiceView = null;
+        }
+        
+        public async UniTask DestroyDice()
+        {
+            var diceView = DiceView;
+            ClearView();
+
+            var diceHolder = diceView.DiceHolderParent;
+            diceHolder.DeOccupy(diceView);
+            diceView.transform.DOKill();
+            await diceView.transform.DOScale(Vector3.zero, 0.2f).ToUniTask(); 
+            Object.Destroy(diceView.gameObject);
         }
     }
 }
