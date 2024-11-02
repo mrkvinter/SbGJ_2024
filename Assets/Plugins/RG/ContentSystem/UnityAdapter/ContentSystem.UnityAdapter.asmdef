@@ -1,0 +1,7 @@
+{
+  "name": "ContentSystem.UnityAdapter",
+  "references": [
+    "GUID:9f83f8dfcf56405badc08adb0b2839cf",
+    "GUID:7889d94429ec5514191b8ca968b1105e"
+  ]
+}
