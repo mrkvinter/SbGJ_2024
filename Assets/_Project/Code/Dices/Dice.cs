@@ -7,11 +7,11 @@ namespace Code.Dices
 {
     public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        [SerializeField] private TMP_Text diceCountText;
-        [SerializeField] private int maxDiceValue;
+        public TMP_Text diceCountText;
+        public SpriteRenderer DiceSpriteRenderer;
 
-        private int diceValue;
-        private Vector3 originalPosition;
+        private DiceState diceState;
+
         private Vector3 shift;
         private Collider2D collider2D;
         private RaycastHit2D[] hits = new RaycastHit2D[30];
@@ -19,18 +19,19 @@ namespace Code.Dices
         private DiceHandHolder diceHolderParent;
         private DiceHandHolder previewDiceHolder;
         
-        public int DiceValue => diceValue;
         public DiceHandHolder DiceHolderParent => diceHolderParent;
+        public DiceState DiceState => diceState;
         
         private void Awake()
         {
             collider2D = GetComponent<Collider2D>();
         }
-
-        public void Roll()
+        
+        public void Init(DiceState diceState)
         {
-            diceValue = Random.Range(1, maxDiceValue + 1);
-            diceCountText.text = diceValue.ToString();
+            this.diceState = diceState;
+            DiceSpriteRenderer.sprite = diceState.DiceEntry.DiceSprite;
+            diceCountText.fontSize = (int)diceState.DiceEntry.FontSize;
         }
 
         public void SetDiceHolderParent(DiceHandHolder diceHolder)
@@ -45,7 +46,6 @@ namespace Code.Dices
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            originalPosition = transform.position;
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             shift = transform.position - pos;
             
@@ -107,6 +107,11 @@ namespace Code.Dices
             }
 
             return null;
+        }
+
+        public void SetValue(int value)
+        {
+            diceCountText.text = value.ToString();
         }
     }
 }

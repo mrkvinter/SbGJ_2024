@@ -81,7 +81,7 @@ namespace Code.Dices
                     }
                 }
 
-                dice.transform.DOLocalMove(new Vector3(x, 0, 0), 0.1f);
+                dice.transform.DOLocalMove(new Vector3(x, 0, -0.1f), 0.1f);
             }
         }
 
