@@ -10,6 +10,7 @@ namespace Code.Dices
         public DiceEntry DiceEntry { get; }
         public Dice DiceView { get; private set; }
         public int Value { get; private set; }
+        public bool HaveToShowLeftIndicator => DiceEntry.Duplicator;
 
         public DiceState(DiceEntry diceEntry)
         {
@@ -32,6 +33,23 @@ namespace Code.Dices
         public void ClearView()
         {
             DiceView = null;
+        }
+        
+        public void OnDiceHolderUpdated()
+        {
+            if (DiceEntry.Duplicator)
+            {
+                var index = DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1;
+                if (index >= 1)
+                {
+                    var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
+                    SetValue(leftDice.DiceState.Value);
+                }
+                else
+                {
+                    SetValue(0);
+                }
+            }
         }
         
         public async UniTask DestroyDice()

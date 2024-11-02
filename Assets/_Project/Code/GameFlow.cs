@@ -115,6 +115,11 @@ namespace Code
             diceState.SetView(Object.Instantiate(diceState.DiceEntry.DicePrefab));
             
             var diceValue = rollMaxValue ? diceState.DiceEntry.MaxDiceValue : Random.Range(1, diceState.DiceEntry.MaxDiceValue + 1);
+            if (diceState.DiceEntry.Duplicator)
+            {
+                diceValue = 0;
+            }
+
             diceState.SetValue(diceValue);
                 
             diceState.DiceView.SetDiceHolderParent(game.handDiceHolder);

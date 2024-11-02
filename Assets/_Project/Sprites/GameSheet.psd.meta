@@ -310,6 +310,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Selector
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 921
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7533d9ccb66d46548b8d1d7f2c70d529
+      internalID: 482555930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -330,6 +352,7 @@ TextureImporter:
       Dice_d4: 4988286562539615388
       Dice_d6: 6994111720309722666
       GameSheet_2: -8693281611674993084
+      Selector: 482555930
       SwordIcon: -705314204
       d12: -1659747100
       d20: 352765249

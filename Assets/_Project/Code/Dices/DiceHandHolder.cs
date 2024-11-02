@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
@@ -14,13 +15,13 @@ namespace Code.Dices
     {
         [SerializeField] private float offset = 0.09f;
         public int maxDiceCount = 3;
-        
+
         private List<Dice> dices = new();
         private Dice previewDice;
-        public IReadOnlyList<Dice> Dices => dices;
-        
-        public bool IsLocked { get; private set; }
+        public IList<Dice> Dices => dices;
 
+        public bool IsLocked { get; private set; }
+        
         public bool IsFull()
         {
             if (maxDiceCount < 0)
@@ -36,6 +37,13 @@ namespace Code.Dices
         {
             dices.Remove(dice);
             ArrangeСentre();
+            
+            foreach (var d in dices)
+            {
+                d.DiceState.OnDiceHolderUpdated();
+            }
+            
+            dice.DiceState.OnDiceHolderUpdated();
         }
 
         public bool Occupy(Dice dice)
@@ -45,11 +53,16 @@ namespace Code.Dices
                 return false;
             }
 
+            dice.SetDiceHolderParent(this);
             previewDice = null;
             var index = CalculateIndex(dice);
             dices.Insert(index, dice);
             dice.transform.SetParent(transform);
             ArrangeСentre();
+            foreach (var d in dices)
+            {
+                d.DiceState.OnDiceHolderUpdated();
+            }
 
             return true;
         }
@@ -78,6 +91,7 @@ namespace Code.Dices
             {
                 previewIndex = CalculateIndex(previewDice);
             }
+
             for (int i = 0; i < count; i++)
             {
                 var dice = dices[i];

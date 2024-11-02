@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using DG.Tweening;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -9,7 +11,7 @@ namespace Code.Dices
     {
         public TMP_Text diceCountText;
         public SpriteRenderer DiceSpriteRenderer;
-
+        public SpriteRenderer LeftIndicator;
         private DiceState diceState;
 
         private Vector3 shift;
@@ -25,6 +27,7 @@ namespace Code.Dices
         private void Awake()
         {
             collider2D = GetComponent<Collider2D>();
+            LeftIndicator.color = LeftIndicator.color.WithAlpha(0);
         }
         
         public void Init(DiceState diceState)
@@ -50,6 +53,12 @@ namespace Code.Dices
             if (diceHolderParent?.IsLocked == true)
             {
                 return;
+            }
+
+            if (diceState.HaveToShowLeftIndicator)
+            {
+                LeftIndicator.DOKill();
+                LeftIndicator.DOFade(1, 0.2f);
             }
 
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
@@ -91,6 +100,12 @@ namespace Code.Dices
                 return;
             }
 
+            if (diceState.HaveToShowLeftIndicator)
+            {
+                LeftIndicator.DOKill();
+                LeftIndicator.DOFade(0, 0.2f);
+            }
+            
             previewDiceHolder?.OccupyPreview(null);
             previewDiceHolder = null;
 
@@ -100,12 +115,11 @@ namespace Code.Dices
                 var diceHolder = FindDiceHolderParent();
                 if (diceHolder != null && diceHolder.Occupy(this))
                 {
-                    diceHolderParent = diceHolder;
                     return;
                 }
             }
             
-            diceHolderParent?.Occupy(this);
+            diceHolderParent?.Occupy(this);//????
         }
 
         private DiceHandHolder FindDiceHolderParent()
@@ -127,7 +141,7 @@ namespace Code.Dices
 
         public void SetValue(int value)
         {
-            diceCountText.text = value.ToString();
+            diceCountText.text = value <= 0 ? "?" : value.ToString();
         }
     }
 }
