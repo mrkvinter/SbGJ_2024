@@ -75,6 +75,35 @@ namespace Code.Dices
             Object.Destroy(diceView.gameObject);
         }
         
+        public string GetTooltip()
+        {
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine($"<size=+15><b>d{DiceEntry.MaxDiceValue}</b></size>");
+            sb.AppendLine($"<size=-5>{Texts.MaxValue}: {DiceEntry.MaxDiceValue}</size>\n");
+            
+            if (DiceEntry.LoneWolf)
+            {
+                sb.AppendLine($"{Texts.Name("Lone Wolf")} - This dice will show its {Texts.MaxValue} if it's the only dice on the field.\n");
+            }
+            
+            if (DiceEntry.Duplicator)
+            {
+                sb.AppendLine($"{Texts.Name("Duplicator")} - This dice will show the value of the dice to the left.");
+            }
+            
+            if (DiceEntry.Reroller)
+            {
+                sb.AppendLine($"{Texts.Name("Reroller")} - This dice will reroll the dice to the left.");
+            }
+            
+            if (DiceEntry.GhostDice)
+            {
+                sb.AppendLine($"{Texts.Name("Ghost Dice")} - This dice will not occupy a slot on the field.");
+            }
+            
+            return sb.ToString();
+        }
+        
         public void DeOccupy()
         {
             DiceView.DiceHolderParent.DeOccupy(DiceView);
@@ -126,6 +155,16 @@ namespace Code.Dices
             
             await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
             // await UniTask.Delay(350);
+        }
+
+        public void OnPointerEnter()
+        {
+            Game.Instance.TooltipService.ShowTooltip(GetTooltip(), DiceView.transform, new Vector2(-10f, 20f));
+        }
+
+        public void OnPointerExit()
+        {
+            Game.Instance.TooltipService.HideTooltip();
         }
     }
 }

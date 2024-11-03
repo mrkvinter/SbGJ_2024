@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 namespace Code.Dices
 {
-    public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
     {
         public TMP_Text diceCountText;
         public SpriteRenderer DiceSpriteRenderer;
@@ -79,6 +79,7 @@ namespace Code.Dices
                 return;
             }
 
+            diceState.OnPointerEnter();
             var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos + shift;
             
@@ -147,6 +148,16 @@ namespace Code.Dices
         public void SetValue(int value)
         {
             diceCountText.text = value <= 0 ? "?" : value.ToString();
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            diceState.OnPointerEnter();
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            diceState.OnPointerExit();
         }
     }
 }

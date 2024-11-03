@@ -1,6 +1,7 @@
 using Code.Buddies;
 using Code.Dices;
 using Code.Utilities;
+using Code.Visual;
 using Cysharp.Threading.Tasks;
 using RG.ContentSystem.UnityAdapter;
 using TMPro;
@@ -28,6 +29,7 @@ namespace Code
         [Space]
         [SerializeField] public Button AttackButton;
         [SerializeField] public Transform AttackHolder;
+        [SerializeField] public Tooltip Tooltip;
 
         [Space] 
         public Transform BuddySelectorRoot;
@@ -37,6 +39,8 @@ namespace Code
         public BuddySelector LastBuddySelector;
         
         public TMP_Text DiceInBagText;
+
+        public TooltipService TooltipService { get; } = new();
 
         private GameFlow gameFlow;
 
