@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using RG.ContentSystem.Core;
 using UnityEngine;
 using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 namespace Code.Enemies
 {
@@ -37,6 +39,20 @@ namespace Code.Enemies
             Object.Destroy(View.gameObject);
             View = null;
         }
+        
+        public void OnRoundStart()
+        {
+            if (EnemyEntry.MakeDiceHot)
+            {
+                var hand = Game.Instance.GameFlow.GameState.Hand.Where(d => !d.IsHot).ToList();
+                if (hand.Count == 0)
+                {
+                    return;
+                }
+                var dice = hand[Random.Range(0, hand.Count)];
+                dice.SetIsHot(true);
+            }
+        }
     }
     
     [Serializable]
@@ -45,6 +61,7 @@ namespace Code.Enemies
         [field: SerializeField] public int HealthCount { get; private set; }
         [field: SerializeField] public int DamageCount { get; private set; }
         [field: SerializeField] public EnemyView Prefab { get; private set; }
+        [field: SerializeField] public bool MakeDiceHot { get; private set; }
     }
     
     [Serializable]

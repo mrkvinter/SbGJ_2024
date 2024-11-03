@@ -20,7 +20,7 @@ namespace Code
         public List<DiceState> Dices = new();
         public List<DiceState> Bag = new();
         public List<DiceState> Hand = new();
-        public int DrawnDicesCount = 3;
+        public int DrawnDicesCount = 4;
         public int CurrentDrawnDicesCount = 0;
         public int ChallengeIndex = 0;
         

@@ -1,7 +1,8 @@
 using System;
+using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using Unity.VisualScripting;
+using KvinterGames;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
@@ -10,15 +11,20 @@ namespace Code.Dices
 {
     public class DiceState
     {
-        
         public DiceEntry DiceEntry { get; }
         public Dice DiceView { get; private set; }
         public int Value { get; private set; }
+        public bool IsHot { get; private set; }
         public bool HaveToShowLeftIndicator => DiceEntry.Duplicator || DiceEntry.Reroller;
+
+        private GameSettings gameSettings;
+        private bool wasRerolledOnThisTurn;
 
         public DiceState(DiceEntry diceEntry)
         {
             DiceEntry = diceEntry;
+            
+            gameSettings = ContentManager.GetSettings<GameSettings>();
         }
         
         public void SetValue(int value)
@@ -38,6 +44,32 @@ namespace Code.Dices
             DiceView.SetValue(Value);
         }
         
+        public void SetIsHot(bool isHot)
+        {
+            IsHot = isHot;
+            if (DiceView != null)
+            {
+                DiceView.Hot.sprite = isHot ? GetHotSprite() : null;
+                DiceView.Hot.DOFade(isHot ? 1 : 0, 0.2f)
+                    .OnComplete(() => DiceView.Hot.gameObject.SetActive(isHot));
+            }
+
+            if (IsHot)
+            {
+                SoundController.Instance.PlaySound("hot");
+            }
+        }
+
+        private Sprite GetHotSprite() => DiceEntry.MaxDiceValue switch
+        {
+            4 => gameSettings.D4HotModifierSprite,
+            6 => gameSettings.D6HotModifierSprite,
+            8 => gameSettings.D8HotModifierSprite,
+            12 => gameSettings.D12HotModifierSprite,
+            20 => gameSettings.D20HotModifierSprite,
+            _ => null
+        };
+
         public void ClearView()
         {
             DiceView = null;
@@ -115,6 +147,10 @@ namespace Code.Dices
                 sb.AppendLine($"{Texts.Name("Strong Cube")} - All dice on the field will increase their value by 1.");
             }
             
+            if (IsHot)
+            {
+                sb.AppendLine($"{Texts.Hot} - This dice will deal 1 damage to your buddy.");
+            }            
             
             return sb.ToString();
         }
@@ -147,7 +183,7 @@ namespace Code.Dices
                     var tween = ShakeDice();
                     await UniTask.Delay(200);
                     SetValue(DiceEntry.MaxDiceValue);
-                    await tween.AsyncWaitForCompletion();
+                    await tween;
                 }
             }
 
@@ -156,15 +192,26 @@ namespace Code.Dices
                 var tween = ShakeDice();
                 await UniTask.Delay(200);
                 SetValue(DiceEntry.MaxDiceValue);
-                await tween.AsyncWaitForCompletion();
+                await tween;
 
+            }
+            
+            if (IsHot)
+            {
+                var tween = ShakeDice();
+                await UniTask.Delay(200);
+                SoundController.Instance.PlaySound("hot");
+                await Game.Instance.GameFlow.GameState.Buddy.TakeDamage(1);
+                SetIsHot(false);
+                await tween;
             }
             
             updater?.Invoke();
             await UniTask.Delay(500);
 
-            if (DiceEntry.Reroller)
+            if (DiceEntry.Reroller && !wasRerolledOnThisTurn)
             {
+                wasRerolledOnThisTurn = true;
                 var index = DiceView.DiceHolderParent.Dices.IndexOf(DiceView);
                 if (index >= 1)
                 {
@@ -172,7 +219,7 @@ namespace Code.Dices
                     var tween = leftDice.DiceState.ShakeDice();
                     await UniTask.Delay(200);
                     leftDice.DiceState.Reroll();
-                    await tween.AsyncWaitForCompletion();
+                    await tween;
                     await leftDice.DiceState.CalculateValue(updater);
                 }
             }
@@ -189,7 +236,7 @@ namespace Code.Dices
                     var tween = dice.DiceState.ShakeDice();
                     await UniTask.Delay(200);
                     dice.DiceState.SetValue(dice.DiceState.DiceEntry.MaxDiceValue);
-                    await tween.AsyncWaitForCompletion();
+                    await tween;
                     await dice.DiceState.CalculateValue(updater);
                 }
             }
@@ -206,17 +253,27 @@ namespace Code.Dices
                     var tween = dice.DiceState.ShakeDice();
                     await UniTask.Delay(200);
                     dice.DiceState.SetValue(dice.DiceState.Value + 1);
-                    await tween.AsyncWaitForCompletion();
+                    await tween;
                     await dice.DiceState.CalculateValue(updater);
                 }
             }
             
             await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
         }
-
-        private Tweener ShakeDice()
+        
+        public void OnEndTurn()
         {
-            return DiceView.transform.DOShakeRotation(0.4f, 60*Vector3.forward, 20, 90f, true);
+            wasRerolledOnThisTurn = false;
+        }
+
+        private UniTask ShakeDice()
+        {
+            return DOTween.Sequence()
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.1f))
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, -10), 0.1f))
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f))
+                .SetLoops(2).ToUniTask();
+
         }
         public void OnPointerEnter()
         {

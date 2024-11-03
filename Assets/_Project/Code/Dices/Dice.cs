@@ -16,6 +16,7 @@ namespace Code.Dices
         public TMP_Text diceCountText;
         public SpriteRenderer DiceSpriteRenderer;
         public SpriteRenderer LeftIndicator;
+        public SpriteRenderer Hot;
         private DiceState diceState;
 
         private Vector3 shift;
@@ -38,6 +39,8 @@ namespace Code.Dices
             collider2D = GetComponent<Collider2D>();
             LeftIndicator.color = LeftIndicator.color.WithAlpha(0);
             LeftIndicator.gameObject.SetActive(false);
+            
+            Hot.color = Hot.color.WithAlpha(0);
         }
         
         public void Init(DiceState diceState)

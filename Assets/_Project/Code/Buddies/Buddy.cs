@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Code.Dices;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using RG.ContentSystem.Core;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Code.Buddies
 {
@@ -16,6 +18,8 @@ namespace Code.Buddies
         private DiceHandHolder healthDiceHandHolder;
         private DiceHandHolder shieldDiceHandHolder;
         public int Health => healthDiceHandHolder.Dices.Sum(dice => dice.DiceState.Value);
+        
+        private List<DiceState> usedShieldDices = new();
 
         public Buddy(BuddyEntry buddyEntry, BuddyView buddyView)
         {
@@ -42,6 +46,7 @@ namespace Code.Buddies
                     await shieldDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (shieldDice.DiceState.Value == 0)
                     {
+                        usedShieldDices.Add(shieldDice.DiceState);
                         await shieldDice.DiceState.DestroyDice();
                         await UniTask.Delay(100);
                     }
@@ -78,6 +83,22 @@ namespace Code.Buddies
             }
 
             return null;
+        }
+        
+        public void OnFightEnd()
+        {
+            shieldDiceHandHolder.Unlock();
+            foreach (var usedShieldDice in usedShieldDices)
+            {
+                usedShieldDice.SetView(Object.Instantiate(usedShieldDice.DiceEntry.DicePrefab));
+                shieldDiceHandHolder.Occupy(usedShieldDice.DiceView);
+            }
+
+            foreach (var dice in shieldDiceHandHolder.Dices)
+            {
+                dice.SetValue(dice.DiceState.DiceEntry.MaxDiceValue);
+            }
+            shieldDiceHandHolder.Lock();
         }
     }
     

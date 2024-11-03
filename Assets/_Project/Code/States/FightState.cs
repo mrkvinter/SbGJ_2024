@@ -82,6 +82,12 @@ namespace Code.States
 
         private async UniTask Attack()
         {
+            if (Game.Instance.attackDiceHolder.Dices.Count == 0)
+            {
+                EndTurn().Forget();
+                return;
+            }
+
             Game.Instance.AttackButton.interactable = false;
 
             var game = Game.Instance;
@@ -123,7 +129,9 @@ namespace Code.States
                 enemies.Remove(selectedEnemy);
                 selectedEnemy.View.OnEnemyClicked -= OnEnemyClicked;
                 await selectedEnemy.Die();
-                selectedEnemy = null;
+                selectedEnemy = null; 
+                if (enemies.Count > 0)
+                    OnEnemyClicked(enemies[0]);
             }
 
             game.damageText.text = string.Empty;
@@ -134,7 +142,8 @@ namespace Code.States
                 dice.DiceState.DestroyDice().Forget();
             }
 
-            EndTurn().Forget();
+            if (gameFlow.GameState.Hand.Count == 0 || enemies.Count == 0)
+                await EndTurn();
 
             Game.Instance.AttackButton.interactable = true;
         }
@@ -149,7 +158,7 @@ namespace Code.States
             gameState.ShuffleBag();
             gameState.CurrentDrawnDicesCount = gameState.DrawnDicesCount;
 
-            await gameFlow.DrawHand();
+            await StartNextTurn();
         }
 
         private async UniTask StartNextTurn()
@@ -158,6 +167,11 @@ namespace Code.States
                 OnEnemyClicked(enemies[0]);
 
             await gameFlow.DrawHand();
+            
+            foreach (var enemy in enemies)
+            {
+                enemy.OnRoundStart();
+            }
         }
 
         private async UniTask EndTurn()
@@ -167,11 +181,17 @@ namespace Code.States
                 await diceState.DestroyDice();
             }
 
+            foreach (var dice in gameFlow.GameState.Dices)
+            {
+                dice.OnEndTurn();
+            }
+
             gameFlow.GameState.Hand.Clear();
 
             if (enemies.Count == 0)
             {
                 gameFlow.GameState.ChallengeIndex++;
+                gameFlow.GameState.Buddy.OnFightEnd();
                 await gameFlow.WinFightState();
                 return;
             }

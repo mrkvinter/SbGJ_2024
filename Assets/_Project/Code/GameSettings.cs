@@ -22,6 +22,13 @@ namespace Code
         [Space]
         public ContentRef<DiceSetEntry> StartingDiceSet;
 
+        [Space] 
+        public Sprite D4HotModifierSprite;
+        public Sprite D6HotModifierSprite;
+        public Sprite D8HotModifierSprite;
+        public Sprite D12HotModifierSprite;
+        public Sprite D20HotModifierSprite;
+
         [Title("===TEST===")] 
         public bool AutoSelectHpAndShield;
     }

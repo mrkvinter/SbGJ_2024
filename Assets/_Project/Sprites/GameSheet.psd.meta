@@ -825,7 +825,7 @@ TextureImporter:
         width: 49
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -842,8 +842,8 @@ TextureImporter:
       name: d4_gray
       rect:
         serializedVersion: 2
-        x: 743
-        y: 994
+        x: 742
+        y: 998
         width: 58
         height: 51
       alignment: 9
@@ -891,7 +891,7 @@ TextureImporter:
         width: 50
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -900,6 +900,116 @@ TextureImporter:
       bones: []
       spriteID: bbd93ffb53d3aaa4c8011177181cd9ea
       internalID: -1316695305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d6_hot
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1006
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5654eb84b4b0c634789998f81e111f08
+      internalID: -1873647552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d4_hot
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 998
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4827586, y: 0.4117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c988a723d6b57c4fb5ea43ba70981d0
+      internalID: 569576607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d8_hot
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 923
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.49056605, y: 0.5102041}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af7a9c63aaf4a940ae7c4c334e871ac
+      internalID: 291259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20_hot
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 921
+        width: 50
+        height: 55
+      alignment: 9
+      pivot: {x: 0.48, y: 0.47272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e0ac5dd651e034fa9d5c09b0092ae2
+      internalID: -1365973868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d12_hot
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1001
+        width: 54
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5185185, y: 0.46428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6484350644ee1e44a8d61003c505dab
+      internalID: 851481272
       vertices: []
       indices: 
       edges: []
@@ -944,19 +1054,24 @@ TextureImporter:
       d12: -1659747100
       d12 Strong: -2101982325
       d12_gray: 1273564086
+      d12_hot: 851481272
       d20: 352765249
       d20 Strong: -734867160
       d20_gray: -1316695305
+      d20_hot: -1365973868
       d4 Strong: 48337363
       d4_epic: 463593561
       d4_gray: 1643209466
+      d4_hot: 569576607
       d6 Strong: -1698881620
       d6-epic: -741645486
       d6_gray: 1204752713
+      d6_hot: -1873647552
       d8 Strong: 540165642
       d8_epic: -768427489
+      d8_hot: 291259
   mipmapLimitGroupName: 
-  pSDRemoveMatte: 0
+  pSDRemoveMatte: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 

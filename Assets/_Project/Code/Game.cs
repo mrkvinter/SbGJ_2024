@@ -42,6 +42,7 @@ namespace Code
         public TMP_Text DiceInBagText;
 
         public TooltipService TooltipService { get; } = new();
+        public GameFlow GameFlow => gameFlow;
 
         private GameFlow gameFlow;
 
