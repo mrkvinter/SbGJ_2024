@@ -15,7 +15,7 @@ namespace Code.States
     {
         private GameFlow gameFlow;
         private Enemy selectedEnemy;
-        
+
         private List<Enemy> enemies = new();
 
         public FightState(GameFlow gameFlow)
@@ -29,6 +29,7 @@ namespace Code.States
 
             Game.Instance.AttackButton.gameObject.SetActive(true);
             Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
+            Game.Instance.AttackHolder.gameObject.SetActive(true);
 
             var gameSettings = ContentManager.GetSettings<GameSettings>();
             var challenge = gameFlow.GameState.ChallengeIndex;
@@ -42,10 +43,10 @@ namespace Code.States
 
             if (!challengeEntry.RightEnemy.IsEmpty)
                 SpawnEnemy(challengeEntry.RightEnemy, Game.Instance.RightEnemyPoint);
-            
+
             await StartTurn();
         }
-        
+
         private Enemy SpawnEnemy(ContentRef<EnemyEntry> enemyEntry, Transform point)
         {
             var enemy = ContentManager.GetContent(enemyEntry);
@@ -72,7 +73,8 @@ namespace Code.States
         {
             Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.onClick.RemoveListener(OnAttackButtonClicked);
-            
+            Game.Instance.AttackHolder.gameObject.SetActive(false);
+
             selectedEnemy = null;
         }
 
@@ -81,7 +83,7 @@ namespace Code.States
         private async UniTask Attack()
         {
             Game.Instance.AttackButton.interactable = false;
-            
+
             var game = Game.Instance;
             var attackAmount = 0;
             var calculatedDices = new List<DiceState>();
@@ -90,25 +92,30 @@ namespace Code.States
                 var dice = game.attackDiceHolder.Dices[i];
                 gameFlow.GameState.Hand.Remove(dice.DiceState);
                 calculatedDices.Add(dice.DiceState);
-                await dice.DiceState.CalculateValue();
+                await dice.DiceState.CalculateValue(() =>
+                {
+                    attackAmount = calculatedDices.Sum(d => d.Value);
+                    game.damageText.text = attackAmount.ToString();
+                });
 
-                attackAmount = calculatedDices.Sum(d => d.Value);
-                game.damageText.text = attackAmount.ToString();
+                // attackAmount = calculatedDices.Sum(d => d.Value);
+                // game.damageText.text = attackAmount.ToString();
             }
+
             var tasks = new List<UniTask>();
-            var countFX = attackAmount/4f;
+            var countFX = attackAmount / 4f;
             for (var i = 0; i < countFX; i++)
             {
                 var fx = Object.Instantiate(game.attackFx);
-                fx.transform.position = game.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                fx.transform.position = game.attackPoint.position +
+                                        new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                 fx.transform.position = fx.transform.position.WithZ(-0.1f);
-                var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.25f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
-                    .ContinueWith(() =>
-                    {
-                        Object.Destroy(fx);
-                    });
+                var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.25f)
+                    .SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
+                    .ContinueWith(() => { Object.Destroy(fx); });
                 tasks.Add(task);
             }
+
             await UniTask.WhenAll(tasks);
             selectedEnemy.TakeDamage(attackAmount);
             if (selectedEnemy.IsDead)
@@ -120,13 +127,13 @@ namespace Code.States
             }
 
             game.damageText.text = string.Empty;
-            
+
             for (var index = game.attackDiceHolder.Dices.Count - 1; index >= 0; index--)
             {
                 var dice = game.attackDiceHolder.Dices[index];
                 dice.DiceState.DestroyDice().Forget();
             }
-            
+
             EndTurn().Forget();
 
             Game.Instance.AttackButton.interactable = true;
@@ -144,14 +151,15 @@ namespace Code.States
 
             await gameFlow.DrawHand();
         }
-        
+
         private async UniTask StartNextTurn()
         {
-            if (selectedEnemy == null) 
+            if (selectedEnemy == null)
                 OnEnemyClicked(enemies[0]);
-            
+
             await gameFlow.DrawHand();
         }
+
         private async UniTask EndTurn()
         {
             foreach (var diceState in gameFlow.GameState.Hand)
@@ -167,34 +175,33 @@ namespace Code.States
                 await gameFlow.WinState();
                 return;
             }
-            
+
             await EnemyTurn();
             await UniTask.Delay(1000);
-            
+
             await StartNextTurn();
         }
-        
+
         private async UniTask EnemyTurn()
         {
             foreach (var enemy in enemies)
             {
                 var damage = enemy.EnemyEntry.DamageCount;
-                var countFX = damage/4f;
+                var countFX = damage / 4f;
                 var tasks = new List<UniTask>();
                 for (var i = 0; i < countFX; i++)
                 {
                     var fx = Object.Instantiate(Game.Instance.attackFx);
-                    fx.transform.position = Game.Instance.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                    fx.transform.position = Game.Instance.attackPoint.position +
+                                            new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                     fx.transform.position = fx.transform.position.WithZ(-0.1f);
                     var nextDice = gameFlow.GameState.Buddy.GetNextDice();
-                    var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
-                        .ContinueWith(() =>
-                        {
-                            Object.Destroy(fx);
-                        });
-                    tasks.Add(task);                
+                    var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f)
+                        .SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
+                        .ContinueWith(() => { Object.Destroy(fx); });
+                    tasks.Add(task);
                 }
-                
+
                 await UniTask.WhenAll(tasks);
                 await gameFlow.GameState.Buddy.TakeDamage(damage);
             }

@@ -48,13 +48,15 @@ namespace Code
             fsm = new Fsm();
             fsm.RegistryState(new FightState(this));
             fsm.RegistryState(new AttributesSelectionState(this));
+            fsm.RegistryState(new SelectBuddyState(this));
             
             foreach (var dice in ContentManager.GetSettings<GameSettings>().StartingDiceSet.Unwrap().DiceEntries)
             {
                 gameState.Dices.Add(new DiceState(dice.Unwrap()));
             }
 
-            fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
+            fsm.ToState<SelectBuddyState>().Forget();
+            // fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
         }
 
         private async UniTask StartTurn()
@@ -133,6 +135,11 @@ namespace Code
         public async UniTask WinState()
         {
             throw new System.NotImplementedException();
+        }
+
+        public void StartWithBuddy(ContentRef<BuddyEntry> buddy)
+        {
+            fsm.ToStateWithParams<AttributesSelectionState>(buddy).Forget();
         }
     }
 }

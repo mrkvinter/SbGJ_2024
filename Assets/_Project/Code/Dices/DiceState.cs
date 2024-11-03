@@ -1,6 +1,10 @@
+using System;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 namespace Code.Dices
 {
@@ -51,7 +55,7 @@ namespace Code.Dices
                 }
             }
         }
-
+        
         private void Reroll()
         {
             var value = Random.Range(1, DiceEntry.MaxDiceValue + 1);
@@ -67,7 +71,7 @@ namespace Code.Dices
             var diceHolder = diceView.DiceHolderParent;
             diceHolder.DeOccupy(diceView);
             diceView.transform.DOKill();
-            await diceView.transform.DOScale(Vector3.zero, 0.2f).ToUniTask(); 
+            await diceView.transform.DOScale(Vector3.zero, 0.15f).ToUniTask(); 
             Object.Destroy(diceView.gameObject);
         }
         
@@ -83,16 +87,28 @@ namespace Code.Dices
             diceHandHolder.Occupy(DiceView);
         }
         
-        public async UniTask CalculateValue()
+        public async UniTask CalculateValue(Action updater)
         {
-            await DiceView.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
-            await DiceView.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
-            await UniTask.Delay(500);
-
             if (DiceView == null || DiceView.DiceHolderParent == null)
             {
                 return;
             }
+
+            await DiceView.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
+
+            if (DiceEntry.LoneWolf)
+            {
+                if (DiceView.DiceHolderParent.Dices.Count == 1)
+                {
+                    var tween = DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+                    await UniTask.Delay(200);
+                    SetValue(DiceEntry.MaxDiceValue);
+                    await tween.AsyncWaitForCompletion();
+                }
+            }
+
+            updater?.Invoke();
+            await UniTask.Delay(500);
 
             if (DiceEntry.Reroller)
             {
@@ -100,18 +116,16 @@ namespace Code.Dices
                 if (index >= 1)
                 {
                     var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
+                    var tween = DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+                    await UniTask.Delay(200);
                     leftDice.DiceState.Reroll();
-                    await leftDice.DiceState.CalculateValue();
+                    await tween.AsyncWaitForCompletion();
+                    await leftDice.DiceState.CalculateValue(updater);
                 }
             }
-
-            if (DiceEntry.LoneWolf)
-            {
-                if (DiceView.DiceHolderParent.Dices.Count == 1)
-                {
-                    SetValue(DiceEntry.MaxDiceValue);
-                }
-            }
+            
+            await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
+            // await UniTask.Delay(350);
         }
     }
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   content:
     <Id>k__BackingField: BuddyHeart
     <HealthDiceCount>k__BackingField: 3
-    <ShieldDiceCount>k__BackingField: 2
+    <ShieldDiceCount>k__BackingField: 1
+    <AttackDiceCount>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 3235274249375672811, guid: dcffca7331986c14e91eaecbef081371, type: 3}

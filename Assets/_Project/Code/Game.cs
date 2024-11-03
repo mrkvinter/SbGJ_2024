@@ -1,3 +1,4 @@
+using Code.Buddies;
 using Code.Dices;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
@@ -26,6 +27,14 @@ namespace Code
 
         [Space]
         [SerializeField] public Button AttackButton;
+        [SerializeField] public Transform AttackHolder;
+
+        [Space] 
+        public Transform BuddySelectorRoot;
+        public BuddySelector TutorialBuddySelector;
+        public BuddySelector FirstBuddySelector;
+        public BuddySelector SecondBuddySelector;
+        public BuddySelector LastBuddySelector;
         
         public TMP_Text DiceInBagText;
 

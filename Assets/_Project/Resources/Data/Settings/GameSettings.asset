@@ -16,6 +16,14 @@ MonoBehaviour:
     <Id>k__BackingField: 
     Challenges:
     - id: 1
+    TutorialBuddy:
+      id: Buddy_Tutor
+    FirstBuddy:
+      id: Buddy
+    SecondBuddy:
+      id: BuddyHeart
+    LastBuddy:
+      id: Buddy_Son
     StartingDiceSet:
       id: Test
     AutoSelectHpAndShield: 1

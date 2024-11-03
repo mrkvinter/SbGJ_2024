@@ -83,10 +83,10 @@ namespace Code.Dices
             transform.position = pos + shift;
             
             var diceHolder = FindDiceHolderParent();
-            if (diceHolder == diceHolderParent)
-            {
-                diceHolder = null;
-            }
+            // if (diceHolder == diceHolderParent)
+            // {
+            //     diceHolder = null;
+            // }
 
             if (diceHolder != previewDiceHolder)
             {

@@ -35,6 +35,20 @@ namespace Code.Dices
             return count >= maxDiceCount;
         }
 
+        public int RealMaxDiceCount
+        {
+            get
+            {
+                if (maxDiceCount < 0)
+                {
+                    return -1;
+                }
+
+                var count = dices.Count(e => e.DiceState.DiceEntry.GhostDice);
+                return maxDiceCount + count;
+            }
+        }
+
         public void DeOccupy(Dice dice)
         {
             dices.Remove(dice);
@@ -138,6 +152,8 @@ namespace Code.Dices
                     dice.transform.DOLocalMove(new Vector3(x + shift, 0, -0.1f), 0.1f);
                 }
             }
+            
+            UpdateSlotsVisibility();
         }
 
         public void OccupyPreview(Dice dice)
@@ -149,6 +165,14 @@ namespace Code.Dices
         public void Lock()
         {
             IsLocked = true;
+        }
+        
+        private void UpdateSlotsVisibility()
+        {
+            for (var i = 0; i < slots.Length; i++)
+            {
+                slots[i].gameObject.SetActive(i < RealMaxDiceCount);
+            }
         }
     }
 }

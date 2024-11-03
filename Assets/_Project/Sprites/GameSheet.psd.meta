@@ -574,6 +574,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SimpleBuddy
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 591
+        width: 112
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2c822e239644a4a8035e7672eba754
+      internalID: -536513564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SimpleBudd
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 589
+        width: 116
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3daf39cb70e7f445bad6d39a4db05c8
+      internalID: -552996500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -605,6 +649,8 @@ TextureImporter:
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579
       Selector: 482555930
+      SimpleBudd: -552996500
+      SimpleBuddy: -536513564
       Spide: 1213118286
       SpiderSelector: -1009616588
       SwordIcon: -705314204

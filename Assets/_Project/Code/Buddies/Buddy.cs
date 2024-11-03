@@ -86,6 +86,7 @@ namespace Code.Buddies
     {
         [field: SerializeField] public int HealthDiceCount { get; private set; }
         [field: SerializeField] public int ShieldDiceCount { get; private set; }
+        [field: SerializeField] public int AttackDiceCount { get; private set; }
         [field: SerializeField] public BuddyView Prefab { get; private set; }
     }
 }

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: ContentDatabase
   m_EditorClassIdentifier: 
   <Contents>k__BackingField:
+  - {fileID: 11400000, guid: dbcbdfcbce7df6c4dbb587e755c8cf34, type: 2}
   - {fileID: 11400000, guid: 0f6f5777973dafc49a5612aa1ed6e292, type: 2}
+  - {fileID: 11400000, guid: 231fa14b51af0d9499a5ec4f3d08f246, type: 2}
+  - {fileID: 11400000, guid: a79faf8396fa302439f5fe278d9b4141, type: 2}
   - {fileID: 11400000, guid: 64c2a37f59a43734a9b52c406c4d4e1e, type: 2}
   - {fileID: 11400000, guid: 1f272670b253cc84cb53bdc8ada59097, type: 2}
   - {fileID: 11400000, guid: e8d44bd4442f1344da8f807c5463d1cd, type: 2}
