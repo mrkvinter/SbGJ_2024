@@ -1014,6 +1014,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Coin
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 817
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a4756063ce59f4ab2033d86eb379cc
+      internalID: -8675998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1036,6 +1058,7 @@ TextureImporter:
       CandleKeeper: -446791613
       Cndle_0: 1771381697
       Cndle_1: 1096519518
+      Coin: -8675998
       D8: 1565232741
       DiceHolderBack: 1311892621
       DiceZone: -1519455761

@@ -11,12 +11,14 @@ namespace Code.States
     public class AttributesSelectionState : BaseState<ContentRef<BuddyEntry>>
     {
         private GameFlow gameFlow;
+        private GameRunState gameRunState;
 
         public Buddy Buddy { get; private set; }
 
-        public AttributesSelectionState(GameFlow gameFlow)
+        public AttributesSelectionState(GameFlow gameFlow, GameRunState parentFsm)
         {
             this.gameFlow = gameFlow;
+            gameRunState = parentFsm;
         }
 
         protected override async UniTask OnEnter()
@@ -92,7 +94,7 @@ namespace Code.States
             }
             
             gameFlow.GameState.Hand.Clear();
-            gameFlow.EnterFightState();
+            gameRunState.EnterFightState();
         });
     }
 }

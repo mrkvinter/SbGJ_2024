@@ -14,13 +14,15 @@ namespace Code.States
     public class FightState : BaseState
     {
         private GameFlow gameFlow;
+        private GameRunState gameRunState;
         private Enemy selectedEnemy;
 
         private List<Enemy> enemies = new();
 
-        public FightState(GameFlow gameFlow)
+        public FightState(GameFlow gameFlow, GameRunState gameRunState)
         {
             this.gameFlow = gameFlow;
+            this.gameRunState = gameRunState;
         }
 
         protected override async UniTask OnEnter()
@@ -192,7 +194,7 @@ namespace Code.States
             {
                 gameFlow.GameState.ChallengeIndex++;
                 gameFlow.GameState.Buddy.OnFightEnd();
-                await gameFlow.WinFightState();
+                await gameRunState.WinFightState();
                 return;
             }
 

@@ -31,6 +31,7 @@ namespace Code
         [SerializeField] public Transform AttackHolder;
         [SerializeField] public Tooltip Tooltip;
         [SerializeField] public Image BlackScreen;
+        [SerializeField] public Transform GameUIRoot;
 
         [Space] 
         public Transform BuddySelectorRoot;

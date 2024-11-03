@@ -66,12 +66,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_C79B2600: 39
+    - Vector1_C79B2600: 14.43
     - _EnableExternalAlpha: 0
-    - _FadeAmount: 1.17
+    - _FadeAmount: 15
     - _ZWrite: 0
     m_Colors:
-    - Color_AE581CF8: {r: 0, g: 0, b: 0, a: 1}
+    - Color_AE581CF8: {r: 0.8867924, g: 0.17714292, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

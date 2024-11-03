@@ -57,9 +57,10 @@ namespace Code
             gameSettings = ContentManager.GetSettings<GameSettings>();
             gameState = new GameState();
             fsm = new Fsm();
-            fsm.RegistryState(new FightState(this));
-            fsm.RegistryState(new AttributesSelectionState(this));
+            // fsm.RegistryState(new FightState(this));
+            // fsm.RegistryState(new AttributesSelectionState(this));
             fsm.RegistryState(new SelectBuddyState(this));
+            fsm.RegistryState(new GameRunState(this));
             
             foreach (var dice in ContentManager.GetSettings<GameSettings>().StartingDiceSet.Unwrap().DiceEntries)
             {
@@ -149,26 +150,9 @@ namespace Code
             gameState.Bag.Sort((_, _) => Random.Range(-1, 1));
         }
 
-        public void EnterFightState() => fsm.ToState<FightState>().Forget();
-
-        public async UniTask WinFightState()
-        {
-            await ShowBlackScreen();
-            gameState.ChallengeIndex++;
-            if (gameState.ChallengeIndex == gameSettings.Challenges.Length)
-            {
-                Debug.Log("You win!");
-                fsm.ToState<SelectBuddyState>().Forget();
-                return;
-            }
-            
-            fsm.ToState<FightState>().Forget();
-            await HideBlackScreen();
-        }
-
         public void StartWithBuddy(ContentRef<BuddyEntry> buddy)
         {
-            fsm.ToStateWithParams<AttributesSelectionState>(buddy).Forget();
+            fsm.ToStateWithParams<GameRunState>(buddy).Forget();
         }
         
         public async UniTask ShowBlackScreen(bool instant = false)
