@@ -24,6 +24,10 @@ namespace Code.Dices
         public void SetValue(int value)
         {
             Value = value;
+            if (Value > DiceEntry.MaxDiceValue)
+            {
+                Value = DiceEntry.MaxDiceValue;
+            }
             DiceView?.SetValue(value);
         }
         
@@ -100,6 +104,17 @@ namespace Code.Dices
             {
                 sb.AppendLine($"{Texts.Name("Ghost Dice")} - This dice will not occupy a slot on the field.");
             }
+            
+            if (DiceEntry.IsEpicCube)
+            {
+                sb.AppendLine($"{Texts.Name("Epic Cube")} - All dice on the field will reroll and show their {Texts.MaxValue}.");
+            }
+            
+            if (DiceEntry.IsStrongCube)
+            {
+                sb.AppendLine($"{Texts.Name("Strong Cube")} - All dice on the field will increase their value by 1.");
+            }
+            
             
             return sb.ToString();
         }
@@ -179,12 +194,29 @@ namespace Code.Dices
                 }
             }
             
+            if (DiceEntry.IsStrongCube)
+            {
+                foreach (var dice in DiceView.DiceHolderParent.Dices)
+                {
+                    // if (dice.DiceState == this)
+                    // {
+                    //     continue;
+                    // }
+
+                    var tween = dice.DiceState.ShakeDice();
+                    await UniTask.Delay(200);
+                    dice.DiceState.SetValue(dice.DiceState.Value + 1);
+                    await tween.AsyncWaitForCompletion();
+                    await dice.DiceState.CalculateValue(updater);
+                }
+            }
+            
             await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
         }
 
         private Tweener ShakeDice()
         {
-            return DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+            return DiceView.transform.DOShakeRotation(0.4f, 60*Vector3.forward, 20, 90f, true);
         }
         public void OnPointerEnter()
         {

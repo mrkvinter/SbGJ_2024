@@ -49,7 +49,7 @@ namespace Code
         public void StartGame()
         {
             ambientNoise = SoundController.Instance.PlayLoop("amb_noise");
-            ambientNoise.AudioSource.volume = 0.5f;
+            ambientNoise.AudioSource.volume = 1f;
             ChangePitch();
 
             ShowBlackScreen(true).Forget();
@@ -120,6 +120,8 @@ namespace Code
             {
                 await ReturnDicesToBag(gameState.Hand);
             }
+            
+            SoundController.Instance.PlaySound("dice_deal", 0.1f, 0.7f, pitch: 1.25f);
             var diceState = gameState.Bag[^1];
             gameState.Bag.RemoveAt(gameState.Bag.Count - 1);
             gameState.Hand.Add(diceState);
@@ -138,7 +140,7 @@ namespace Code
             game.handDiceHolder.Occupy(diceState.DiceView);
             game.DiceInBagText.text = gameState.Bag.Count.ToString();
 
-            await UniTask.Delay(100);
+            await UniTask.Delay(150);
         }
         
 

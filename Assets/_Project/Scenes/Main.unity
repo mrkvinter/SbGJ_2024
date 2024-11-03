@@ -989,7 +989,7 @@ Transform:
   m_GameObject: {fileID: 391264511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.35, y: -2.49, z: -2.9590604}
+  m_LocalPosition: {x: 7.04, y: -2.49, z: -2.9590604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2322,7 +2322,7 @@ Transform:
   m_GameObject: {fileID: 789215062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.85, y: -1.17, z: -2.9590604}
+  m_LocalPosition: {x: 4.28, y: -1.17, z: -2.9590604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3801,7 +3801,7 @@ Transform:
   m_GameObject: {fileID: 1377625293}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.53, y: -0.22, z: -2.9590604}
+  m_LocalPosition: {x: 7.2199993, y: -0.22, z: -2.9590604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4123,6 +4123,11 @@ MonoBehaviour:
   - Name: amb_noise
     Clips:
     - {fileID: 8300000, guid: d981a7ae3c47220439fbf1292c9b2fc3, type: 3}
+  - Name: dice_deal
+    Clips:
+    - {fileID: 8300000, guid: 78689b3116341b742a7afbe19858a4c0, type: 3}
+    - {fileID: 8300000, guid: 484707d4645afcc4bbb63b752500c505, type: 3}
+    - {fileID: 8300000, guid: 8c129a4e2b9ac074780b006be58ca378, type: 3}
 --- !u!4 &1685538236
 Transform:
   m_ObjectHideFlags: 0
@@ -4256,7 +4261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1829977145
 RectTransform:
   m_ObjectHideFlags: 0

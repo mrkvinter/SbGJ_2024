@@ -248,7 +248,7 @@ TextureImporter:
       name: d20
       rect:
         serializedVersion: 2
-        x: 182
+        x: 181
         y: 918
         width: 50
         height: 58
@@ -538,8 +538,8 @@ TextureImporter:
         y: 345
         width: 291
         height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.30927837, y: 0.5111111}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -561,7 +561,7 @@ TextureImporter:
         width: 295
         height: 139
       alignment: 9
-      pivot: {x: 0.5016949, y: 0.4964029}
+      pivot: {x: 0.31525424, y: 0.50359714}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -693,7 +693,7 @@ TextureImporter:
         width: 98
         height: 176
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -702,6 +702,204 @@ TextureImporter:
       bones: []
       spriteID: e28f253290af3a2419c0a7a2840f06c9
       internalID: -1197132654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d6 Strong
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1006
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c72d59aa88499e46930373d01e45be6
+      internalID: -1698881620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d4 Strong
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 998
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4827586, y: 0.4117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ba891cb9ff6ff42824e00436178dd5
+      internalID: 48337363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d12 Strong
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1001
+        width: 54
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.44642857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900a9810fb5f15648b23d4559be711f5
+      internalID: -2101982325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d8 Strong
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 924
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.509434, y: 0.57142854}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4120b74a97e5c964e8154e1e1e902d43
+      internalID: 540165642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20 Strong
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 918
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e13ac27c38e254bbfc5d53292b3d48
+      internalID: -734867160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d6_gray
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1006
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689a922ad839eb84d9c5aa96b728a681
+      internalID: 1204752713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d4_gray
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 994
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4827586, y: 0.4117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5457e4356399b034db83755748179262
+      internalID: 1643209466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d12_gray
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1002
+        width: 54
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.44642857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac0c2ec6cb4dbe4287547a1c9b07bf2
+      internalID: 1273564086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20_gray
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 918
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd93ffb53d3aaa4c8011177181cd9ea
+      internalID: -1316695305
       vertices: []
       indices: 
       edges: []
@@ -720,7 +918,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Background: -783017744
+      Background: -1193750981
       BuddySon: -1197132654
       Buddy_Heart: 4170510071181775271
       Buddy_Heart_Selection: 1914867013
@@ -733,7 +931,7 @@ TextureImporter:
       DiceZone: -1519455761
       Dice_d4: 4988286562539615388
       Dice_d6: 6994111720309722666
-      GameSheet_2: -8693281611674993084
+      GameSheet_2: -1064802336
       Painting: -1118719202
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579
@@ -744,9 +942,18 @@ TextureImporter:
       SpiderSelector: -1009616588
       SwordIcon: -705314204
       d12: -1659747100
+      d12 Strong: -2101982325
+      d12_gray: 1273564086
       d20: 352765249
+      d20 Strong: -734867160
+      d20_gray: -1316695305
+      d4 Strong: 48337363
       d4_epic: 463593561
+      d4_gray: 1643209466
+      d6 Strong: -1698881620
       d6-epic: -741645486
+      d6_gray: 1204752713
+      d8 Strong: 540165642
       d8_epic: -768427489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

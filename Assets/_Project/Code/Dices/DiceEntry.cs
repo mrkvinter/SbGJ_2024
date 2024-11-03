@@ -13,12 +13,14 @@ namespace Code.Dices
         [field: SerializeField] public Dice DicePrefab { get; private set; }
         [field: SerializeField] public Sprite DiceSprite { get; private set; }
         [field: SerializeField] public Color DiceColor { get; private set; }
+        [field: SerializeField] public Color DiceTextColor { get; private set; }
         [field: SerializeField] public float FontSize { get; private set; }
         [field: Space, SerializeField] public bool GhostDice { get; private set; }
         [field:SerializeField] public bool Duplicator { get; private set; }
         [field:SerializeField] public bool Reroller { get; private set; }
         [field:SerializeField] public bool LoneWolf { get; private set; }
         [field:SerializeField] public bool IsEpicCube { get; private set; }
+        [field:SerializeField] public bool IsStrongCube { get; private set; }
     }
     
     [Serializable]

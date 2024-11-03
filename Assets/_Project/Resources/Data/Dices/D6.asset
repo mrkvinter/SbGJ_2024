@@ -18,5 +18,11 @@ MonoBehaviour:
     <DicePrefab>k__BackingField: {fileID: 2396086552863000784, guid: 9bd5e1c20c415cb41a0e37b0fb66d495, type: 3}
     <DiceSprite>k__BackingField: {fileID: 6994111720309722666, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     <DiceColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
+    <DiceTextColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}
     <FontSize>k__BackingField: 45
     <GhostDice>k__BackingField: 0
+    <Duplicator>k__BackingField: 0
+    <Reroller>k__BackingField: 0
+    <LoneWolf>k__BackingField: 0
+    <IsEpicCube>k__BackingField: 0
+    <IsStrongCube>k__BackingField: 0
