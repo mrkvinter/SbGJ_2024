@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbd2e0b0f1442c3b5146d189ecbf985, type: 3}
+  m_Name: SpiderEnemy
+  m_EditorClassIdentifier: 
+  content:
+    <Id>k__BackingField: Spider
+    <HealthCount>k__BackingField: 10
+    <DamageCount>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 3202769899048978820, guid: 5bb12db096cf62241aae74d4d757a459, type: 3}

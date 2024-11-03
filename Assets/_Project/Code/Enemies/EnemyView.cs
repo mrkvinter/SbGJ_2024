@@ -16,6 +16,7 @@ namespace Code.Enemies
         [SerializeField] private TMP_Text healthText;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Light2D light2D;
+        [SerializeField] private SpriteRenderer shadowSpriteRenderer;
 
         private Material dissolveMaterial;
         private float dissolveAmount = 1.6f;
@@ -47,6 +48,7 @@ namespace Code.Enemies
         public async UniTask Die()
         {
             DOTween.To(() => dissolveAmount, SetDissolveAmount, 0, 2f);
+            shadowSpriteRenderer.DOFade(0, 2f);
             await DOTween.Sequence()
                 .Append(DOTween.To(() => light2D.intensity, x => light2D.intensity = x, 1, 0.4f))
                 .Append(DOTween.To(() => light2D.intensity, x => light2D.intensity = x, 0, 1.6f))

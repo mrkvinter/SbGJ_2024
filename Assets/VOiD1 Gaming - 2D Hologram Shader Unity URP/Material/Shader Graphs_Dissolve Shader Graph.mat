@@ -57,7 +57,7 @@ Material:
     m_Floats:
     - Vector1_51DDBE76: 1.6
     - Vector1_C79B2600: 21.63
-    - _FadeAmount: 1.6
+    - _FadeAmount: 11.8
     m_Colors:
     - Color_AE581CF8: {r: 0.19215687, g: 0, b: 0.101126745, a: 1}
   m_BuildTextureStacks: []
