@@ -165,7 +165,7 @@ TextureImporter:
         width: 58
         height: 51
       alignment: 9
-      pivot: {x: 0.47692308, y: 0.4107143}
+      pivot: {x: 0.4827586, y: 0.4117647}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -583,7 +583,7 @@ TextureImporter:
         width: 112
         height: 213
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -605,7 +605,7 @@ TextureImporter:
         width: 116
         height: 217
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,6 +614,94 @@ TextureImporter:
       bones: []
       spriteID: c3daf39cb70e7f445bad6d39a4db05c8
       internalID: -552996500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d6-epic
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1006
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c076a9279e06b4ea91a20e7b227fbe
+      internalID: -741645486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d4_epic
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 998
+        width: 58
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4827586, y: 0.4117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b09f70b8076eff4cbf158bb73250675
+      internalID: 463593561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d8_epic
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 923
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.509434, y: 0.5714286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4574b4b8d84c64f80d4b833b01b8eb
+      internalID: -768427489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BuddySon
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 605
+        width: 98
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28f253290af3a2419c0a7a2840f06c9
+      internalID: -1197132654
       vertices: []
       indices: 
       edges: []
@@ -633,6 +721,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Background: -783017744
+      BuddySon: -1197132654
       Buddy_Heart: 4170510071181775271
       Buddy_Heart_Selection: 1914867013
       Button: -75571457
@@ -656,6 +745,9 @@ TextureImporter:
       SwordIcon: -705314204
       d12: -1659747100
       d20: 352765249
+      d4_epic: 463593561
+      d6-epic: -741645486
+      d8_epic: -768427489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -21,7 +21,6 @@ MonoBehaviour:
     - id: D4
     - id: D4
     - id: D4
-    - id: D4
     - id: D6
     - id: D6
     - id: D6
@@ -30,3 +29,4 @@ MonoBehaviour:
     - id: Dublicator_D20
     - id: Reroller_D4
     - id: LoneWolf_D6
+    - id: Epic D4

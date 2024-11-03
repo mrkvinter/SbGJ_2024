@@ -18,7 +18,7 @@ namespace Code.Dices
         [field:SerializeField] public bool Duplicator { get; private set; }
         [field:SerializeField] public bool Reroller { get; private set; }
         [field:SerializeField] public bool LoneWolf { get; private set; }
-        // [field:SerializedField] public string Name { get; private set; }
+        [field:SerializeField] public bool IsEpicCube { get; private set; }
     }
     
     [Serializable]

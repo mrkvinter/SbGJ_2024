@@ -129,13 +129,22 @@ namespace Code.Dices
             {
                 if (DiceView.DiceHolderParent.Dices.Count == 1)
                 {
-                    var tween = DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+                    var tween = ShakeDice();
                     await UniTask.Delay(200);
                     SetValue(DiceEntry.MaxDiceValue);
                     await tween.AsyncWaitForCompletion();
                 }
             }
 
+            if (DiceEntry.IsEpicCube)
+            {
+                var tween = ShakeDice();
+                await UniTask.Delay(200);
+                SetValue(DiceEntry.MaxDiceValue);
+                await tween.AsyncWaitForCompletion();
+
+            }
+            
             updater?.Invoke();
             await UniTask.Delay(500);
 
@@ -145,18 +154,38 @@ namespace Code.Dices
                 if (index >= 1)
                 {
                     var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
-                    var tween = DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+                    var tween = leftDice.DiceState.ShakeDice();
                     await UniTask.Delay(200);
                     leftDice.DiceState.Reroll();
                     await tween.AsyncWaitForCompletion();
                     await leftDice.DiceState.CalculateValue(updater);
                 }
             }
+
+            if (DiceEntry.IsEpicCube)
+            {
+                foreach (var dice in DiceView.DiceHolderParent.Dices)
+                {
+                    if (dice.DiceState.DiceEntry.IsEpicCube)
+                    {
+                        continue;
+                    }
+
+                    var tween = dice.DiceState.ShakeDice();
+                    await UniTask.Delay(200);
+                    dice.DiceState.SetValue(dice.DiceState.DiceEntry.MaxDiceValue);
+                    await tween.AsyncWaitForCompletion();
+                    await dice.DiceState.CalculateValue(updater);
+                }
+            }
             
             await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
-            // await UniTask.Delay(350);
         }
 
+        private Tweener ShakeDice()
+        {
+            return DiceView.transform.DOShakeRotation(0.4f, 90*Vector3.forward, 10, 90f, false);
+        }
         public void OnPointerEnter()
         {
             Game.Instance.TooltipService.ShowTooltip(GetTooltip(), DiceView.transform, new Vector2(-10f, 20f));
