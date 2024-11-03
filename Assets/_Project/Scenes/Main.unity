@@ -2907,13 +2907,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spder
       objectReference: {fileID: 0}
+    - target: {fileID: 7578657094467809536, guid: 5bb12db096cf62241aae74d4d757a459, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5605926113855019701, guid: 5bb12db096cf62241aae74d4d757a459, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb12db096cf62241aae74d4d757a459, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
