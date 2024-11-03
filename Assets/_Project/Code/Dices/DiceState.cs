@@ -50,15 +50,6 @@ namespace Code.Dices
                     SetValue(0);
                 }
             }
-            // if (DiceEntry.Reroller)
-            // {
-            //     var index = DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1;
-            //     if (index >= 1)
-            //     {
-            //         var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
-            //         leftDice.DiceState.Reroll();
-            //     }
-            // }
         }
 
         private void Reroll()
@@ -98,14 +89,27 @@ namespace Code.Dices
             await DiceView.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
             await UniTask.Delay(500);
 
+            if (DiceView == null || DiceView.DiceHolderParent == null)
+            {
+                return;
+            }
+
             if (DiceEntry.Reroller)
             {
-                var index = DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1;
+                var index = DiceView.DiceHolderParent.Dices.IndexOf(DiceView);
                 if (index >= 1)
                 {
                     var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
                     leftDice.DiceState.Reroll();
                     await leftDice.DiceState.CalculateValue();
+                }
+            }
+
+            if (DiceEntry.LoneWolf)
+            {
+                if (DiceView.DiceHolderParent.Dices.Count == 1)
+                {
+                    SetValue(DiceEntry.MaxDiceValue);
                 }
             }
         }

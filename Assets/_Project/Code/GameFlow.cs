@@ -87,13 +87,6 @@ namespace Code
                 if (!playedDices.Contains(diceState))
                 {
                     gameState.Bag.Add(diceState);
-                    continue;
-                }
-
-                if (diceState.DiceView != null)
-                {
-                    Object.Destroy(diceState.DiceView.gameObject);
-                    diceState.ClearView();
                 }
             }
             

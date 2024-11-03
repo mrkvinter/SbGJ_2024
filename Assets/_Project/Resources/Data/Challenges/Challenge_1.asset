@@ -19,5 +19,5 @@ MonoBehaviour:
     <LeftEnemy>k__BackingField:
       id: Test
     <RightEnemy>k__BackingField:
-      id: 
+      id: Test
     <CoinsReward>k__BackingField: 2
