@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbd2e0b0f1442c3b5146d189ecbf985, type: 3}
+  m_Name: PaintingEnemy
+  m_EditorClassIdentifier: 
+  content:
+    <Id>k__BackingField: Painting
+    <HealthCount>k__BackingField: 5
+    <DamageCount>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 8575864240371752867, guid: 0f4bbe040c0903445a3ac2e3bcec67c3, type: 3}

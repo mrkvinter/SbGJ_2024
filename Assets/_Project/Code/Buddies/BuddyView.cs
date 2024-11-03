@@ -16,6 +16,12 @@ namespace Code.Buddies
             
             HpDiceHandHolder.maxDiceCount = buddy.BuddyEntry.HealthDiceCount;
             ShieldDiceHandHolder.maxDiceCount = buddy.BuddyEntry.ShieldDiceCount;
+            
+            HpDiceHandHolder.UpdateSlotsVisibility();
+            ShieldDiceHandHolder.UpdateSlotsVisibility();
+            
+            Game.Instance.attackDiceHolder.maxDiceCount = buddy.BuddyEntry.AttackDiceCount;
+            Game.Instance.attackDiceHolder.UpdateSlotsVisibility();
         }
     }
 }

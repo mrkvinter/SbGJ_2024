@@ -19,7 +19,7 @@ namespace Code.States
 
         protected override async UniTask OnEnter()
         {
-            var buddyCompleted = PlayerPrefs.GetInt("BuddyCompleted", 3);
+            var buddyCompleted = PlayerPrefs.GetInt("BuddyCompleted", 0);
 
             Game.Instance.BuddySelectorRoot.gameObject.SetActive(true);
 

@@ -167,7 +167,7 @@ namespace Code.Dices
             IsLocked = true;
         }
         
-        private void UpdateSlotsVisibility()
+        public void UpdateSlotsVisibility()
         {
             for (var i = 0; i < slots.Length; i++)
             {

@@ -7,7 +7,9 @@ using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Core.FinalStateMachine;
+using KvinterGames;
 using RG.ContentSystem.Core;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code
@@ -33,9 +35,11 @@ namespace Code
         private Game game;
         private GameState gameState;
         private IFsm fsm;
-        
+        private GameSettings gameSettings;
         
         public GameState GameState => gameState;
+        
+        private SoundController.LoopSound ambientNoise;
 
         public GameFlow(Game game)
         {
@@ -44,6 +48,13 @@ namespace Code
 
         public void StartGame()
         {
+            ambientNoise = SoundController.Instance.PlayLoop("amb_noise");
+            ambientNoise.AudioSource.volume = 0.5f;
+            ChangePitch();
+
+            ShowBlackScreen(true).Forget();
+
+            gameSettings = ContentManager.GetSettings<GameSettings>();
             gameState = new GameState();
             fsm = new Fsm();
             fsm.RegistryState(new FightState(this));
@@ -54,9 +65,15 @@ namespace Code
             {
                 gameState.Dices.Add(new DiceState(dice.Unwrap()));
             }
-
+            
             fsm.ToState<SelectBuddyState>().Forget();
+            HideBlackScreen().Forget();
             // fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
+        }
+
+        private void ChangePitch()
+        {
+            ambientNoise.AudioSource.DOPitch(Random.Range(0.8f, 1.2f), 2).SetEase(Ease.Linear).OnComplete(ChangePitch);
         }
 
         private async UniTask StartTurn()
@@ -132,14 +149,42 @@ namespace Code
 
         public void EnterFightState() => fsm.ToState<FightState>().Forget();
 
-        public async UniTask WinState()
+        public async UniTask WinFightState()
         {
-            throw new System.NotImplementedException();
+            await ShowBlackScreen();
+            gameState.ChallengeIndex++;
+            if (gameState.ChallengeIndex == gameSettings.Challenges.Length)
+            {
+                Debug.Log("You win!");
+                fsm.ToState<SelectBuddyState>().Forget();
+                return;
+            }
+            
+            fsm.ToState<FightState>().Forget();
+            await HideBlackScreen();
         }
 
         public void StartWithBuddy(ContentRef<BuddyEntry> buddy)
         {
             fsm.ToStateWithParams<AttributesSelectionState>(buddy).Forget();
+        }
+        
+        public async UniTask ShowBlackScreen(bool instant = false)
+        {
+            if (instant)
+            {
+                game.BlackScreen.gameObject.SetActive(true);
+                game.BlackScreen.color = new Color(0, 0, 0, 1);
+                return;
+            }
+            game.BlackScreen.gameObject.SetActive(true);
+            await game.BlackScreen.DOFade(1, 1).SetEase(Ease.Linear).ToUniTask();
+        }
+        
+        public async UniTask HideBlackScreen()
+        {
+            await game.BlackScreen.DOFade(0, 1).SetEase(Ease.Linear).ToUniTask();
+            game.BlackScreen.gameObject.SetActive(false);
         }
     }
 }

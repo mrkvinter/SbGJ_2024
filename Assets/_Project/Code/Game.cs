@@ -30,6 +30,7 @@ namespace Code
         [SerializeField] public Button AttackButton;
         [SerializeField] public Transform AttackHolder;
         [SerializeField] public Tooltip Tooltip;
+        [SerializeField] public Image BlackScreen;
 
         [Space] 
         public Transform BuddySelectorRoot;

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6588027564689193666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.774517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5859585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9590604
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010940012266171054, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016808543038850289, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2139644579, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+    - target: {fileID: 7579766001878506981, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_Name
+      value: PaintingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139605686892458326, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1821435391, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7579766001878506981, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6673342308889597838}
+  m_SourcePrefab: {fileID: 100100000, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+--- !u!1 &3629300067544524583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7579766001878506981, guid: 6a666aa473105f348bd9471f366e488c, type: 3}
+  m_PrefabInstance: {fileID: 6588027564689193666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6673342308889597838
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3629300067544524583}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9aeaaf087f57d3243988ab4b578a208f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

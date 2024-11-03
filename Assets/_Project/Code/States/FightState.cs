@@ -172,7 +172,7 @@ namespace Code.States
             if (enemies.Count == 0)
             {
                 gameFlow.GameState.ChallengeIndex++;
-                await gameFlow.WinState();
+                await gameFlow.WinFightState();
                 return;
             }
 

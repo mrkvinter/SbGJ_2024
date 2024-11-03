@@ -16,6 +16,8 @@ MonoBehaviour:
     <Id>k__BackingField: 
     Challenges:
     - id: 1
+    - id: 2
+    - id: 3
     TutorialBuddy:
       id: Buddy_Tutor
     FirstBuddy:
