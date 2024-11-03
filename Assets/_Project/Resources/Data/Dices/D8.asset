@@ -15,6 +15,7 @@ MonoBehaviour:
   content:
     <Id>k__BackingField: D8
     <MaxDiceValue>k__BackingField: 8
+    <DiceRank>k__BackingField: 1
     <DicePrefab>k__BackingField: {fileID: 2396086552863000784, guid: 9bd5e1c20c415cb41a0e37b0fb66d495, type: 3}
     <DiceSprite>k__BackingField: {fileID: 1565232741, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     <DiceColor>k__BackingField: {r: 1, g: 1, b: 1, a: 1}

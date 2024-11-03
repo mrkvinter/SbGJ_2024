@@ -1,5 +1,6 @@
 using Code.Buddies;
 using Code.Dices;
+using Code.States;
 using Code.Utilities;
 using Code.Visual;
 using Cysharp.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace Code
         [SerializeField] public Transform FrontEnemyPoint;
         [SerializeField] public Transform LeftEnemyPoint;
         [SerializeField] public Transform RightEnemyPoint;
+        [Space]
+        public ShopItem[] ShopSlots;
 
         [Space]
         [SerializeField] public Button AttackButton;
@@ -32,6 +35,7 @@ namespace Code
         [SerializeField] public Tooltip Tooltip;
         [SerializeField] public Image BlackScreen;
         [SerializeField] public Transform GameUIRoot;
+        [SerializeField] public TMP_Text GoldCountText;
 
         [Space] 
         public Transform BuddySelectorRoot;

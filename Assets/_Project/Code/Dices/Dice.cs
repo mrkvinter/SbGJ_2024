@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
+﻿using System;
 using DG.Tweening;
 using KvinterGames;
 using TMPro;
@@ -11,7 +10,7 @@ using UnityEngine.UIElements;
 
 namespace Code.Dices
 {
-    public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
+    public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public TMP_Text diceCountText;
         public SpriteRenderer DiceSpriteRenderer;
@@ -30,7 +29,8 @@ namespace Code.Dices
         
         public DiceHandHolder DiceHolderParent => diceHolderParent;
         public DiceState DiceState => diceState;
-        
+        public event Action OnClick;
+
         private void Awake()
         {
             sortingGroup = GetComponent<SortingGroup>();
@@ -173,6 +173,11 @@ namespace Code.Dices
         public void OnPointerExit(PointerEventData eventData)
         {
             diceState.OnPointerExit();
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            OnClick?.Invoke();
         }
     }
 }

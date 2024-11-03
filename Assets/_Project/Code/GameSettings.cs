@@ -11,6 +11,8 @@ namespace Code
     [Serializable]
     public class GameSettings : SettingsEntry
     {
+        public int StartCoins;
+
         public ContentRef<ChallengeEntry>[] Challenges;
         
         [Space]
@@ -31,5 +33,6 @@ namespace Code
 
         [Title("===TEST===")] 
         public bool AutoSelectHpAndShield;
+
     }
 }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content:
     <Id>k__BackingField: 
+    StartCoins: 5
     Challenges:
     - id: 1
     - id: 2

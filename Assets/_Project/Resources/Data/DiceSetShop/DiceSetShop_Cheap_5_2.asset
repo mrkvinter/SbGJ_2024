@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed113c7b80854134b42807f6b767b624, type: 3}
+  m_Name: DiceSetShop_Cheap_5_2
+  m_EditorClassIdentifier: 
+  content:
+    <Id>k__BackingField: Cheap_5_2
+    <Icon>k__BackingField: {fileID: -342345063, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+    <Name>k__BackingField: Simple Set
+    <Price>k__BackingField: 5
+    <DiceCount>k__BackingField: 5
+    <DiceToSelect>k__BackingField: 2
+    <Probabilities>k__BackingField:
+    - <Rank>k__BackingField: 0
+      <Probability>k__BackingField: 2
+    - <Rank>k__BackingField: 1
+      <Probability>k__BackingField: 6
+    - <Rank>k__BackingField: 2
+      <Probability>k__BackingField: 2
+    - <Rank>k__BackingField: 3
+      <Probability>k__BackingField: 1

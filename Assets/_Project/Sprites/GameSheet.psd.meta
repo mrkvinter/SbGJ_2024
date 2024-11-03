@@ -1023,7 +1023,7 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1032,6 +1032,28 @@ TextureImporter:
       bones: []
       spriteID: 09a4756063ce59f4ab2033d86eb379cc
       internalID: -8675998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiceSet
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 623
+        width: 85
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e66fd1aca28cd409df8d2bf550bfaf
+      internalID: -342345063
       vertices: []
       indices: 
       edges: []
@@ -1050,7 +1072,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Background: -1193750981
+      Background: -998789075
       BuddySon: -1197132654
       Buddy_Heart: 4170510071181775271
       Buddy_Heart_Selection: 1914867013
@@ -1061,10 +1083,11 @@ TextureImporter:
       Coin: -8675998
       D8: 1565232741
       DiceHolderBack: 1311892621
+      DiceSet: -342345063
       DiceZone: -1519455761
       Dice_d4: 4988286562539615388
       Dice_d6: 6994111720309722666
-      GameSheet_2: -1064802336
+      GameSheet_2: -1506290788
       Painting: -1118719202
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579

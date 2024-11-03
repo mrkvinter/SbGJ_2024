@@ -13,22 +13,14 @@ namespace Code.States
         private GameFlow gameFlow;
         private GameRunState gameRunState;
 
-        public Buddy Buddy { get; private set; }
-
-        public AttributesSelectionState(GameFlow gameFlow, GameRunState parentFsm)
+        public AttributesSelectionState(GameFlow gameFlow, GameRunState gameRunState)
         {
             this.gameFlow = gameFlow;
-            gameRunState = parentFsm;
+            this.gameRunState = gameRunState;
         }
 
         protected override async UniTask OnEnter()
         {
-            var buddyEntry = ContentManager.GetContent(Arguments);
-            var view = Object.Instantiate(buddyEntry.Prefab, Game.Instance.BuddyPoint);
-            view.transform.localPosition = Vector3.zero;
-            Buddy = new Buddy(buddyEntry, view);
-            gameFlow.GameState.Buddy = Buddy;
-            
             Game.Instance.AttackButton.gameObject.SetActive(true);
             Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
 
@@ -42,20 +34,21 @@ namespace Code.States
 
             if (ContentManager.GetSettings<GameSettings>().AutoSelectHpAndShield)
             {
-                while (Buddy.BuddyView.HpDiceHandHolder.Dices.Count < Buddy.BuddyEntry.HealthDiceCount)
+                var buddy = gameRunState.Buddy;
+                while (buddy.BuddyView.HpDiceHandHolder.Dices.Count < buddy.BuddyEntry.HealthDiceCount)
                 {
                     var dice = gameFlow.GameState.Hand[^1];
                     gameFlow.GameState.Hand.Remove(dice);
                     dice.DeOccupy();
-                    dice.Occupy(Buddy.BuddyView.HpDiceHandHolder);
+                    dice.Occupy(buddy.BuddyView.HpDiceHandHolder);
                 }
 
-                while (Buddy.BuddyView.ShieldDiceHandHolder.Dices.Count < Buddy.BuddyEntry.ShieldDiceCount)
+                while (buddy.BuddyView.ShieldDiceHandHolder.Dices.Count < buddy.BuddyEntry.ShieldDiceCount)
                 {
                     var dice = gameFlow.GameState.Hand[^1];
                     gameFlow.GameState.Hand.Remove(dice);
                     dice.DeOccupy();
-                    dice.Occupy(Buddy.BuddyView.ShieldDiceHandHolder);
+                    dice.Occupy(buddy.BuddyView.ShieldDiceHandHolder);
                 }
             }
         }
@@ -68,22 +61,22 @@ namespace Code.States
 
         private void OnAttackButtonClicked() => UniTask.Create(async () =>
         {
-            if (!Buddy.BuddyView.HpDiceHandHolder.IsFull())
+            if (!gameRunState.Buddy.BuddyView.HpDiceHandHolder.IsFull())
             {
                 Debug.Log("HP dice hand is not full");
                 //TODO: Show error message
                 return;
             }
             
-            if (!Buddy.BuddyView.ShieldDiceHandHolder.IsFull())
+            if (!gameRunState.Buddy.BuddyView.ShieldDiceHandHolder.IsFull())
             {
                 Debug.Log("Shield dice hand is not full");
                 //TODO: Show error message
                 return;
             }
             
-            Buddy.BuddyView.HpDiceHandHolder.Lock();
-            Buddy.BuddyView.ShieldDiceHandHolder.Lock();
+            gameRunState.Buddy.BuddyView.HpDiceHandHolder.Lock();
+            gameRunState.Buddy.BuddyView.ShieldDiceHandHolder.Lock();
             
             gameFlow.GameState.Dices.Clear();
             gameFlow.GameState.Dices.AddRange(Game.Instance.handDiceHolder.Dices.Select(dice => dice.DiceState));

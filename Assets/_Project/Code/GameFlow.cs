@@ -23,6 +23,7 @@ namespace Code
         public int DrawnDicesCount = 4;
         public int CurrentDrawnDicesCount = 0;
         public int ChallengeIndex = 0;
+        public int Coins = 0;
         
         public void ShuffleBag()
         {

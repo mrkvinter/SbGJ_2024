@@ -19,6 +19,9 @@ namespace Code.Dices
 
         private GameSettings gameSettings;
         private bool wasRerolledOnThisTurn;
+        
+        public event Action<DiceState> OnClick; 
+        
 
         public DiceState(DiceEntry diceEntry)
         {
@@ -42,8 +45,11 @@ namespace Code.Dices
             DiceView = dice;
             DiceView.Init(this);
             DiceView.SetValue(Value);
+
+            DiceView.OnClick += HandleClick;
         }
         
+        private void HandleClick() => OnClick?.Invoke(this);
         public void SetIsHot(bool isHot)
         {
             IsHot = isHot;
@@ -72,6 +78,7 @@ namespace Code.Dices
 
         public void ClearView()
         {
+            DiceView.OnClick -= HandleClick;
             DiceView = null;
         }
         
@@ -284,5 +291,13 @@ namespace Code.Dices
         {
             Game.Instance.TooltipService.HideTooltip();
         }
+    }
+    
+    public enum DiceRank
+    {
+        Poor,
+        Common,
+        Rare,
+        Epic
     }
 }
