@@ -2,6 +2,7 @@
 using System.Linq;
 using Code.Dices;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using RG.ContentSystem.Core;
 using UnityEngine;
 
@@ -38,9 +39,11 @@ namespace Code.Buddies
                     var damageToTake = Mathf.Min(shieldDiceValue, damage);
                     damage -= damageToTake;
                     shieldDice.DiceState.SetValue(shieldDiceValue - damageToTake);
+                    await shieldDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (shieldDice.DiceState.Value == 0)
                     {
                         await shieldDice.DiceState.DestroyDice();
+                        await UniTask.Delay(100);
                     }
                 }
                 else if (healthDiceHandHolder.Dices.Count > 0)
@@ -50,14 +53,31 @@ namespace Code.Buddies
                     var damageToTake = Mathf.Min(healthDiceValue, damage);
                     damage -= damageToTake;
                     healthDice.DiceState.SetValue(healthDiceValue - damageToTake);
+                    await healthDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (healthDice.DiceState.Value == 0)
                     {
                         await healthDice.DiceState.DestroyDice();
+                        await UniTask.Delay(100);
                     }
                 }
                 
                 await UniTask.Yield();
             }
+        }
+
+        public DiceState GetNextDice()
+        {
+            if (shieldDiceHandHolder.Dices.Count > 0)
+            {
+                return shieldDiceHandHolder.Dices[^1].DiceState;
+            }
+
+            if (healthDiceHandHolder.Dices.Count > 0)
+            {
+                return healthDiceHandHolder.Dices[^1].DiceState;
+            }
+
+            return null;
         }
     }
     

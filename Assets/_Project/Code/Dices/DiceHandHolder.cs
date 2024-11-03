@@ -14,6 +14,8 @@ namespace Code.Dices
     public class DiceHandHolder : MonoBehaviour, IDiceDropHandler
     {
         [SerializeField] private float offset = 0.09f;
+        [SerializeField] private Transform[] slots;
+        
         public int maxDiceCount = 3;
 
         private List<Dice> dices = new();
@@ -95,20 +97,46 @@ namespace Code.Dices
             for (int i = 0; i < count; i++)
             {
                 var dice = dices[i];
+                var shift = 0f;
                 var x = i * offset - fullWidth / 2;
                 if (previewIndex.HasValue)
                 {
                     if (i - previewIndex.Value >= 0)
                     {
-                        x += diceWidth * 0.5f;
+                        shift = diceWidth * 0.5f;
                     }
                     else if (i - previewIndex.Value <= -1)
                     {
-                        x -= diceWidth * 0.5f;
+                        shift = -diceWidth * 0.5f;
                     }
                 }
 
-                dice.transform.DOLocalMove(new Vector3(x, 0, -0.1f), 0.1f);
+                if (slots.Length != 0)
+                {
+                    if (previewIndex.HasValue && i - previewIndex.Value >= 0)
+                    {
+                        shift = diceWidth * 2f;
+                    }
+                    else if (previewIndex.HasValue && i - previewIndex.Value <= -1)
+                    {
+                        shift = 0;
+                    }
+                    if (slots.Length > i)
+                    {
+                        var endValue = new Vector3(slots[i].position.x + shift, slots[i].position.y, -0.1f);
+                        dice.transform.DOMove(endValue, 0.1f);
+                    }
+                    else
+                    {
+                        var distance = slots[1].localPosition - slots[0].localPosition;
+                        var endValue = new Vector3(slots[0].position.x + distance.x * i + shift, slots[0].position.y, -0.1f);
+                        dice.transform.DOMove(endValue, 0.1f);
+                    }
+                }
+                else
+                {
+                    dice.transform.DOLocalMove(new Vector3(x + shift, 0, -0.1f), 0.1f);
+                }
             }
         }
 

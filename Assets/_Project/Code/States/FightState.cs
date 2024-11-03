@@ -99,9 +99,10 @@ namespace Code.States
             var countFX = attackAmount/4f;
             for (var i = 0; i < countFX; i++)
             {
-                var fx = Object.Instantiate(game.attackFx, selectedEnemy.View.transform);
-                fx.transform.localPosition = game.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
-                var task = fx.transform.DOMove(selectedEnemy.View.transform.position, 0.25f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
+                var fx = Object.Instantiate(game.attackFx);
+                fx.transform.position = game.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                fx.transform.position = fx.transform.position.WithZ(-0.1f);
+                var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.25f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
                     .ContinueWith(() =>
                     {
                         Object.Destroy(fx);
@@ -144,6 +145,13 @@ namespace Code.States
             await gameFlow.DrawHand();
         }
         
+        private async UniTask StartNextTurn()
+        {
+            if (selectedEnemy == null) 
+                OnEnemyClicked(enemies[0]);
+            
+            await gameFlow.DrawHand();
+        }
         private async UniTask EndTurn()
         {
             foreach (var diceState in gameFlow.GameState.Hand)
@@ -163,7 +171,7 @@ namespace Code.States
             await EnemyTurn();
             await UniTask.Delay(1000);
             
-            await gameFlow.DrawHand();
+            await StartNextTurn();
         }
         
         private async UniTask EnemyTurn()
@@ -171,6 +179,23 @@ namespace Code.States
             foreach (var enemy in enemies)
             {
                 var damage = enemy.EnemyEntry.DamageCount;
+                var countFX = damage/4f;
+                var tasks = new List<UniTask>();
+                for (var i = 0; i < countFX; i++)
+                {
+                    var fx = Object.Instantiate(Game.Instance.attackFx);
+                    fx.transform.position = Game.Instance.attackPoint.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
+                    fx.transform.position = fx.transform.position.WithZ(-0.1f);
+                    var nextDice = gameFlow.GameState.Buddy.GetNextDice();
+                    var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f).SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
+                        .ContinueWith(() =>
+                        {
+                            Object.Destroy(fx);
+                        });
+                    tasks.Add(task);                
+                }
+                
+                await UniTask.WhenAll(tasks);
                 await gameFlow.GameState.Buddy.TakeDamage(damage);
             }
         }

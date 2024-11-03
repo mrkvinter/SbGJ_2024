@@ -380,7 +380,7 @@ TextureImporter:
       name: PaintingEnemy_Selection
       rect:
         serializedVersion: 2
-        x: 405
+        x: 404
         y: 328
         width: 159
         height: 189
@@ -428,8 +428,8 @@ TextureImporter:
         y: 78
         width: 20
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08510638}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,8 +450,8 @@ TextureImporter:
         y: 78
         width: 20
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08510638}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,6 +460,116 @@ TextureImporter:
       bones: []
       spriteID: 9bc1b1f1437413d4bb0f70970353e4e5
       internalID: 1096519518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 219
+        width: 145
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7418639cd5887054a95e31e2bf35c6c8
+      internalID: -75571457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiceZone
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 127
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f64cd89dc8ca794ca41897e4e4a330f
+      internalID: -1519455761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DiceHolderBack
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 70
+        width: 355
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5c6b0900968ad4e94d90e08e77ff33
+      internalID: 1311892621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spide
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 345
+        width: 291
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e3fcd35be573e47af0cec9719f373c
+      internalID: 1213118286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderSelector
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 193
+        width: 295
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5016949, y: 0.4964029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0206c8ffbaf9c8840a695afa755570c8
+      internalID: -1009616588
       vertices: []
       indices: 
       edges: []
@@ -481,10 +591,13 @@ TextureImporter:
       Background: -783017744
       Buddy_Heart: 4170510071181775271
       Buddy_Heart_Selection: 1914867013
+      Button: -75571457
       CandleKeeper: -446791613
       Cndle_0: 1771381697
       Cndle_1: 1096519518
       D8: 1565232741
+      DiceHolderBack: 1311892621
+      DiceZone: -1519455761
       Dice_d4: 4988286562539615388
       Dice_d6: 6994111720309722666
       GameSheet_2: -8693281611674993084
@@ -492,6 +605,8 @@ TextureImporter:
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579
       Selector: 482555930
+      Spide: 1213118286
+      SpiderSelector: -1009616588
       SwordIcon: -705314204
       d12: -1659747100
       d20: 352765249

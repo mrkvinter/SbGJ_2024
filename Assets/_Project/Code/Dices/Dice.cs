@@ -30,6 +30,7 @@ namespace Code.Dices
         {
             collider2D = GetComponent<Collider2D>();
             LeftIndicator.color = LeftIndicator.color.WithAlpha(0);
+            LeftIndicator.gameObject.SetActive(false);
         }
         
         public void Init(DiceState diceState)
@@ -60,6 +61,7 @@ namespace Code.Dices
             if (diceState.HaveToShowLeftIndicator)
             {
                 LeftIndicator.DOKill();
+                LeftIndicator.gameObject.SetActive(true);
                 LeftIndicator.DOFade(1, 0.2f);
             }
 
@@ -105,7 +107,8 @@ namespace Code.Dices
             if (diceState.HaveToShowLeftIndicator)
             {
                 LeftIndicator.DOKill();
-                LeftIndicator.DOFade(0, 0.2f);
+                LeftIndicator.DOFade(0, 0.2f)
+                    .OnComplete(() => LeftIndicator.gameObject.SetActive(false));
             }
             
             previewDiceHolder?.OccupyPreview(null);
