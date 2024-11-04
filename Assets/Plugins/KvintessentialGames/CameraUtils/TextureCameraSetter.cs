@@ -1,41 +1,39 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace KvinterGames.CameraUtils
 {
-    public class TextureCameraSetter : MonoBehaviour
+    public class TextureCameraSetter : BaseTextureCameraSetter
     {
-        public Camera textureCamera;
         public RawImage renderTexture;
+        
+        // protected override void SetTexture()
+        // {
+        //     if (cameraTextureSource.renderTexture != null)
+        //     {
+        //         renderTexture.texture = cameraTextureSource.renderTexture;
+        //         return;
+        //     }
+        //     
+        //     // screenSize = new Vector2Int(Screen.width, Screen.height);
+        //     var texture = new RenderTexture(screenSize.x, screenSize.y, 16, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear)
+        //     {
+        //         filterMode = FilterMode.Point,
+        //         useMipMap = false
+        //     };
+        //
+        //     texture.filterMode = FilterMode.Point;
+        //     texture.useMipMap = false;
+        //     texture.Create();
+        //
+        //     textureCamera.targetTexture = texture;
+        //     SetTexture(texture);
+        //     cameraTextureSource.renderTexture = texture;
+        // }
 
-        private void Awake()
+        protected override void SetTexture(RenderTexture texture)
         {
-            SetTexture();
-        }
-
-        private void SetTexture()
-        {
-            var rectTransform = renderTexture.rectTransform.rect;
-            var texture = new RenderTexture((int)rectTransform.width, (int)rectTransform.height, 16, UnityEngine.Experimental.Rendering.DefaultFormat.HDR);
-            texture.filterMode = FilterMode.Point;
-            texture.useMipMap = false;
-            texture.Create();
-
-            textureCamera.targetTexture = texture;
-            renderTexture.texture = textureCamera.targetTexture;
-        }
-
-        private void OnValidate()
-        {
-            if (textureCamera == null || renderTexture == null)
-            {
-                return;
-            }
-
-            SetTexture();
+            renderTexture.texture = texture;
         }
     }
 }

@@ -216,7 +216,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1565232741, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+  m_Sprite: {fileID: -2101982325, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 0.32224694, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.75
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -388,7 +388,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 291259, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+  m_Sprite: {fileID: 851481272, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 12
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06ac47b8f59b72c4faee15aa8dec01d3, type: 2}
   m_sharedMaterial: {fileID: -8982137716313497680, guid: 06ac47b8f59b72c4faee15aa8dec01d3, type: 2}
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 23.6
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1

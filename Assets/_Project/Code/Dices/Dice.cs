@@ -1,16 +1,15 @@
 ﻿using System;
+using Code.Utilities;
 using DG.Tweening;
 using KvinterGames;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
-using UnityEngine.UIElements;
 
 namespace Code.Dices
 {
-    public class Dice : MonoBehaviour, IDragAndDropEvent, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public class Dice : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public TMP_Text diceCountText;
         public SpriteRenderer DiceSpriteRenderer;

@@ -15,7 +15,8 @@ MonoBehaviour:
   content:
     <Id>k__BackingField: Cheap_5_2
     <Icon>k__BackingField: {fileID: -342345063, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
-    <Name>k__BackingField: Simple Set
+    <Name>k__BackingField: Extended Basic Set
+    <Description>k__BackingField: You can choose 2 die out of 5
     <Price>k__BackingField: 5
     <DiceCount>k__BackingField: 5
     <DiceToSelect>k__BackingField: 2

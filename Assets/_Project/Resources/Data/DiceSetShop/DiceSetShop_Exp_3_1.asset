@@ -16,6 +16,7 @@ MonoBehaviour:
     <Id>k__BackingField: Exp_3_1
     <Icon>k__BackingField: {fileID: -342345063, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     <Name>k__BackingField: Set With Good Dices
+    <Description>k__BackingField: You can choose 1 die out of 3
     <Price>k__BackingField: 5
     <DiceCount>k__BackingField: 3
     <DiceToSelect>k__BackingField: 1

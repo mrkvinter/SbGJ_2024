@@ -46,6 +46,9 @@ namespace Code.States
             if (!challengeEntry.RightEnemy.IsEmpty)
                 SpawnEnemy(challengeEntry.RightEnemy, Game.Instance.RightEnemyPoint);
 
+            if (gameFlow.GameState.Buddy.BuddyEntry.IsTutorialBuddy)
+                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.tutor_third);
+
             await StartTurn();
         }
 
@@ -83,12 +86,14 @@ namespace Code.States
         private void OnAttackButtonClicked() => Attack().Forget();
 
         private async UniTask Attack()
-        {
+        { 
             if (Game.Instance.attackDiceHolder.Dices.Count == 0)
             {
                 EndTurn().Forget();
                 return;
             }
+
+            Game.Instance.DialoguePanel.Clear();
 
             Game.Instance.AttackButton.interactable = false;
 

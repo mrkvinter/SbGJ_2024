@@ -1,6 +1,7 @@
 using Code.Buddies;
 using Code.Dices;
 using Code.States;
+using Code.UI;
 using Code.Utilities;
 using Code.Visual;
 using Cysharp.Threading.Tasks;
@@ -28,6 +29,8 @@ namespace Code
         [SerializeField] public Transform RightEnemyPoint;
         [Space]
         public ShopItem[] ShopSlots;
+
+        public DialoguePanel DialoguePanel;
 
         [Space]
         [SerializeField] public Button AttackButton;
@@ -93,6 +96,11 @@ namespace Code
         {
             var scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
+        }
+        
+        public void SetTextToButton(string text)
+        {
+            AttackButton.GetComponentInChildren<TMP_Text>().text = text;
         }
     }
 }

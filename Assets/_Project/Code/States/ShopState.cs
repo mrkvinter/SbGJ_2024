@@ -3,10 +3,13 @@ using System.Linq;
 using Code.Buddies;
 using Code.Dices;
 using Code.DiceSets;
+using Code.UI;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using Game.Core.FinalStateMachine;
+using KvinterGames;
 using RG.ContentSystem.Core;
+using TMPro;
 using UnityEngine;
 
 namespace Code.States
@@ -21,6 +24,7 @@ namespace Code.States
         public ShopState(GameFlow gameFlow, GameRunState gameRunState)
         {
             this.gameFlow = gameFlow;
+            this.gameRunState = gameRunState;
 
             fsm = new Fsm();
             fsm.RegistryState(new SelectDiceFromDiceSet(gameFlow, this));
@@ -28,6 +32,15 @@ namespace Code.States
 
         protected override async UniTask OnEnter()
         {
+            if (gameFlow.GameState.Buddy.BuddyEntry.IsTutorialBuddy)
+            {
+                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.tutor_first);
+            }
+
+            Game.Instance.AttackButton.gameObject.SetActive(true);
+            // Game.Instance.AttackButton.GetComponentInChildren<TMP_Text>()
+            Game.Instance.AttackButton.onClick.AddListener(HandleAttackButton);
+
             shopItems = new List<ShopItem>();
             for (var i = 0; i < Arguments.Length; i++)
             {
@@ -36,13 +49,22 @@ namespace Code.States
                 shopEntryView.SetContent(shopEntry);
                 shopEntryView.gameObject.SetActive(true);
                 shopEntryView.OnSelected += OnDiceSetSelected;
-                
+
                 shopItems.Add(shopEntryView);
             }
         }
 
+        private void HandleAttackButton()
+        {
+            gameRunState.OnShopClosed();
+        }
+
         protected override async UniTask OnExit()
         {
+            Game.Instance.AttackButton.gameObject.SetActive(false);
+            Game.Instance.AttackButton.onClick.RemoveListener(HandleAttackButton);
+            Game.Instance.DialoguePanel.Clear();
+            
             for (var i = 0; i < Game.Instance.ShopSlots.Length; i++)
             {
                 Game.Instance.ShopSlots[i].gameObject.SetActive(false);
@@ -51,6 +73,13 @@ namespace Code.States
 
         public void OnDiceSetSelected(ShopItem shopItem)
         {
+            if (Game.Instance.GameFlow.GameState.Coins < shopItem.DiceSetShopEntry.Price)
+            {
+                return;
+            }
+
+            Game.Instance.AttackButton.gameObject.SetActive(false);
+
             for (var i = 0; i < Game.Instance.ShopSlots.Length; i++)
             {
                 Game.Instance.ShopSlots[i].gameObject.SetActive(false);
@@ -58,17 +87,21 @@ namespace Code.States
 
             shopItems.Remove(shopItem);
             gameFlow.GameState.Coins -= shopItem.DiceSetShopEntry.Price;
+            Game.Instance.GoldCountText.text = gameFlow.GameState.Coins.ToString();
+            SoundController.Instance.PlaySound("coin", 0.1f, pitch: 0.7f);
             var diceSetEntry = shopItem.DiceSetShopEntry;
             fsm.ToStateWithParams<SelectDiceFromDiceSet>(diceSetEntry);
         }
-        
+
         public void AllDiceSelected()
         {
             fsm.Exit();
+            Game.Instance.AttackButton.gameObject.SetActive(true);
 
             for (var i = 0; i < shopItems.Count; i++)
             {
                 shopItems[i].gameObject.SetActive(true);
+                shopItems[i].UpdateColorPrice();
             }
         }
     }
@@ -78,8 +111,9 @@ namespace Code.States
         private GameFlow gameFlow;
         private ShopState shopState;
         private GameRunState gameRunState;
-        
+
         private int countToSelect;
+
         public SelectDiceFromDiceSet(GameFlow gameFlow, ShopState shopState)
         {
             this.gameFlow = gameFlow;
@@ -93,7 +127,7 @@ namespace Code.States
             var dices = new List<DiceState>();
             countToSelect = Arguments.DiceToSelect;
             var fullProbability = Arguments.Probabilities.Sum(e => e.Probability);
-            
+
             for (var i = 0; i < Arguments.DiceCount; i++)
             {
                 var random = Random.Range(0, fullProbability);
@@ -114,7 +148,7 @@ namespace Code.States
                 diceState.SetView(Object.Instantiate(diceState.DiceEntry.DicePrefab));
                 dices.Add(diceState);
                 diceState.OnClick += OnDiceSelected;
-                
+
                 diceState.DiceView.SetDiceHolderParent(Game.Instance.handDiceHolder);
                 Game.Instance.handDiceHolder.Occupy(diceState.DiceView);
             }
@@ -139,6 +173,7 @@ namespace Code.States
                 shopState.AllDiceSelected();
             }
         }
+
         public void EnterGameRunState(ContentRef<DiceSetEntry> diceSetEntry) => UniTask.Create(async () =>
         {
             // gameFlow.GameState.DiceSet = new DiceSet(diceSetEntry);

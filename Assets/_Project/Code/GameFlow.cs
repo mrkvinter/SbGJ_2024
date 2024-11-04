@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 using Code.Buddies;
 using Code.Dices;
 using Code.States;
@@ -9,7 +8,6 @@ using DG.Tweening;
 using Game.Core.FinalStateMachine;
 using KvinterGames;
 using RG.ContentSystem.Core;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Code

@@ -19,6 +19,7 @@ namespace Code.Dices
 
         private GameSettings gameSettings;
         private bool wasRerolledOnThisTurn;
+        private bool wasStrongCubeOnThisTurn;
         
         public event Action<DiceState> OnClick; 
         
@@ -248,8 +249,9 @@ namespace Code.Dices
                 }
             }
             
-            if (DiceEntry.IsStrongCube)
+            if (DiceEntry.IsStrongCube && !wasStrongCubeOnThisTurn)
             {
+                wasStrongCubeOnThisTurn = true;
                 foreach (var dice in DiceView.DiceHolderParent.Dices)
                 {
                     // if (dice.DiceState == this)
@@ -271,6 +273,7 @@ namespace Code.Dices
         public void OnEndTurn()
         {
             wasRerolledOnThisTurn = false;
+            wasStrongCubeOnThisTurn = false;
         }
 
         private UniTask ShakeDice()
@@ -284,6 +287,10 @@ namespace Code.Dices
         }
         public void OnPointerEnter()
         {
+            if (DiceView == null)
+            {
+                return;
+            }
             Game.Instance.TooltipService.ShowTooltip(GetTooltip(), DiceView.transform, new Vector2(-10f, 20f));
         }
 

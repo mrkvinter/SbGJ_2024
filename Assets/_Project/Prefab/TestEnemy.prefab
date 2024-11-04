@@ -655,6 +655,7 @@ MonoBehaviour:
   healthText: {fileID: 1826000781542842861}
   spriteRenderer: {fileID: 8139605686892458326}
   light2D: {fileID: 7441226152259415965}
+  shadowSpriteRenderer: {fileID: 0}
 --- !u!50 &358783559539100132
 Rigidbody2D:
   serializedVersion: 5

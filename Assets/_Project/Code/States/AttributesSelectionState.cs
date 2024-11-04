@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Code.States
 {
-    public class AttributesSelectionState : BaseState<ContentRef<BuddyEntry>>
+    public class AttributesSelectionState : BaseState
     {
         private GameFlow gameFlow;
         private GameRunState gameRunState;
@@ -26,6 +26,12 @@ namespace Code.States
 
             gameFlow.GameState.Bag.Clear();
             gameFlow.GameState.Bag.AddRange(gameFlow.GameState.Dices);
+
+            UniTask task = UniTask.CompletedTask;
+            if (gameFlow.GameState.Buddy.BuddyEntry.IsTutorialBuddy)
+            {
+                task = Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.tutor_second);
+            }
 
             while (gameFlow.GameState.Bag.Count > 0)
             {
@@ -57,6 +63,8 @@ namespace Code.States
         {
             Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.onClick.RemoveListener(OnAttackButtonClicked);
+            
+            Game.Instance.DialoguePanel.Clear();
         }
 
         private void OnAttackButtonClicked() => UniTask.Create(async () =>
