@@ -18,3 +18,11 @@ MonoBehaviour:
     <ShieldDiceCount>k__BackingField: 1
     <AttackDiceCount>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 3235274249375672811, guid: dcffca7331986c14e91eaecbef081371, type: 3}
+    <IsTutorialBuddy>k__BackingField: 0
+    <Index>k__BackingField: 3
+    <HasTwist>k__BackingField: 1
+    TwistIndex: 1
+    Challenges:
+    - id: 1
+    - id: 2
+    - id: 3

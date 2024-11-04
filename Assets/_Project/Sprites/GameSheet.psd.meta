@@ -1058,6 +1058,138 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BuddySon_Scare
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 605
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069462ff7f9e9674d8a8fe5163c07192
+      internalID: 812016600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remains BuddySon
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 466
+        width: 102
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9489b5341ee3c4648b05b8f999152db3
+      internalID: 1374934741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireSkull
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 377
+        width: 85
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f33683ad85f9d4e9372252d626e376
+      internalID: -579399765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FireSkull_Selection
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 375
+        width: 89
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8fd724a7fd9c3418465c2bd9e70156
+      internalID: -593146168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 190
+        width: 91
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067d73775c38e5a42b1a0dccbc5fc2bf
+      internalID: -7082244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull_Selection
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 188
+        width: 95
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd9311d90f70284592ff8beb9171907
+      internalID: -1775383660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1074,6 +1206,7 @@ TextureImporter:
     nameFileIdTable:
       Background: -998789075
       BuddySon: -1197132654
+      BuddySon_Scare: 812016600
       Buddy_Heart: 4170510071181775271
       Buddy_Heart_Selection: 1914867013
       Button: -75571457
@@ -1087,13 +1220,18 @@ TextureImporter:
       DiceZone: -1519455761
       Dice_d4: 4988286562539615388
       Dice_d6: 6994111720309722666
+      FireSkull: -579399765
+      FireSkull_Selection: -593146168
       GameSheet_2: -1506290788
       Painting: -1118719202
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579
+      Remains BuddySon: 1374934741
       Selector: 482555930
       SimpleBudd: -552996500
       SimpleBuddy: -536513564
+      Skull: -7082244
+      Skull_Selection: -1775383660
       Spide: 1213118286
       SpiderSelector: -1009616588
       SwordIcon: -705314204

@@ -2,7 +2,7 @@
 
 namespace Code.UI
 {
-    public class Dialogue
+     public class Dialogue
     {
         private readonly List<DialogueStage> stages = new();
 
@@ -60,13 +60,23 @@ namespace Code.UI
         {
             return new Dialogue().Clear();
         }
+
+        public Dialogue PlayAnimation()
+        {
+            stages.Add(new DialogueStage
+            {
+                Type = DialogueStageType.Animation,
+            });
+            return this;
+        }
     }
 
     public enum DialogueStageType
     {
         Text,
         Delay,
-        Clear
+        Clear,
+        Animation,
     }
     
     public enum DialogueSpeed

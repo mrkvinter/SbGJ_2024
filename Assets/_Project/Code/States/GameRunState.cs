@@ -52,6 +52,9 @@ namespace Code.States
         
         protected override async UniTask OnExit()
         {
+            Object.Destroy(Buddy.BuddyView.gameObject);
+            Buddy = null;
+            gameFlow.GameState.Buddy = null;
             Game.Instance.GameUIRoot.gameObject.SetActive(false);
             fsm.Exit();
         }
@@ -65,7 +68,8 @@ namespace Code.States
 
         public async UniTask WinFightState()
         {
-            var challenge = gameSettings.Challenges[gameFlow.GameState.ChallengeIndex].Unwrap();
+            var buddyEntry = gameFlow.GameState.Buddy.BuddyEntry;
+            var challenge = buddyEntry.Challenges[gameFlow.GameState.ChallengeIndex].Unwrap();
             for (int i = 0; i < challenge.CoinsReward; i++)
             {
                 gameFlow.GameState.Coins++;
@@ -77,13 +81,28 @@ namespace Code.States
             await UniTask.Delay(500);
             await gameFlow.ShowBlackScreen();
             gameFlow.GameState.ChallengeIndex++;
-            if (gameFlow.GameState.ChallengeIndex == gameSettings.Challenges.Length)
+
+            if (gameFlow.GameState.ChallengeIndex == buddyEntry.Challenges.Length) //win
             {
-                Debug.Log("You win!");
-                fsm.ToState<SelectBuddyState>().Forget();
+                var buddyCompleted = PlayerPrefs.GetInt("BuddyCompleted", 0);
+                var currentBuddy = buddyEntry.Index;
+                if (buddyCompleted < currentBuddy)
+                {
+                    PlayerPrefs.SetInt("BuddyCompleted", currentBuddy);
+                }
+
+                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.BuddyWinDialogue);
+                var hasTwist = buddyEntry.HasTwist;
+                gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+                await gameFlow.HideBlackScreen();
+                
+                if (hasTwist)
+                {
+                    await Game.Instance.RealWorldService.ShowRealWorld(buddyEntry.TwistIndex);
+                }
                 return;
             }
-            
+
             fsm.ToState<FightState>().Forget();
             await gameFlow.HideBlackScreen();
         }

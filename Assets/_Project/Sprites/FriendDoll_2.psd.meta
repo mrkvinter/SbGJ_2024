@@ -1,0 +1,6721 @@
+fileFormatVersion: 2
+guid: 81044613e2fd8034f98a9b8646c9c99a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3118384633859981968
+    second: FriendDoll_2_0
+  - first:
+      213: 567020477879591621
+    second: FriendDoll_2_1
+  - first:
+      213: -8325319064959307042
+    second: FriendDoll_2_2
+  - first:
+      213: -5879996826358058407
+    second: FriendDoll_2_3
+  - first:
+      213: -6603825046454045070
+    second: FriendDoll_2_4
+  - first:
+      213: 6887095676170580400
+    second: FriendDoll_2_5
+  - first:
+      213: 5649393515205634206
+    second: FriendDoll_2_6
+  - first:
+      213: -2595877995744745458
+    second: FriendDoll_2_7
+  - first:
+      213: -7847491097378074419
+    second: FriendDoll_2_8
+  - first:
+      213: -3440039620781401434
+    second: FriendDoll_2_9
+  - first:
+      213: -6291017954157186759
+    second: FriendDoll_2_10
+  - first:
+      213: 7059816725474349692
+    second: FriendDoll_2_11
+  - first:
+      213: -7782364807021036181
+    second: FriendDoll_2_12
+  - first:
+      213: -130675550277699967
+    second: FriendDoll_2_13
+  - first:
+      213: 260676838476115183
+    second: FriendDoll_2_14
+  - first:
+      213: -4778666542525418202
+    second: FriendDoll_2_15
+  - first:
+      213: -8431014238830762715
+    second: FriendDoll_2_16
+  - first:
+      213: 5409282590897281687
+    second: FriendDoll_2_17
+  - first:
+      213: -5151204774024945898
+    second: FriendDoll_2_18
+  - first:
+      213: -4026519513028513501
+    second: FriendDoll_2_19
+  - first:
+      213: -1407760876971389732
+    second: FriendDoll_2_20
+  - first:
+      213: 1529602621173060679
+    second: FriendDoll_2_21
+  - first:
+      213: -7984200871535415894
+    second: FriendDoll_2_22
+  - first:
+      213: 5875253814916114309
+    second: FriendDoll_2_23
+  - first:
+      213: -5841310002993187436
+    second: FriendDoll_2_24
+  - first:
+      213: -6004584880904082642
+    second: FriendDoll_2_25
+  - first:
+      213: 5247560510740168369
+    second: FriendDoll_2_26
+  - first:
+      213: -3842539043254029337
+    second: FriendDoll_2_27
+  - first:
+      213: 3322083008402179110
+    second: FriendDoll_2_28
+  - first:
+      213: 4919675697739340232
+    second: FriendDoll_2_29
+  - first:
+      213: 413175234918274809
+    second: FriendDoll_2_30
+  - first:
+      213: -2325472799564624445
+    second: FriendDoll_2_31
+  - first:
+      213: -7932117858288809283
+    second: FriendDoll_2_32
+  - first:
+      213: -3411009354606808639
+    second: FriendDoll_2_33
+  - first:
+      213: 3744336702108084208
+    second: FriendDoll_2_34
+  - first:
+      213: -6190437225340555061
+    second: FriendDoll_2_35
+  - first:
+      213: 96849232491388590
+    second: FriendDoll_2_36
+  - first:
+      213: 1572999858377019275
+    second: FriendDoll_2_37
+  - first:
+      213: -7887053024334064747
+    second: FriendDoll_2_38
+  - first:
+      213: -6468073121705390281
+    second: FriendDoll_2_39
+  - first:
+      213: -8822967527019584102
+    second: FriendDoll_2_40
+  - first:
+      213: 2867995647046494294
+    second: FriendDoll_2_41
+  - first:
+      213: 5585443377397388051
+    second: FriendDoll_2_42
+  - first:
+      213: -7911693130110282898
+    second: FriendDoll_2_43
+  - first:
+      213: 1839543270867490993
+    second: FriendDoll_2_44
+  - first:
+      213: 6061527012320563655
+    second: FriendDoll_2_45
+  - first:
+      213: 4805991838071058408
+    second: FriendDoll_2_46
+  - first:
+      213: -5773819874010090650
+    second: FriendDoll_2_47
+  - first:
+      213: -6177004759847328420
+    second: FriendDoll_2_48
+  - first:
+      213: 4349889022857782561
+    second: FriendDoll_2_49
+  - first:
+      213: 1222376293232832920
+    second: FriendDoll_2_50
+  - first:
+      213: -6069342038987060280
+    second: FriendDoll_2_51
+  - first:
+      213: 7040174121877766152
+    second: FriendDoll_2_52
+  - first:
+      213: 1858201353159802849
+    second: FriendDoll_2_53
+  - first:
+      213: 803758704649756047
+    second: FriendDoll_2_54
+  - first:
+      213: 2724184382997688623
+    second: FriendDoll_2_55
+  - first:
+      213: 4251709104827554395
+    second: FriendDoll_2_56
+  - first:
+      213: 2438936226497385230
+    second: FriendDoll_2_57
+  - first:
+      213: 5440550535528886268
+    second: FriendDoll_2_58
+  - first:
+      213: 3730206528092660805
+    second: FriendDoll_2_59
+  - first:
+      213: -3593657383827596549
+    second: FriendDoll_2_60
+  - first:
+      213: 8612717613025664057
+    second: FriendDoll_2_61
+  - first:
+      213: -7724073670992349303
+    second: FriendDoll_2_62
+  - first:
+      213: -4524324776255553120
+    second: FriendDoll_2_63
+  - first:
+      213: -7071752883531516251
+    second: FriendDoll_2_64
+  - first:
+      213: 1463045977607096763
+    second: FriendDoll_2_65
+  - first:
+      213: -3170209476094863915
+    second: FriendDoll_2_66
+  - first:
+      213: -4792961429724017589
+    second: FriendDoll_2_67
+  - first:
+      213: 8741916753819096557
+    second: FriendDoll_2_68
+  - first:
+      213: 4601335913856608465
+    second: FriendDoll_2_69
+  - first:
+      213: 2732457331480348765
+    second: FriendDoll_2_70
+  - first:
+      213: 6394728636108957693
+    second: FriendDoll_2_71
+  - first:
+      213: -8913085161535889811
+    second: FriendDoll_2_72
+  - first:
+      213: 5324883194374164144
+    second: FriendDoll_2_73
+  - first:
+      213: -2023180484654071139
+    second: FriendDoll_2_74
+  - first:
+      213: 7048083254157536443
+    second: FriendDoll_2_75
+  - first:
+      213: -3388523331364103012
+    second: FriendDoll_2_76
+  - first:
+      213: -5615905340616950555
+    second: FriendDoll_2_77
+  - first:
+      213: 6258490502044398579
+    second: FriendDoll_2_78
+  - first:
+      213: 7017601166864863975
+    second: FriendDoll_2_79
+  - first:
+      213: -5601162474284364563
+    second: FriendDoll_2_80
+  - first:
+      213: 9077257301681564694
+    second: FriendDoll_2_81
+  - first:
+      213: -9119026596069151151
+    second: FriendDoll_2_82
+  - first:
+      213: 3002145344426835969
+    second: FriendDoll_2_83
+  - first:
+      213: 158295105121745419
+    second: FriendDoll_2_84
+  - first:
+      213: -5740782771273993795
+    second: FriendDoll_2_85
+  - first:
+      213: 4334434818216458175
+    second: FriendDoll_2_86
+  - first:
+      213: 7430842745542469072
+    second: FriendDoll_2_87
+  - first:
+      213: -1731725704412293067
+    second: FriendDoll_2_88
+  - first:
+      213: 1662444060792590489
+    second: FriendDoll_2_89
+  - first:
+      213: 303016284074934738
+    second: FriendDoll_2_90
+  - first:
+      213: 3726873727921166889
+    second: FriendDoll_2_91
+  - first:
+      213: 7272433559364107973
+    second: FriendDoll_2_92
+  - first:
+      213: -382688705361571253
+    second: FriendDoll_2_93
+  - first:
+      213: 347184047797654895
+    second: FriendDoll_2_94
+  - first:
+      213: -1772190613198788576
+    second: FriendDoll_2_95
+  - first:
+      213: -6627027887793589435
+    second: FriendDoll_2_96
+  - first:
+      213: 3789702563970370283
+    second: FriendDoll_2_97
+  - first:
+      213: 7813768865340234544
+    second: FriendDoll_2_98
+  - first:
+      213: 2082278322043582173
+    second: FriendDoll_2_99
+  - first:
+      213: -5047197091514870790
+    second: FriendDoll_2_100
+  - first:
+      213: 2915676411467103076
+    second: FriendDoll_2_101
+  - first:
+      213: 266534729919541854
+    second: FriendDoll_2_102
+  - first:
+      213: -3755110026928441762
+    second: FriendDoll_2_103
+  - first:
+      213: -4768260786482307735
+    second: FriendDoll_2_104
+  - first:
+      213: 908224141421700395
+    second: FriendDoll_2_105
+  - first:
+      213: -295568217554433535
+    second: FriendDoll_2_106
+  - first:
+      213: -4026961436782544452
+    second: FriendDoll_2_107
+  - first:
+      213: -3862536927645871571
+    second: FriendDoll_2_108
+  - first:
+      213: -4018582879400306635
+    second: FriendDoll_2_109
+  - first:
+      213: -3197052697637873204
+    second: FriendDoll_2_110
+  - first:
+      213: 7694056960165926402
+    second: FriendDoll_2_111
+  - first:
+      213: 250059312627786830
+    second: FriendDoll_2_112
+  - first:
+      213: -7524600416372442232
+    second: FriendDoll_2_113
+  - first:
+      213: -2543988932561480340
+    second: FriendDoll_2_114
+  - first:
+      213: -3859270948011713724
+    second: FriendDoll_2_115
+  - first:
+      213: -3625292229020583150
+    second: FriendDoll_2_116
+  - first:
+      213: -4426332910976501424
+    second: FriendDoll_2_117
+  - first:
+      213: -7357586115290756251
+    second: FriendDoll_2_118
+  - first:
+      213: -9075411571883839534
+    second: FriendDoll_2_119
+  - first:
+      213: -5019448215395980193
+    second: FriendDoll_2_120
+  - first:
+      213: 8642748774179041069
+    second: FriendDoll_2_121
+  - first:
+      213: 7866594747147757906
+    second: FriendDoll_2_122
+  - first:
+      213: -6215397968924346758
+    second: FriendDoll_2_123
+  - first:
+      213: 2063600818110289756
+    second: FriendDoll_2_124
+  - first:
+      213: 2319612188800576587
+    second: FriendDoll_2_125
+  - first:
+      213: 8665312583770153548
+    second: FriendDoll_2_126
+  - first:
+      213: 4433681828054658756
+    second: FriendDoll_2_127
+  - first:
+      213: -201925932286170843
+    second: FriendDoll_2_128
+  - first:
+      213: -8809605390232158017
+    second: FriendDoll_2_129
+  - first:
+      213: -7224685144430989543
+    second: FriendDoll_2_130
+  - first:
+      213: -118238141022508027
+    second: FriendDoll_2_131
+  - first:
+      213: 4407603115496044706
+    second: FriendDoll_2_132
+  - first:
+      213: 8234697738598929791
+    second: FriendDoll_2_133
+  - first:
+      213: 9126249377198991104
+    second: FriendDoll_2_134
+  - first:
+      213: 180652448776002360
+    second: FriendDoll_2_135
+  - first:
+      213: -2965724440963940840
+    second: FriendDoll_2_136
+  - first:
+      213: 8241415474373625138
+    second: FriendDoll_2_137
+  - first:
+      213: -3836449224488035787
+    second: FriendDoll_2_138
+  - first:
+      213: -7344119029210733209
+    second: FriendDoll_2_139
+  - first:
+      213: -5313069160624307298
+    second: FriendDoll_2_140
+  - first:
+      213: 3987216495603338127
+    second: FriendDoll_2_141
+  - first:
+      213: -3576270351893644854
+    second: FriendDoll_2_142
+  - first:
+      213: 2305923427748254086
+    second: FriendDoll_2_143
+  - first:
+      213: -2279337489628139682
+    second: FriendDoll_2_144
+  - first:
+      213: 3297438760167128973
+    second: FriendDoll_2_145
+  - first:
+      213: -1668363969395773845
+    second: FriendDoll_2_146
+  - first:
+      213: 939888863223504525
+    second: FriendDoll_2_147
+  - first:
+      213: 5645899994907281930
+    second: FriendDoll_2_148
+  - first:
+      213: 8916131451274173822
+    second: FriendDoll_2_149
+  - first:
+      213: -3910968742387348500
+    second: FriendDoll_2_150
+  - first:
+      213: 1780239967850650988
+    second: FriendDoll_2_151
+  - first:
+      213: 5502231620247775834
+    second: FriendDoll_2_152
+  - first:
+      213: -6244793429407468476
+    second: FriendDoll_2_153
+  - first:
+      213: 8257376554385749149
+    second: FriendDoll_2_154
+  - first:
+      213: 6426284896830285071
+    second: FriendDoll_2_155
+  - first:
+      213: 3612516525286574175
+    second: FriendDoll_2_156
+  - first:
+      213: 3646405307371192768
+    second: FriendDoll_2_157
+  - first:
+      213: -7998746754909304252
+    second: FriendDoll_2_158
+  - first:
+      213: 4685304779791367209
+    second: FriendDoll_2_159
+  - first:
+      213: 3980735563198006950
+    second: FriendDoll_2_160
+  - first:
+      213: -3922919473065866715
+    second: FriendDoll_2_161
+  - first:
+      213: -797005804953014623
+    second: FriendDoll_2_162
+  - first:
+      213: -618245231340707388
+    second: FriendDoll_2_163
+  - first:
+      213: -6215647632326415206
+    second: FriendDoll_2_164
+  - first:
+      213: 2683860433057042613
+    second: FriendDoll_2_165
+  - first:
+      213: 2742725384578294149
+    second: FriendDoll_2_166
+  - first:
+      213: -6566665264659397497
+    second: FriendDoll_2_167
+  - first:
+      213: 5347728851882334704
+    second: FriendDoll_2_168
+  - first:
+      213: 979635191115370590
+    second: FriendDoll_2_169
+  - first:
+      213: 3293146722021130721
+    second: FriendDoll_2_170
+  - first:
+      213: 7621274826962312913
+    second: FriendDoll_2_171
+  - first:
+      213: -3691953344526515740
+    second: FriendDoll_2_172
+  - first:
+      213: -4645854319612143482
+    second: FriendDoll_2_173
+  - first:
+      213: -7493150751282769739
+    second: FriendDoll_2_174
+  - first:
+      213: -5906427257772929075
+    second: FriendDoll_2_175
+  - first:
+      213: 1318835882907089768
+    second: FriendDoll_2_176
+  - first:
+      213: -1899385068449758051
+    second: FriendDoll_2_177
+  - first:
+      213: -8402193157122695840
+    second: FriendDoll_2_178
+  - first:
+      213: -8660391438020275440
+    second: FriendDoll_2_179
+  - first:
+      213: 6473924475357255511
+    second: FriendDoll_2_180
+  - first:
+      213: -1579799658105419697
+    second: FriendDoll_2_181
+  - first:
+      213: -5810181499648284698
+    second: FriendDoll_2_182
+  - first:
+      213: 6856497845432231110
+    second: FriendDoll_2_183
+  - first:
+      213: -898071071460545569
+    second: FriendDoll_2_184
+  - first:
+      213: -6173941442890006920
+    second: FriendDoll_2_185
+  - first:
+      213: 1620866290458283738
+    second: FriendDoll_2_186
+  - first:
+      213: -4044000463359935349
+    second: FriendDoll_2_187
+  - first:
+      213: -7206251912799872422
+    second: FriendDoll_2_188
+  - first:
+      213: -1139299858504175599
+    second: FriendDoll_2_189
+  - first:
+      213: -7599445568845839706
+    second: FriendDoll_2_190
+  - first:
+      213: -7535889910494983202
+    second: FriendDoll_2_191
+  - first:
+      213: 658357469475124471
+    second: FriendDoll_2_192
+  - first:
+      213: -5331450565271643359
+    second: FriendDoll_2_193
+  - first:
+      213: -429822606387948109
+    second: FriendDoll_2_194
+  - first:
+      213: 9083120850658027077
+    second: FriendDoll_2_195
+  - first:
+      213: -5712208429427042416
+    second: FriendDoll_2_196
+  - first:
+      213: 521152586893662244
+    second: FriendDoll_2_197
+  - first:
+      213: 1817708552768212963
+    second: FriendDoll_2_198
+  - first:
+      213: 2078087041396488819
+    second: FriendDoll_2_199
+  - first:
+      213: 5531539331549602381
+    second: FriendDoll_2_200
+  - first:
+      213: 1272522647933921846
+    second: FriendDoll_2_201
+  - first:
+      213: -3391779519595825301
+    second: FriendDoll_2_202
+  - first:
+      213: -6848958208189603075
+    second: FriendDoll_2_203
+  - first:
+      213: -3420718181942941067
+    second: FriendDoll_2_204
+  - first:
+      213: -5280451258200858557
+    second: FriendDoll_2_205
+  - first:
+      213: 5670989237812524393
+    second: FriendDoll_2_206
+  - first:
+      213: -287082363271251094
+    second: FriendDoll_2_207
+  - first:
+      213: 473539625566179692
+    second: FriendDoll_2_208
+  - first:
+      213: -8625780970215984476
+    second: FriendDoll_2_209
+  - first:
+      213: 1040008994336042745
+    second: FriendDoll_2_210
+  - first:
+      213: 3275578498271218574
+    second: FriendDoll_2_211
+  - first:
+      213: 4980401502914065232
+    second: FriendDoll_2_212
+  - first:
+      213: -4876587946960233188
+    second: FriendDoll_2_213
+  - first:
+      213: 7213378869069840511
+    second: FriendDoll_2_214
+  - first:
+      213: 4382130794355976869
+    second: FriendDoll_2_215
+  - first:
+      213: -5928288548745666810
+    second: FriendDoll_2_216
+  - first:
+      213: -773643564832795880
+    second: FriendDoll_2_217
+  - first:
+      213: 8221845347308553540
+    second: FriendDoll_2_218
+  - first:
+      213: 7667170388365190755
+    second: FriendDoll_2_219
+  - first:
+      213: -5865409768239224231
+    second: FriendDoll_2_220
+  - first:
+      213: 1841413194885763545
+    second: FriendDoll_2_221
+  - first:
+      213: -2213012625298310957
+    second: FriendDoll_2_222
+  - first:
+      213: 3390658414557955153
+    second: FriendDoll_2_223
+  - first:
+      213: 6060224776232254140
+    second: FriendDoll_2_224
+  - first:
+      213: -6780789723083211125
+    second: FriendDoll_2_225
+  - first:
+      213: -9118294789856711349
+    second: FriendDoll_2_226
+  - first:
+      213: 4619748072094064960
+    second: FriendDoll_2_227
+  - first:
+      213: -3750221405363669271
+    second: FriendDoll_2_228
+  - first:
+      213: -6500644914337521657
+    second: FriendDoll_2_229
+  - first:
+      213: 9149976240791847990
+    second: FriendDoll_2_230
+  - first:
+      213: -8806743361410402175
+    second: FriendDoll_2_231
+  - first:
+      213: 4614370798506687082
+    second: FriendDoll_2_232
+  - first:
+      213: 6065410291093726478
+    second: FriendDoll_2_233
+  - first:
+      213: 400906788722860523
+    second: FriendDoll_2_234
+  - first:
+      213: -8003838587367999568
+    second: FriendDoll_2_235
+  - first:
+      213: 5167170635769993236
+    second: FriendDoll_2_236
+  - first:
+      213: -2191477002077065559
+    second: FriendDoll_2_237
+  - first:
+      213: -4705390537578551133
+    second: FriendDoll_2_238
+  - first:
+      213: 1861017082141245338
+    second: FriendDoll_2_239
+  - first:
+      213: 5397183464128291898
+    second: FriendDoll_2_240
+  - first:
+      213: 3012379192122806592
+    second: FriendDoll_2_241
+  - first:
+      213: 9149375569740864238
+    second: FriendDoll_2_242
+  - first:
+      213: -6128474130606373074
+    second: FriendDoll_2_243
+  - first:
+      213: -8798056311829897858
+    second: FriendDoll_2_244
+  - first:
+      213: -4257766288116129358
+    second: FriendDoll_2_245
+  - first:
+      213: -6031224237742265235
+    second: FriendDoll_2_246
+  - first:
+      213: -3932694618222554790
+    second: FriendDoll_2_247
+  - first:
+      213: -6995592907777180442
+    second: FriendDoll_2_248
+  - first:
+      213: 6601561193015002299
+    second: FriendDoll_2_249
+  - first:
+      213: -4474130553061715077
+    second: FriendDoll_2_250
+  - first:
+      213: 4240827046422436060
+    second: FriendDoll_2_251
+  - first:
+      213: -1124261320433690967
+    second: FriendDoll_2_252
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FriendDoll_2_0
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 976
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092c2467d4ab64b20800000000000000
+      internalID: 3118384633859981968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 943
+        width: 119
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2a264de167ed700800000000000000
+      internalID: 567020477879591621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 907
+        width: 87
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2305b7b66867c80800000000000000
+      internalID: -8325319064959307042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_3
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 856
+        width: 83
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952f08c3a0e066ea0800000000000000
+      internalID: -5879996826358058407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 915
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276774bdb108a54a0800000000000000
+      internalID: -6603825046454045070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_5
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 861
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1b6403701e39f50800000000000000
+      internalID: 6887095676170580400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 897
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e982a36687da66e40800000000000000
+      internalID: 5649393515205634206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 901
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08a16767b699fbd0800000000000000
+      internalID: -2595877995744745458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_8
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 891
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc05dbabc6c181390800000000000000
+      internalID: -7847491097378074419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_9
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 875
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa1e06e0368240d0800000000000000
+      internalID: -3440039620781401434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_10
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 875
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9313bde7080d1b8a0800000000000000
+      internalID: -6291017954157186759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 877
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c72924548e189f160800000000000000
+      internalID: 7059816725474349692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_12
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 880
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d7205d07c7ff390800000000000000
+      internalID: -7782364807021036181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 867
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1867ed4874fbf2ef0800000000000000
+      internalID: -130675550277699967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 870
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec6a86143c1e9300800000000000000
+      internalID: 260676838476115183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_15
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 664
+        width: 159
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6257ab81914ceadb0800000000000000
+      internalID: -4778666542525418202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_16
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 751
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5256b3e18350ffa80800000000000000
+      internalID: -8431014238830762715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_17
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 749
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a13285bd1a11b40800000000000000
+      internalID: 5409282590897281687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_18
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 754
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f52fedc8e3388b0800000000000000
+      internalID: -5151204774024945898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_19
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 679
+        width: 189
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321b1c816ddee18c0800000000000000
+      internalID: -4026519513028513501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_20
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 720
+        width: 77
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc8d67e0f0a67ce0800000000000000
+      internalID: -1407760876971389732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_21
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 743
+        width: 33
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744d682da7d3a3510800000000000000
+      internalID: 1529602621173060679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_22
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 617
+        width: 161
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad64c40c9b623190800000000000000
+      internalID: -7984200871535415894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_23
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 547
+        width: 134
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587655b5738198150800000000000000
+      internalID: 5875253814916114309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_24
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 515
+        width: 397
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495b7a8308f7feea0800000000000000
+      internalID: -5841310002993187436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_25
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 716
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2be70e4ddd6baca0800000000000000
+      internalID: -6004584880904082642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_26
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 713
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bef8045b7413d840800000000000000
+      internalID: 5247560510740168369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_27
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 710
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3364b491f8caac0800000000000000
+      internalID: -3842539043254029337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_28
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 726
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6244c2e15e86a1e20800000000000000
+      internalID: 3322083008402179110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_29
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 609
+        width: 113
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c910e54bf2364440800000000000000
+      internalID: 4919675697739340232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_30
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 639
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6da43efa4ebb500800000000000000
+      internalID: 413175234918274809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 629
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd0e174fc24abfd0800000000000000
+      internalID: -2325472799564624445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_32
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 632
+        width: 49
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbac92485d47be190800000000000000
+      internalID: -7932117858288809283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_33
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 653
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c170257019a9a0d0800000000000000
+      internalID: -3411009354606808639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_34
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 629
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f72c98646e86f330800000000000000
+      internalID: 3744336702108084208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_35
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 573
+        width: 51
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0b8335426271aa0800000000000000
+      internalID: -6190437225340555061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_36
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 558
+        width: 44
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae1b632dd3185100800000000000000
+      internalID: 96849232491388590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_37
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 570
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f4d4e790b64d510800000000000000
+      internalID: 1572999858377019275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_38
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 624
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593d5efcf0f8b8290800000000000000
+      internalID: -7887053024334064747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_39
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 608
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f8f7fd3c9cc36a0800000000000000
+      internalID: -6468073121705390281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_40
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 608
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a95e03fb7c58e8580800000000000000
+      internalID: -8822967527019584102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_41
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 600
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 658a29f78da2dc720800000000000000
+      internalID: 2867995647046494294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_42
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 548
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31354d6a82b738d40800000000000000
+      internalID: 5585443377397388051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_43
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 546
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63d0ef1405043290800000000000000
+      internalID: -7911693130110282898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_44
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 547
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b85409cbde578910800000000000000
+      internalID: 1839543270867490993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_45
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 509
+        width: 31
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c15dcdc3bede1450800000000000000
+      internalID: 6061527012320563655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_46
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 554
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efe6ad0d1052b240800000000000000
+      internalID: 4805991838071058408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_47
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 550
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663b9846a654fdfa0800000000000000
+      internalID: -5773819874010090650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_48
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 514
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c552769e5eed64aa0800000000000000
+      internalID: -6177004759847328420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_49
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 544
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1252fc30509ed5c30800000000000000
+      internalID: 4349889022857782561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_50
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 530
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891700423c0c6f010800000000000000
+      internalID: 1222376293232832920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_51
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 483
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbc4d1829d55cba0800000000000000
+      internalID: -6069342038987060280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_52
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 527
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8000c6b3019b3b160800000000000000
+      internalID: 7040174121877766152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_53
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 534
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef7d381948a9c910800000000000000
+      internalID: 1858201353159802849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_54
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 394
+        width: 336
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dd6cb8846872b00800000000000000
+      internalID: 803758704649756047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_55
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 501
+        width: 17
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f217e33534f3ec520800000000000000
+      internalID: 2724184382997688623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_56
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 472
+        width: 24
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a5a8187ea110b30800000000000000
+      internalID: 4251709104827554395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_57
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 525
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0355327397d8d120800000000000000
+      internalID: 2438936226497385230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_58
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 517
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffa2c403e7b08b40800000000000000
+      internalID: 5440550535528886268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_59
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 497
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5446ec5e21b54c330800000000000000
+      internalID: 3730206528092660805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_60
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 322
+        width: 146
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa1f7046a3c02ec0800000000000000
+      internalID: -3593657383827596549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_61
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 507
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c15237905868770800000000000000
+      internalID: 8612717613025664057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_62
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 477
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987bd8d8be39ec490800000000000000
+      internalID: -7724073670992349303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_63
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 457
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a10ace369e5631c0800000000000000
+      internalID: -4524324776255553120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_64
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 362
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a672cd58361cdd90800000000000000
+      internalID: -7071752883531516251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_65
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 369
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9c559a098cd4410800000000000000
+      internalID: 1463045977607096763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_66
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 337
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5d9c927472104d0800000000000000
+      internalID: -3170209476094863915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_67
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 172
+        width: 126
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cc62f49fafb7db0800000000000000
+      internalID: -4792961429724017589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_68
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 146
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de55c6f88f6815970800000000000000
+      internalID: 8741916753819096557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_69
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 182
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8abad72aa3bdf30800000000000000
+      internalID: 4601335913856608465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_70
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 191
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d584cce3773abe520800000000000000
+      internalID: 2732457331480348765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_71
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 194
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df7ea4650d3aeb850800000000000000
+      internalID: 6394728636108957693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_72
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 240
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e19d5e44c5e4480800000000000000
+      internalID: -8913085161535889811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_73
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 205
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be8e178d09c5e940800000000000000
+      internalID: 5324883194374164144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_74
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 168
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9201b781183ce3e0800000000000000
+      internalID: -2023180484654071139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_75
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 233
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc60779062dfc160800000000000000
+      internalID: 7048083254157536443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_76
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 225
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c5be8bbfb89f0d0800000000000000
+      internalID: -3388523331364103012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_77
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 226
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecbe48d8db4012b0800000000000000
+      internalID: -5615905340616950555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_78
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 189
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f33384e3ff9ad650800000000000000
+      internalID: 6258490502044398579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_79
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 220
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2d8569417836160800000000000000
+      internalID: 7017601166864863975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_80
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 219
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec4807e76ca442b0800000000000000
+      internalID: -5601162474284364563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_81
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 205
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61cec892c65e8fd70800000000000000
+      internalID: 9077257301681564694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_82
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 200
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e65f320a5b27180800000000000000
+      internalID: -9119026596069151151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_83
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 232
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10087a2e843c9a920800000000000000
+      internalID: 3002145344426835969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_84
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 209
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0af6763f80623200800000000000000
+      internalID: 158295105121745419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_85
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 167
+        width: 105
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1f7894c74a450b0800000000000000
+      internalID: -5740782771273993795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_86
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 223
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb770e99081072c30800000000000000
+      internalID: 4334434818216458175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_87
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 215
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5e8d55b18af1760800000000000000
+      internalID: 7430842745542469072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_88
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 210
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538971c95aca7f7e0800000000000000
+      internalID: -1731725704412293067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_89
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 205
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9901086b010321710800000000000000
+      internalID: 1662444060792590489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_90
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 219
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1027574b7843400800000000000000
+      internalID: 303016284074934738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_91
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 201
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a1a73e8e388b330800000000000000
+      internalID: 3726873727921166889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_92
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 206
+        width: 110
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cef68e8acfdce460800000000000000
+      internalID: 7272433559364107973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_93
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 200
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b429e5966aa60baf0800000000000000
+      internalID: -382688705361571253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_94
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 114
+        width: 140
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6559a05d0271d400800000000000000
+      internalID: 347184047797654895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_95
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 197
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028210ad60ae767e0800000000000000
+      internalID: -1772190613198788576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_96
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 204
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543b47f5f311804a0800000000000000
+      internalID: -6627027887793589435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_97
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 228
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea47d9376ab79430800000000000000
+      internalID: 3789702563970370283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_98
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 225
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b9c974265107c60800000000000000
+      internalID: 7813768865340234544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_99
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 239
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd677ecf91db5ec10800000000000000
+      internalID: 2082278322043582173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_100
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 237
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af31fd88cf0c4f9b0800000000000000
+      internalID: -5047197091514870790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_101
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 215
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b7b719f30967820800000000000000
+      internalID: 2915676411467103076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_102
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 210
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52b829bcebe2b300800000000000000
+      internalID: 266534729919541854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_103
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 248
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e563c60735b23ebc0800000000000000
+      internalID: -3755110026928441762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_104
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 205
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96d1c49f31cb3ddb0800000000000000
+      internalID: -4768260786482307735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_105
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 214
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25efdd6b09aa9c00800000000000000
+      internalID: 908224141421700395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_106
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 233
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ac5c9a54ee5ebf0800000000000000
+      internalID: -295568217554433535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_107
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 228
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb93164b8eb5d18c0800000000000000
+      internalID: -4026961436782544452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_108
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 223
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22d6dff023856ac0800000000000000
+      internalID: -3862536927645871571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_109
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 208
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538d0ec99202b38c0800000000000000
+      internalID: -4018582879400306635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_110
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 203
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9171d9289c1a3d0800000000000000
+      internalID: -3197052697637873204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_111
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 255
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206df485a08c6ca60800000000000000
+      internalID: 7694056960165926402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_112
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 203
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4425f5be93687300800000000000000
+      internalID: 250059312627786830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_113
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 209
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b3d51d9cf339790800000000000000
+      internalID: -7524600416372442232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_114
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 229
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65d5226b8fe1bcd0800000000000000
+      internalID: -2543988932561480340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_115
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bd6c3258d117ac0800000000000000
+      internalID: -3859270948011713724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_116
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 210
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b7e32ecef50bdc0800000000000000
+      internalID: -3625292229020583150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_117
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 252
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059ff9f4ba18292c0800000000000000
+      internalID: -4426332910976501424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_118
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 210
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b8fb9096a94e990800000000000000
+      internalID: -7357586115290756251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_119
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 210
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfe46b4249ad0280800000000000000
+      internalID: -9075411571883839534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_120
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 211
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5caad83176575ab0800000000000000
+      internalID: -5019448215395980193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_121
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 201
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f62e7083631f770800000000000000
+      internalID: 8642748774179041069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_122
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 201
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25922b75e32cb2d60800000000000000
+      internalID: 7866594747147757906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_123
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 210
+        width: 140
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7674945a787eb9a0800000000000000
+      internalID: -6215397968924346758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_124
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 194
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c575ba9b20263ac10800000000000000
+      internalID: 2063600818110289756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_125
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 203
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cef12fefae03020800000000000000
+      internalID: 2319612188800576587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_126
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 200
+        width: 87
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42a75752ef514870800000000000000
+      internalID: 8665312583770153548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_127
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 192
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce6d48c12a978d30800000000000000
+      internalID: 4433681828054658756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_128
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 199
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529a4273f6d923df0800000000000000
+      internalID: -201925932286170843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_129
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 194
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb088d7a29efdb580800000000000000
+      internalID: -8809605390232158017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_130
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 203
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f2620a323ccbb90800000000000000
+      internalID: -7224685144430989543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_131
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 215
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c6375890feb5ef0800000000000000
+      internalID: -118238141022508027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_132
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 144
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8fb0a5ea3fa2d30800000000000000
+      internalID: 4407603115496044706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_133
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 154
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75d6e5c6f5874270800000000000000
+      internalID: 8234697738598929791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_134
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 124
+        width: 51
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0076393a473f6ae70800000000000000
+      internalID: 9126249377198991104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_135
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 177
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b191de17ec18200800000000000000
+      internalID: 180652448776002360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_136
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 193
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e76a28551a7d6d0800000000000000
+      internalID: -2965724440963940840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_137
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 170
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235827485b36f5270800000000000000
+      internalID: 8241415474373625138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_138
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 191
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a5197b1c132cac0800000000000000
+      internalID: -3836449224488035787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_139
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 179
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76525bb57a2741a90800000000000000
+      internalID: -7344119029210733209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_140
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 83
+        width: 107
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93c7ed8fbf2446b0800000000000000
+      internalID: -5313069160624307298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_141
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 142
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bc30f0740755730800000000000000
+      internalID: 3987216495603338127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_142
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 106
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac93e9610198e5ec0800000000000000
+      internalID: -3576270351893644854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_143
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 181
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6819f26e329400020800000000000000
+      internalID: 2305923427748254086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_144
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 172
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5feb7f21aa2e50e0800000000000000
+      internalID: -2279337489628139682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_145
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 130
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fbd50f41bd2cd20800000000000000
+      internalID: 3297438760167128973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_146
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 142
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6eaa182fc7c8d8e0800000000000000
+      internalID: -1668363969395773845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_147
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 152
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e58ccf0f72b0d00800000000000000
+      internalID: 939888863223504525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_148
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 137
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a04d1d1244a5e40800000000000000
+      internalID: 5645899994907281930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_149
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 166
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d92e3b0567cbb70800000000000000
+      internalID: 8916131451274173822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_150
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 149
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb885666a279b9c0800000000000000
+      internalID: -3910968742387348500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_151
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 158
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6dd0b291dea4b810800000000000000
+      internalID: 1780239967850650988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_152
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 161
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a6acca18adb5c40800000000000000
+      internalID: 5502231620247775834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_153
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 145
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444797856790659a0800000000000000
+      internalID: -6244793429407468476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_154
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 148
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d943dcc0a38189270800000000000000
+      internalID: 8257376554385749149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_155
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 126
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05e605d010ce2950800000000000000
+      internalID: 6426284896830285071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_156
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 38
+        width: 110
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f584feac3ac322230800000000000000
+      internalID: 3612516525286574175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_157
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 156
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c185fcbe42aa9230800000000000000
+      internalID: 3646405307371192768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_158
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 156
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a8251a43ebef090800000000000000
+      internalID: -7998746754909304252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_159
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 42
+        width: 91
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c77e79fdb850140800000000000000
+      internalID: 4685304779791367209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_160
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 128
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a68e2567e96e3730800000000000000
+      internalID: 3980735563198006950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_161
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 94
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a4275168dfe89c0800000000000000
+      internalID: -3922919473065866715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_162
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 98
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aee9df617770f4f0800000000000000
+      internalID: -797005804953014623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_163
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 130
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1abd9dc3d8b67f0800000000000000
+      internalID: -618245231340707388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_164
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 126
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9caf2a09659db9a0800000000000000
+      internalID: -6215647632326415206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_165
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 132
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0571b18dcfe3520800000000000000
+      internalID: 2683860433057042613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_166
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 137
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5816c38a43e101620800000000000000
+      internalID: 2742725384578294149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_167
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 130
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7848415cbb48ed4a0800000000000000
+      internalID: -6566665264659397497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_168
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 98
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9dd8bae03f63a40800000000000000
+      internalID: 5347728851882334704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_169
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 127
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5057e7140d589d00800000000000000
+      internalID: 979635191115370590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_170
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3
+        width: 106
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1cf4fee7b93bd20800000000000000
+      internalID: 3293146722021130721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_171
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 134
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1de17bc631534c960800000000000000
+      internalID: 7621274826962312913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_172
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 132
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e18e247efb83ccc0800000000000000
+      internalID: -3691953344526515740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_173
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 112
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688dd417c1c968fb0800000000000000
+      internalID: -4645854319612143482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_174
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 124
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0d655971bf20890800000000000000
+      internalID: -7493150751282769739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_175
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 75
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf82c0e3b7280ea0800000000000000
+      internalID: -5906427257772929075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_176
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b37bd7f327d4210800000000000000
+      internalID: 1318835882907089768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_177
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 111
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d940f57f75704a5e0800000000000000
+      internalID: -1899385068449758051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_178
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 13
+        width: 86
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ddb7f17d9656b80800000000000000
+      internalID: -8402193157122695840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_179
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 65
+        width: 49
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01397f03fdb10d780800000000000000
+      internalID: -8660391438020275440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_180
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 53
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7575060920008d950800000000000000
+      internalID: 6473924475357255511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_181
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 114
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48c752c49c631ae0800000000000000
+      internalID: -1579799658105419697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_182
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 108
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7eae0b5b61e5fa0800000000000000
+      internalID: -5810181499648284698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_183
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 92
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c42830967c272f50800000000000000
+      internalID: 6856497845432231110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_184
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 85
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb2a826e196983f0800000000000000
+      internalID: -898071071460545569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_185
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 102
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e7a78f7f0c15aa0800000000000000
+      internalID: -6173941442890006920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_186
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 97
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adecb2fad497e7610800000000000000
+      internalID: 1620866290458283738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_187
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 51
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c7aed2103d0e7c0800000000000000
+      internalID: -4044000463359935349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_188
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 73
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a959fc0104efb90800000000000000
+      internalID: -7206251912799872422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_189
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 92
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 110b431a0d46030f0800000000000000
+      internalID: -1139299858504175599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_190
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 87
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2070bc488598690800000000000000
+      internalID: -7599445568845839706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_191
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 79
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb0f72ad042b6790800000000000000
+      internalID: -7535889910494983202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_192
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 74
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f43a4f51a4f22900800000000000000
+      internalID: 658357469475124471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_193
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 67
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b9d6745f1e206b0800000000000000
+      internalID: -5331450565271643359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_194
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 92
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b550d5ed96f80af0800000000000000
+      internalID: -429822606387948109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_195
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 85
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5466a6b0a4abd0e70800000000000000
+      internalID: 9083120850658027077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_196
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 81
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0975201b2b82ab0b0800000000000000
+      internalID: -5712208429427042416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_197
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 70
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428929f34818b3700800000000000000
+      internalID: 521152586893662244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_198
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 82
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef40f05c4cc93910800000000000000
+      internalID: 1817708552768212963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_199
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 77
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ab7ca6729d6dc10800000000000000
+      internalID: 2078087041396488819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_200
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 52
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42ad16f6b9f3cc40800000000000000
+      internalID: 5531539331549602381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_201
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 42
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63aadbe2b98e8a110800000000000000
+      internalID: 1272522647933921846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_202
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 71
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67bb025f7afde0d0800000000000000
+      internalID: -3391779519595825301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_203
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 62
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2ec570ccc93f0a0800000000000000
+      internalID: -6848958208189603075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_204
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 68
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a2290ffea2780d0800000000000000
+      internalID: -3420718181942941067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_205
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 63
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3406c25ce8118b6b0800000000000000
+      internalID: -5280451258200858557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_206
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 73
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965f0e46aa663be40800000000000000
+      internalID: 5670989237812524393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_207
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 65
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bffe39c14140cf0800000000000000
+      internalID: -287082363271251094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_208
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 57
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6191f0d7c9529600800000000000000
+      internalID: 473539625566179692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_209
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2b3ffa8e11b4880800000000000000
+      internalID: -8625780970215984476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_210
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 53
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe6c9e8baade6e00800000000000000
+      internalID: 1040008994336042745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_211
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 55
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b0d571a41357d20800000000000000
+      internalID: 3275578498271218574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_212
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 21
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053b30497c0fd1540800000000000000
+      internalID: 4980401502914065232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_213
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 40
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ddb797911e25cb0800000000000000
+      internalID: -4876587946960233188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_214
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 43
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7087310dd11b1460800000000000000
+      internalID: 7213378869069840511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_215
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 38
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa63ec6db470dc30800000000000000
+      internalID: 4382130794355976869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_216
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 46
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f9ffd69fc7abda0800000000000000
+      internalID: -5928288548745666810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_217
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 48
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813df57d6477345f0800000000000000
+      internalID: -773643564832795880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_218
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 37
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 445468c38ccd91270800000000000000
+      internalID: 8221845347308553540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_219
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 47
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366a6e688d2476a60800000000000000
+      internalID: 7667170388365190755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_220
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 60
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95aaefd54e0e99ea0800000000000000
+      internalID: -5865409768239224231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_221
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 47
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d112e56b830e8910800000000000000
+      internalID: 1841413194885763545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_222
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 39
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8b3a90ebcc941e0800000000000000
+      internalID: -2213012625298310957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_223
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 0
+        width: 54
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1548a621dd90e0f20800000000000000
+      internalID: 3390658414557955153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_224
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 11
+        width: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba3856535e3a1450800000000000000
+      internalID: 6060224776232254140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_225
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e710b4cabc5e1a0800000000000000
+      internalID: -6780789723083211125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_226
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 34
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dab4d033f457180800000000000000
+      internalID: -9118294789856711349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_227
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04166f42564ac1040800000000000000
+      internalID: 4619748072094064960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_228
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 6
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e67b38508984fbc0800000000000000
+      internalID: -3750221405363669271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_229
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 35
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70066fd64e119c5a0800000000000000
+      internalID: -6500644914337521657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_230
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 18
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63489af89ee3bfe70800000000000000
+      internalID: 9149976240791847990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_231
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 31
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1887a1ba29928c580800000000000000
+      internalID: -8806743361410402175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_232
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 5
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a3de21bc9890040800000000000000
+      internalID: 4614370798506687082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_233
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 26
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05e3a9168aac2450800000000000000
+      internalID: 6065410291093726478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_234
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 8
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be16ed9a99e409500800000000000000
+      internalID: 400906788722860523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_235
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 15
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7bd500637ace090800000000000000
+      internalID: -8003838587367999568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_236
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 4
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41856eef05a75b740800000000000000
+      internalID: 5167170635769993236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_237
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae22cd074f4691e0800000000000000
+      internalID: -2191477002077065559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_238
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 13
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8652e7c3813beb0800000000000000
+      internalID: -4705390537578551133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_239
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 11
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f76f51d29a3d910800000000000000
+      internalID: 1861017082141245338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_240
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34aafed3c5a6ea40800000000000000
+      internalID: 5397183464128291898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_241
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041124b3aee1ec920800000000000000
+      internalID: 3012379192122806592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_242
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea9a0fea9c19fe70800000000000000
+      internalID: 9149375569740864238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_243
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 4
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27490e8f3943faa0800000000000000
+      internalID: -6128474130606373074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_244
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 7
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7dde73066607e580800000000000000
+      internalID: -8798056311829897858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_245
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1643c9e1069e4c0800000000000000
+      internalID: -4257766288116129358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_246
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 9
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c65a4b289cc4ca0800000000000000
+      internalID: -6031224237742265235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_247
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5111ceb4134c69c0800000000000000
+      internalID: -3932694618222554790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_248
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ecf2ba8059aaee90800000000000000
+      internalID: -6995592907777180442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_249
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4c9a0bde47d9b50800000000000000
+      internalID: 6601561193015002299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_250
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 0
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73d80a87f1b8e1c0800000000000000
+      internalID: -4474130553061715077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_251
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8d0e7dab17ada30800000000000000
+      internalID: 4240827046422436060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendDoll_2_252
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a696d02942d560f0800000000000000
+      internalID: -1124261320433690967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FriendDoll_2_0: 3118384633859981968
+      FriendDoll_2_1: 567020477879591621
+      FriendDoll_2_10: -6291017954157186759
+      FriendDoll_2_100: -5047197091514870790
+      FriendDoll_2_101: 2915676411467103076
+      FriendDoll_2_102: 266534729919541854
+      FriendDoll_2_103: -3755110026928441762
+      FriendDoll_2_104: -4768260786482307735
+      FriendDoll_2_105: 908224141421700395
+      FriendDoll_2_106: -295568217554433535
+      FriendDoll_2_107: -4026961436782544452
+      FriendDoll_2_108: -3862536927645871571
+      FriendDoll_2_109: -4018582879400306635
+      FriendDoll_2_11: 7059816725474349692
+      FriendDoll_2_110: -3197052697637873204
+      FriendDoll_2_111: 7694056960165926402
+      FriendDoll_2_112: 250059312627786830
+      FriendDoll_2_113: -7524600416372442232
+      FriendDoll_2_114: -2543988932561480340
+      FriendDoll_2_115: -3859270948011713724
+      FriendDoll_2_116: -3625292229020583150
+      FriendDoll_2_117: -4426332910976501424
+      FriendDoll_2_118: -7357586115290756251
+      FriendDoll_2_119: -9075411571883839534
+      FriendDoll_2_12: -7782364807021036181
+      FriendDoll_2_120: -5019448215395980193
+      FriendDoll_2_121: 8642748774179041069
+      FriendDoll_2_122: 7866594747147757906
+      FriendDoll_2_123: -6215397968924346758
+      FriendDoll_2_124: 2063600818110289756
+      FriendDoll_2_125: 2319612188800576587
+      FriendDoll_2_126: 8665312583770153548
+      FriendDoll_2_127: 4433681828054658756
+      FriendDoll_2_128: -201925932286170843
+      FriendDoll_2_129: -8809605390232158017
+      FriendDoll_2_13: -130675550277699967
+      FriendDoll_2_130: -7224685144430989543
+      FriendDoll_2_131: -118238141022508027
+      FriendDoll_2_132: 4407603115496044706
+      FriendDoll_2_133: 8234697738598929791
+      FriendDoll_2_134: 9126249377198991104
+      FriendDoll_2_135: 180652448776002360
+      FriendDoll_2_136: -2965724440963940840
+      FriendDoll_2_137: 8241415474373625138
+      FriendDoll_2_138: -3836449224488035787
+      FriendDoll_2_139: -7344119029210733209
+      FriendDoll_2_14: 260676838476115183
+      FriendDoll_2_140: -5313069160624307298
+      FriendDoll_2_141: 3987216495603338127
+      FriendDoll_2_142: -3576270351893644854
+      FriendDoll_2_143: 2305923427748254086
+      FriendDoll_2_144: -2279337489628139682
+      FriendDoll_2_145: 3297438760167128973
+      FriendDoll_2_146: -1668363969395773845
+      FriendDoll_2_147: 939888863223504525
+      FriendDoll_2_148: 5645899994907281930
+      FriendDoll_2_149: 8916131451274173822
+      FriendDoll_2_15: -4778666542525418202
+      FriendDoll_2_150: -3910968742387348500
+      FriendDoll_2_151: 1780239967850650988
+      FriendDoll_2_152: 5502231620247775834
+      FriendDoll_2_153: -6244793429407468476
+      FriendDoll_2_154: 8257376554385749149
+      FriendDoll_2_155: 6426284896830285071
+      FriendDoll_2_156: 3612516525286574175
+      FriendDoll_2_157: 3646405307371192768
+      FriendDoll_2_158: -7998746754909304252
+      FriendDoll_2_159: 4685304779791367209
+      FriendDoll_2_16: -8431014238830762715
+      FriendDoll_2_160: 3980735563198006950
+      FriendDoll_2_161: -3922919473065866715
+      FriendDoll_2_162: -797005804953014623
+      FriendDoll_2_163: -618245231340707388
+      FriendDoll_2_164: -6215647632326415206
+      FriendDoll_2_165: 2683860433057042613
+      FriendDoll_2_166: 2742725384578294149
+      FriendDoll_2_167: -6566665264659397497
+      FriendDoll_2_168: 5347728851882334704
+      FriendDoll_2_169: 979635191115370590
+      FriendDoll_2_17: 5409282590897281687
+      FriendDoll_2_170: 3293146722021130721
+      FriendDoll_2_171: 7621274826962312913
+      FriendDoll_2_172: -3691953344526515740
+      FriendDoll_2_173: -4645854319612143482
+      FriendDoll_2_174: -7493150751282769739
+      FriendDoll_2_175: -5906427257772929075
+      FriendDoll_2_176: 1318835882907089768
+      FriendDoll_2_177: -1899385068449758051
+      FriendDoll_2_178: -8402193157122695840
+      FriendDoll_2_179: -8660391438020275440
+      FriendDoll_2_18: -5151204774024945898
+      FriendDoll_2_180: 6473924475357255511
+      FriendDoll_2_181: -1579799658105419697
+      FriendDoll_2_182: -5810181499648284698
+      FriendDoll_2_183: 6856497845432231110
+      FriendDoll_2_184: -898071071460545569
+      FriendDoll_2_185: -6173941442890006920
+      FriendDoll_2_186: 1620866290458283738
+      FriendDoll_2_187: -4044000463359935349
+      FriendDoll_2_188: -7206251912799872422
+      FriendDoll_2_189: -1139299858504175599
+      FriendDoll_2_19: -4026519513028513501
+      FriendDoll_2_190: -7599445568845839706
+      FriendDoll_2_191: -7535889910494983202
+      FriendDoll_2_192: 658357469475124471
+      FriendDoll_2_193: -5331450565271643359
+      FriendDoll_2_194: -429822606387948109
+      FriendDoll_2_195: 9083120850658027077
+      FriendDoll_2_196: -5712208429427042416
+      FriendDoll_2_197: 521152586893662244
+      FriendDoll_2_198: 1817708552768212963
+      FriendDoll_2_199: 2078087041396488819
+      FriendDoll_2_2: -8325319064959307042
+      FriendDoll_2_20: -1407760876971389732
+      FriendDoll_2_200: 5531539331549602381
+      FriendDoll_2_201: 1272522647933921846
+      FriendDoll_2_202: -3391779519595825301
+      FriendDoll_2_203: -6848958208189603075
+      FriendDoll_2_204: -3420718181942941067
+      FriendDoll_2_205: -5280451258200858557
+      FriendDoll_2_206: 5670989237812524393
+      FriendDoll_2_207: -287082363271251094
+      FriendDoll_2_208: 473539625566179692
+      FriendDoll_2_209: -8625780970215984476
+      FriendDoll_2_21: 1529602621173060679
+      FriendDoll_2_210: 1040008994336042745
+      FriendDoll_2_211: 3275578498271218574
+      FriendDoll_2_212: 4980401502914065232
+      FriendDoll_2_213: -4876587946960233188
+      FriendDoll_2_214: 7213378869069840511
+      FriendDoll_2_215: 4382130794355976869
+      FriendDoll_2_216: -5928288548745666810
+      FriendDoll_2_217: -773643564832795880
+      FriendDoll_2_218: 8221845347308553540
+      FriendDoll_2_219: 7667170388365190755
+      FriendDoll_2_22: -7984200871535415894
+      FriendDoll_2_220: -5865409768239224231
+      FriendDoll_2_221: 1841413194885763545
+      FriendDoll_2_222: -2213012625298310957
+      FriendDoll_2_223: 3390658414557955153
+      FriendDoll_2_224: 6060224776232254140
+      FriendDoll_2_225: -6780789723083211125
+      FriendDoll_2_226: -9118294789856711349
+      FriendDoll_2_227: 4619748072094064960
+      FriendDoll_2_228: -3750221405363669271
+      FriendDoll_2_229: -6500644914337521657
+      FriendDoll_2_23: 5875253814916114309
+      FriendDoll_2_230: 9149976240791847990
+      FriendDoll_2_231: -8806743361410402175
+      FriendDoll_2_232: 4614370798506687082
+      FriendDoll_2_233: 6065410291093726478
+      FriendDoll_2_234: 400906788722860523
+      FriendDoll_2_235: -8003838587367999568
+      FriendDoll_2_236: 5167170635769993236
+      FriendDoll_2_237: -2191477002077065559
+      FriendDoll_2_238: -4705390537578551133
+      FriendDoll_2_239: 1861017082141245338
+      FriendDoll_2_24: -5841310002993187436
+      FriendDoll_2_240: 5397183464128291898
+      FriendDoll_2_241: 3012379192122806592
+      FriendDoll_2_242: 9149375569740864238
+      FriendDoll_2_243: -6128474130606373074
+      FriendDoll_2_244: -8798056311829897858
+      FriendDoll_2_245: -4257766288116129358
+      FriendDoll_2_246: -6031224237742265235
+      FriendDoll_2_247: -3932694618222554790
+      FriendDoll_2_248: -6995592907777180442
+      FriendDoll_2_249: 6601561193015002299
+      FriendDoll_2_25: -6004584880904082642
+      FriendDoll_2_250: -4474130553061715077
+      FriendDoll_2_251: 4240827046422436060
+      FriendDoll_2_252: -1124261320433690967
+      FriendDoll_2_26: 5247560510740168369
+      FriendDoll_2_27: -3842539043254029337
+      FriendDoll_2_28: 3322083008402179110
+      FriendDoll_2_29: 4919675697739340232
+      FriendDoll_2_3: -5879996826358058407
+      FriendDoll_2_30: 413175234918274809
+      FriendDoll_2_31: -2325472799564624445
+      FriendDoll_2_32: -7932117858288809283
+      FriendDoll_2_33: -3411009354606808639
+      FriendDoll_2_34: 3744336702108084208
+      FriendDoll_2_35: -6190437225340555061
+      FriendDoll_2_36: 96849232491388590
+      FriendDoll_2_37: 1572999858377019275
+      FriendDoll_2_38: -7887053024334064747
+      FriendDoll_2_39: -6468073121705390281
+      FriendDoll_2_4: -6603825046454045070
+      FriendDoll_2_40: -8822967527019584102
+      FriendDoll_2_41: 2867995647046494294
+      FriendDoll_2_42: 5585443377397388051
+      FriendDoll_2_43: -7911693130110282898
+      FriendDoll_2_44: 1839543270867490993
+      FriendDoll_2_45: 6061527012320563655
+      FriendDoll_2_46: 4805991838071058408
+      FriendDoll_2_47: -5773819874010090650
+      FriendDoll_2_48: -6177004759847328420
+      FriendDoll_2_49: 4349889022857782561
+      FriendDoll_2_5: 6887095676170580400
+      FriendDoll_2_50: 1222376293232832920
+      FriendDoll_2_51: -6069342038987060280
+      FriendDoll_2_52: 7040174121877766152
+      FriendDoll_2_53: 1858201353159802849
+      FriendDoll_2_54: 803758704649756047
+      FriendDoll_2_55: 2724184382997688623
+      FriendDoll_2_56: 4251709104827554395
+      FriendDoll_2_57: 2438936226497385230
+      FriendDoll_2_58: 5440550535528886268
+      FriendDoll_2_59: 3730206528092660805
+      FriendDoll_2_6: 5649393515205634206
+      FriendDoll_2_60: -3593657383827596549
+      FriendDoll_2_61: 8612717613025664057
+      FriendDoll_2_62: -7724073670992349303
+      FriendDoll_2_63: -4524324776255553120
+      FriendDoll_2_64: -7071752883531516251
+      FriendDoll_2_65: 1463045977607096763
+      FriendDoll_2_66: -3170209476094863915
+      FriendDoll_2_67: -4792961429724017589
+      FriendDoll_2_68: 8741916753819096557
+      FriendDoll_2_69: 4601335913856608465
+      FriendDoll_2_7: -2595877995744745458
+      FriendDoll_2_70: 2732457331480348765
+      FriendDoll_2_71: 6394728636108957693
+      FriendDoll_2_72: -8913085161535889811
+      FriendDoll_2_73: 5324883194374164144
+      FriendDoll_2_74: -2023180484654071139
+      FriendDoll_2_75: 7048083254157536443
+      FriendDoll_2_76: -3388523331364103012
+      FriendDoll_2_77: -5615905340616950555
+      FriendDoll_2_78: 6258490502044398579
+      FriendDoll_2_79: 7017601166864863975
+      FriendDoll_2_8: -7847491097378074419
+      FriendDoll_2_80: -5601162474284364563
+      FriendDoll_2_81: 9077257301681564694
+      FriendDoll_2_82: -9119026596069151151
+      FriendDoll_2_83: 3002145344426835969
+      FriendDoll_2_84: 158295105121745419
+      FriendDoll_2_85: -5740782771273993795
+      FriendDoll_2_86: 4334434818216458175
+      FriendDoll_2_87: 7430842745542469072
+      FriendDoll_2_88: -1731725704412293067
+      FriendDoll_2_89: 1662444060792590489
+      FriendDoll_2_9: -3440039620781401434
+      FriendDoll_2_90: 303016284074934738
+      FriendDoll_2_91: 3726873727921166889
+      FriendDoll_2_92: 7272433559364107973
+      FriendDoll_2_93: -382688705361571253
+      FriendDoll_2_94: 347184047797654895
+      FriendDoll_2_95: -1772190613198788576
+      FriendDoll_2_96: -6627027887793589435
+      FriendDoll_2_97: 3789702563970370283
+      FriendDoll_2_98: 7813768865340234544
+      FriendDoll_2_99: 2082278322043582173
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

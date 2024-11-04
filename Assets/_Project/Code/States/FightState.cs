@@ -35,7 +35,7 @@ namespace Code.States
 
             var gameSettings = ContentManager.GetSettings<GameSettings>();
             var challenge = gameFlow.GameState.ChallengeIndex;
-            var challengeEntry = ContentManager.GetContent(gameSettings.Challenges[challenge]);
+            var challengeEntry = ContentManager.GetContent(gameFlow.GameState.Buddy.BuddyEntry.Challenges[challenge]);
 
             if (!challengeEntry.FrontEnemy.IsEmpty)
                 SpawnEnemy(challengeEntry.FrontEnemy, Game.Instance.FrontEnemyPoint);
@@ -197,7 +197,6 @@ namespace Code.States
 
             if (enemies.Count == 0)
             {
-                gameFlow.GameState.ChallengeIndex++;
                 gameFlow.GameState.Buddy.OnFightEnd();
                 await gameRunState.WinFightState();
                 return;

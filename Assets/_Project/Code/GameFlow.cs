@@ -33,7 +33,7 @@ namespace Code
     {
         private Game game;
         private GameState gameState;
-        private IFsm fsm;
+        public IFsm fsm;
         private GameSettings gameSettings;
         
         public GameState GameState => gameState;

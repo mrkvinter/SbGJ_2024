@@ -19,3 +19,7 @@ MonoBehaviour:
     <AttackDiceCount>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 73135397112920765, guid: 6101e0492d884e74d99fb647eeb6396d, type: 3}
     <IsTutorialBuddy>k__BackingField: 1
+    <Index>k__BackingField: 1
+    Challenges:
+    - id: tutor_1
+    - id: tutor_2

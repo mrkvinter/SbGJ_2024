@@ -14,6 +14,7 @@ namespace Code.Enemies
         [SerializeField] private GameObject selectionIndicator;
         [SerializeField] private GameObject hoverIndicator;
         [SerializeField] private TMP_Text healthText;
+        [SerializeField] private TMP_Text nameText;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Light2D light2D;
         [SerializeField] private SpriteRenderer shadowSpriteRenderer;
@@ -33,6 +34,7 @@ namespace Code.Enemies
         public void Init(Enemy enemy)
         {
             Enemy = enemy;
+            nameText.text = enemy.EnemyEntry.NameLocalized;
             UpdateHealth(enemy.EnemyEntry.HealthCount);
             Deselect();
         }

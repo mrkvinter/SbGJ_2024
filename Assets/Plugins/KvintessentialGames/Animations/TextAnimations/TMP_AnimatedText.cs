@@ -59,19 +59,22 @@ namespace KvintessentialGames.TextAnimations
                 {
                     charTransforms[i].PositionAdditionalData = new Dictionary<BaseTextAnimation, Vector3>();
                     charTransforms[i].RotationAdditionalData = new Dictionary<BaseTextAnimation, float>();
+                    charTransforms[i].ColorAdditionalData = new Dictionary<BaseTextAnimation, Color32>();
                 }
                 //all text
                 wholeCharTransforms[""] = new CharTransformation
                 {
                     PositionAdditionalData = new Dictionary<BaseTextAnimation, Vector3>(),
-                    RotationAdditionalData = new Dictionary<BaseTextAnimation, float>()
+                    RotationAdditionalData = new Dictionary<BaseTextAnimation, float>(),
+                    ColorAdditionalData = new Dictionary<BaseTextAnimation, Color32>()
                 };
                 foreach (var (key, _) in animationTextPreprocessor.AnimationTags)
                 {
                     var wholeCharTransform = new CharTransformation
                     {
                         PositionAdditionalData = new Dictionary<BaseTextAnimation, Vector3>(),
-                        RotationAdditionalData = new Dictionary<BaseTextAnimation, float>()
+                        RotationAdditionalData = new Dictionary<BaseTextAnimation, float>(),
+                        ColorAdditionalData = new Dictionary<BaseTextAnimation, Color32>()
                     };
                     wholeCharTransforms[key] = wholeCharTransform;
                 }

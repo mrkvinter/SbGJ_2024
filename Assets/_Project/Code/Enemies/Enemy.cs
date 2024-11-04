@@ -58,10 +58,18 @@ namespace Code.Enemies
     [Serializable]
     public class EnemyEntry : ContentEntry
     {
+        [field: SerializeField] public string Name { get; private set; }
+        [field: SerializeField] public string NameRus { get; private set; }
         [field: SerializeField] public int HealthCount { get; private set; }
         [field: SerializeField] public int DamageCount { get; private set; }
         [field: SerializeField] public EnemyView Prefab { get; private set; }
         [field: SerializeField] public bool MakeDiceHot { get; private set; }
+
+        public string NameLocalized => LanguageController.Current switch
+        {
+            Language.Russian => NameRus,
+            _ => Name
+        };
     }
     
     [Serializable]

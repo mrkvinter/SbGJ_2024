@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using Cysharp.Threading.Tasks;
 using KvinterGames;
+using KvintessentialGames.TextAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Code.UI
 {
-    public class DialoguePanel : MonoBehaviour
+  public class DialoguePanel : MonoBehaviour
     {
         [SerializeField] private TMP_Text text;
+        [SerializeField] private PlayableTextAnimation fallLettersAnimation;
 
         private List<Color32[]> colors;
         private bool isShowing;
         private bool isSkipping;
+        private bool updateColors;
         private HashSet<char> additionalDelayChars = new() {'.', ',', '!', '?'};
 
         public void ShowDialogue(string text)
@@ -32,12 +35,29 @@ namespace Code.UI
                 UniTask.Void(async () =>
                 {
                     await UniTask.WaitWhile(() => isShowing);
-                    await ShowSequence(sequence, onComplete);
+                    await SafeShowSequence(sequence, onComplete);
+
                 });
             }
             else
+            { 
+                SafeShowSequence(sequence, onComplete).Forget();
+            }
+        }
+        
+        private async UniTask SafeShowSequence(Dialogue sequence, Action onComplete = null)
+        {
+            try
             {
-                ShowSequence(sequence, onComplete).Forget();
+                await ShowSequence(sequence, onComplete);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
+            finally
+            {
+                isShowing = false;
             }
         }
 
@@ -86,7 +106,7 @@ namespace Code.UI
                             continue;
                         }
 
-                        while (stage.Text[j] != characterInfo.character)
+                        while (char.ToLower(stage.Text[j]) != char.ToLower(characterInfo.character))
                         {
                             j++;
                             
@@ -94,6 +114,11 @@ namespace Code.UI
                             {
                                 break;
                             }
+                        }
+                        
+                        if (j >= stage.Text.Length)
+                        {
+                            break;
                         }
 
                         var color = characterInfo.color;
@@ -106,6 +131,8 @@ namespace Code.UI
                         meshColors[vertexIndex + 1] = color;
                         meshColors[vertexIndex + 2] = color;
                         meshColors[vertexIndex + 3] = color;
+                        
+                        updateColors = true;
                         
                         if (characterInfo.underlineVertexIndex != 0)
                         {
@@ -151,7 +178,8 @@ namespace Code.UI
                             var sound = SoundController.Instance.PlaySound(
                                 $"Typing_{speaker}", 0.1f, 0.5f, pitch: isSkipping ? 1.5f : 1f);
                                 
-                            nextTimeSound = Time.time + sound.length * (isSkipping ? 0.5f : 1f);
+                            var length = sound != null ? sound.length : 0.1f;
+                            nextTimeSound = Time.time + length * (isSkipping ? 0.5f : 1f);
                         }
 
                         if (delay != 0)
@@ -211,14 +239,25 @@ namespace Code.UI
                         colors.Add(array);
                     }
                 }
+
+                if (stage.Type == DialogueStageType.Animation)
+                {
+                    fallLettersAnimation.Play();
+                    await UniTask.WaitWhile(() => fallLettersAnimation.IsPlaying);
+                }
             }
 
-            isShowing = false;
             onComplete?.Invoke();
+            isShowing = false;
         }
         
         private void ClearTextColors()
         {
+            if (text.textInfo == null)
+            {
+                return;
+            }
+
             for (var i = 0; i < text.textInfo.meshInfo.Length; i++)
             {
                 var colors32 = text.textInfo.meshInfo[i].colors32;
@@ -237,9 +276,37 @@ namespace Code.UI
                 return;
             }
 
-            UpdateTextColors();
+            if (updateColors)
+            {
+                UpdateTextColors();
+                updateColors = false;
+            }
+            else
+            {
+                UpdateTransparentColor();
+            }
         }
         
+        
+        private void UpdateTransparentColor()
+        {
+            for (var i = 0; i < text.textInfo.meshInfo.Length; i++)
+            {
+                var colors32 = text.textInfo.meshInfo[i].colors32;
+                var meshColors = colors[i];
+
+                for (var j = 0; j < meshColors.Length; j++)
+                {
+                    if (meshColors[j].a != 0)
+                    {
+                        continue;
+                    }
+                    colors32[j] = meshColors[j];
+                }
+            }
+            
+            text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
+        }
         private void UpdateTextColors()
         {
             for (var i = 0; i < text.textInfo.meshInfo.Length; i++)

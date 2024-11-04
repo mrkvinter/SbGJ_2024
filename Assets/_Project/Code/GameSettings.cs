@@ -13,7 +13,7 @@ namespace Code
     {
         public int StartCoins;
 
-        public ContentRef<ChallengeEntry>[] Challenges;
+        // public ContentRef<ChallengeEntry>[] Challenges;
         
         [Space]
         public ContentRef<BuddyEntry> TutorialBuddy;

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace KvinterGames.CameraUtils
@@ -10,38 +11,6 @@ namespace KvinterGames.CameraUtils
 
         private Material instanceMaterial;
 
-        // protected override void SetTexture()
-        // {
-        //     if (textureCamera == null || meshRenderer == null || material == null)
-        //     {
-        //         return;
-        //     }
-        //     
-        //     if (instanceMaterial == null)
-        //     {
-        //         instanceMaterial = new Material(material);
-        //         meshRenderer.material = instanceMaterial;
-        //     }
-        //
-        //     if (cameraTextureSource.renderTexture != null)
-        //     {
-        //         instanceMaterial.SetTexture(textureName, cameraTextureSource.renderTexture);
-        //         return;
-        //     }
-        //
-        //     var texture = new RenderTexture(Screen.width, Screen.height, 16, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear)
-        //     {
-        //         filterMode = FilterMode.Point,
-        //         useMipMap = false
-        //     };
-        //     
-        //     
-        //     textureCamera.targetTexture = texture;
-        //     SetTexture(texture);
-        //     
-        //     cameraTextureSource.renderTexture = texture;
-        // }
-
         protected override void SetTexture(RenderTexture texture)
         {
             if (instanceMaterial == null)
@@ -51,6 +20,13 @@ namespace KvinterGames.CameraUtils
             }
 
             instanceMaterial.SetTexture(textureName, texture);
+        }
+
+        [Button]
+        private void SetTexture()
+        {
+            if (textureCamera.gameObject.TryGetComponent(out cameraTextureSource))
+                SetTexture(cameraTextureSource.renderTexture);
         }
     }
 }

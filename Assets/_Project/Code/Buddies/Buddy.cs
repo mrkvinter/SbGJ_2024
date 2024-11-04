@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Code.Dices;
+using Code.Enemies;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using RG.ContentSystem.Core;
@@ -110,5 +111,10 @@ namespace Code.Buddies
         [field: SerializeField] public int AttackDiceCount { get; private set; }
         [field: SerializeField] public BuddyView Prefab { get; private set; }
         [field: SerializeField] public bool IsTutorialBuddy { get; private set; }
+        [field:SerializeField] public int Index { get; set; }
+        [field: SerializeField] public bool HasTwist { get; private set; }
+        public int TwistIndex;
+        public ContentRef<ChallengeEntry>[] Challenges;
+
     }
 }

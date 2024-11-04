@@ -40,6 +40,7 @@ namespace Code.States
             Game.Instance.AttackButton.gameObject.SetActive(true);
             // Game.Instance.AttackButton.GetComponentInChildren<TMP_Text>()
             Game.Instance.AttackButton.onClick.AddListener(HandleAttackButton);
+            Game.Instance.SetTextToButton(Texts.BattleButton);
 
             shopItems = new List<ShopItem>();
             for (var i = 0; i < Arguments.Length; i++)

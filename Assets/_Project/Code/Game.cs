@@ -6,6 +6,7 @@ using Code.Utilities;
 using Code.Visual;
 using Cysharp.Threading.Tasks;
 using RG.ContentSystem.UnityAdapter;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -49,10 +50,16 @@ namespace Code
         
         public TMP_Text DiceInBagText;
 
+        public RealWorldServiceSettings RealWorldServiceSettings;
+
         public TooltipService TooltipService { get; } = new();
+        public RealWorldService RealWorldService { get; } = new();
         public GameFlow GameFlow => gameFlow;
 
         private GameFlow gameFlow;
+
+        [Button]
+        public void ShowRealWorld() => RealWorldService.ShowRealWorld().Forget();
 
         private void Awake()
         {
@@ -89,6 +96,12 @@ namespace Code
             if (Input.GetKeyDown(KeyCode.F))
             {
                 gameFlow.RollDice().Forget();
+            }
+            
+            //если щелчоек мыши или нажали на экран
+            if (Input.GetMouseButtonDown(0) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                DialoguePanel.Skip();
             }
         }
 
