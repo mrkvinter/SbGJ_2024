@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using KvinterGames;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
@@ -21,6 +22,13 @@ namespace Code.Dices
         private bool wasRerolledOnThisTurn;
         private bool wasStrongCubeOnThisTurn;
         
+        public int BreakLevel { get; set; }
+        
+        public bool WasPlayed { get; private set; }
+        
+        public bool CanBePlayed => !DiceEntry.IsGlassCube || !WasPlayed;
+        public int MaxDiceValue => Mathf.Max(1, DiceEntry.MaxDiceValue - BreakLevel);
+        
         public event Action<DiceState> OnClick; 
         
 
@@ -34,9 +42,9 @@ namespace Code.Dices
         public void SetValue(int value)
         {
             Value = value;
-            if (Value > DiceEntry.MaxDiceValue)
+            if (Value > MaxDiceValue)
             {
-                Value = DiceEntry.MaxDiceValue;
+                Value = MaxDiceValue;
             }
             DiceView?.SetValue(value);
         }
@@ -102,7 +110,7 @@ namespace Code.Dices
         
         private void Reroll()
         {
-            var value = Random.Range(1, DiceEntry.MaxDiceValue + 1);
+            var value = Random.Range(1, MaxDiceValue + 1);
             SetValue(value);
         }
 
@@ -123,43 +131,121 @@ namespace Code.Dices
         {
             var sb = new System.Text.StringBuilder();
             sb.AppendLine($"<size=+15><b>d{DiceEntry.MaxDiceValue}</b></size>");
-            sb.AppendLine($"<size=-5>{Texts.MaxValue}: {DiceEntry.MaxDiceValue}</size>\n");
+            sb.AppendLine($"<size=-5>{Texts.MaxValue}: {MaxDiceValue}</size>\n");
             
             if (DiceEntry.LoneWolf)
             {
-                sb.AppendLine($"{Texts.Name("Lone Wolf")} - This dice will show its {Texts.MaxValue} if it's the only dice on the field.\n");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine(
+                        $"{Texts.Name("Одинокий Волк")} - Этот кубик покажет своё {Texts.MaxValue}, если он один на поле.\n");
+                }
+                else
+                {
+                    sb.AppendLine(
+                        $"{Texts.Name("Lone Wolf")} - This dice will show its {Texts.MaxValue} if it's the only dice on the field.\n");
+                }
             }
             
             if (DiceEntry.Duplicator)
             {
-                sb.AppendLine($"{Texts.Name("Duplicator")} - This dice will show the value of the dice to the left.");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine(
+                        $"{Texts.Name("Дубликатор")} - Этот кубик примет значение кубика слева.");
+                }
+                else
+                {
+                    sb.AppendLine(
+                        $"{Texts.Name("Duplicator")} - This dice will show the value of the dice to the left.");
+                }
             }
             
             if (DiceEntry.Reroller)
             {
-                sb.AppendLine($"{Texts.Name("Reroller")} - This dice will reroll the dice to the left.");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Перекидыватель")} - Этот кубик перекинет кубик слева.");
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Name("Reroller")} - This dice will reroll the dice to the left.");
+                }
             }
             
             if (DiceEntry.GhostDice)
             {
-                sb.AppendLine($"{Texts.Name("Ghost Dice")} - This dice will not occupy a slot on the field.");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Призрачный Кубик")} - Этот кубик не будет занимать слот на поле.");
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Name("Ghost Dice")} - This dice will not occupy a slot on the field.");
+                }
             }
             
             if (DiceEntry.IsEpicCube)
             {
-                sb.AppendLine($"{Texts.Name("Epic Cube")} - All dice on the field will reroll and show their {Texts.MaxValue}.");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Эпический Кубик")} - Все кубики на поле перекинутся и выбросят своё {Texts.MaxValue}.");
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Name("Epic Cube")} - All dice on the field will reroll and show their {Texts.MaxValue}.");
+                }
             }
             
             if (DiceEntry.IsStrongCube)
             {
-                sb.AppendLine($"{Texts.Name("Strong Cube")} - All dice on the field will increase their value by 1.");
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Сильный Кубик")} - Все кубики на поле увеличат своё значение на 1.");
+                }
+                else
+                {
+                    sb.AppendLine(
+                        $"{Texts.Name("Strong Cube")} - All dice on the field will increase their value by 1.");
+                }
             }
             
             if (IsHot)
             {
-                sb.AppendLine($"{Texts.Hot} - This dice will deal 1 damage to your buddy.");
-            }            
-            
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Горячий")} - Этот кубик нанесёт 1 урон вашему бадди.");
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Hot} - This dice will deal 1 damage to your buddy.");
+                }
+            }
+
+            if (DiceEntry.IsGlassCube)
+            {
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Стеклянный Кубик")} - Этот кубик не может быть перекинут. Идет в сброс до конца боя."); 
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Name("Glass Cube")} - This dice cannot be rerolled. Goes to the discard pile until the end of the battle.");
+                }
+            }
+
+            if (BreakLevel > 0)
+            {
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"{Texts.Name("Кубик Сломан")} - Этот кубик сломан, его {Texts.MaxValue} уменьшено.");
+                }
+                else
+                {
+                    sb.AppendLine($"{Texts.Name("Broken Dice")} - This dice is broken, its {Texts.MaxValue} is reduced.");
+                }
+            }
+
             return sb.ToString();
         }
         
@@ -184,13 +270,14 @@ namespace Code.Dices
 
             await DiceView.transform.DOLocalMoveY(.25f, 0.1f).ToUniTask();
 
+            WasPlayed = true;
             if (DiceEntry.LoneWolf)
             {
                 if (DiceView.DiceHolderParent.Dices.Count == 1)
                 {
                     var tween = ShakeDice();
                     await UniTask.Delay(200);
-                    SetValue(DiceEntry.MaxDiceValue);
+                    SetValue(MaxDiceValue);
                     await tween;
                 }
             }
@@ -199,7 +286,7 @@ namespace Code.Dices
             {
                 var tween = ShakeDice();
                 await UniTask.Delay(200);
-                SetValue(DiceEntry.MaxDiceValue);
+                SetValue(MaxDiceValue);
                 await tween;
 
             }
@@ -243,7 +330,7 @@ namespace Code.Dices
 
                     var tween = dice.DiceState.ShakeDice();
                     await UniTask.Delay(200);
-                    dice.DiceState.SetValue(dice.DiceState.DiceEntry.MaxDiceValue);
+                    dice.DiceState.SetValue(dice.DiceState.MaxDiceValue);
                     await tween;
                     await dice.DiceState.CalculateValue(updater);
                 }
@@ -274,6 +361,7 @@ namespace Code.Dices
         {
             wasRerolledOnThisTurn = false;
             wasStrongCubeOnThisTurn = false;
+            WasPlayed = false;
         }
 
         private UniTask ShakeDice()

@@ -28,6 +28,9 @@ namespace Code.Dices
         
         public DiceHandHolder DiceHolderParent => diceHolderParent;
         public DiceState DiceState => diceState;
+        public bool IsDraggable { get; set; } = true;
+        
+
         public event Action OnClick;
 
         private void Awake()
@@ -63,7 +66,7 @@ namespace Code.Dices
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if (diceHolderParent?.IsLocked == true)
+            if (diceHolderParent?.IsLocked == true || !IsDraggable)
             {
                 return;
             }
@@ -85,7 +88,7 @@ namespace Code.Dices
 
         public void OnDrag(PointerEventData eventData)
         {
-            if (diceHolderParent?.IsLocked == true)
+            if (diceHolderParent?.IsLocked == true || !IsDraggable)
             {
                 return;
             }
@@ -111,7 +114,7 @@ namespace Code.Dices
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            if (diceHolderParent?.IsLocked == true)
+            if (diceHolderParent?.IsLocked == true || !IsDraggable)
             {
                 return;
             }

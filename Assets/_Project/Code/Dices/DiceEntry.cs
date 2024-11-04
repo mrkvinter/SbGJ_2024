@@ -22,6 +22,7 @@ namespace Code.Dices
         [field:SerializeField] public bool LoneWolf { get; private set; }
         [field:SerializeField] public bool IsEpicCube { get; private set; }
         [field:SerializeField] public bool IsStrongCube { get; private set; }
+        [field:SerializeField] public bool IsGlassCube { get; private set; }
     }
     
     [Serializable]

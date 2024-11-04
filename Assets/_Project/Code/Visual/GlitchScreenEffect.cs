@@ -31,6 +31,13 @@ namespace Code.Visual
         {
             glitchObjects = transform.GetComponentsInChildren<Transform>(true).Where(t => t != transform).ToArray();
         }
+        
+        [Button]
+        private void StartGlitch()
+        {
+            timer = 0;
+            isGlitching = false;
+        }
 
         private void Update()
         {

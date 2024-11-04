@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 5339984165168177640}
   - component: {fileID: 3233161617873284440}
   - component: {fileID: 1707923988997468398}
+  - component: {fileID: 6591091245059290666}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select
+  m_text: Touch
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 552fe7c3c6da52649874f8b24f59bfd1, type: 2}
   m_sharedMaterial: {fileID: -6394275595751794488, guid: 552fe7c3c6da52649874f8b24f59bfd1, type: 2}
@@ -346,6 +347,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6591091245059290666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601361470515349615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02015cff06dc4943bad300986f1c0ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  russianText: "\u041A\u043E\u0441\u043D\u0443\u0442\u044C\u0441\u044F"
+  englishText: Touch
 --- !u!1 &2962263442492827705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,8 +1603,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290756543
+  m_fontColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1851,8 +1866,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290756543
+  m_fontColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2201,8 +2216,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290756543
+  m_fontColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

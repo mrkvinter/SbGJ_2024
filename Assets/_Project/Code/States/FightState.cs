@@ -6,6 +6,7 @@ using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Core.FinalStateMachine;
+using KvinterGames;
 using RG.ContentSystem.Core;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ namespace Code.States
 
         private List<Enemy> enemies = new();
 
+        private bool isBusy;
+
         public FightState(GameFlow gameFlow, GameRunState gameRunState)
         {
             this.gameFlow = gameFlow;
@@ -28,12 +31,8 @@ namespace Code.States
         protected override async UniTask OnEnter()
         {
             Debug.Log("FightState OnEnter");
-
-            Game.Instance.AttackButton.gameObject.SetActive(true);
-            Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
-            Game.Instance.AttackHolder.gameObject.SetActive(true);
-
-            var gameSettings = ContentManager.GetSettings<GameSettings>();
+            
+            Game.Instance.SetTextToButton(Texts.EndRoundButton);
             var challenge = gameFlow.GameState.ChallengeIndex;
             var challengeEntry = ContentManager.GetContent(gameFlow.GameState.Buddy.BuddyEntry.Challenges[challenge]);
 
@@ -50,6 +49,10 @@ namespace Code.States
                 await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.tutor_third);
 
             await StartTurn();
+            
+            Game.Instance.AttackButton.gameObject.SetActive(true);
+            Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
+            Game.Instance.AttackHolder.gameObject.SetActive(true);
         }
 
         private Enemy SpawnEnemy(ContentRef<EnemyEntry> enemyEntry, Transform point)
@@ -87,19 +90,32 @@ namespace Code.States
 
         private async UniTask Attack()
         { 
+            if (isBusy)
+                return;
+
+            isBusy = true;
+            Game.Instance.AttackButton.gameObject.SetActive(false);
+            Game.Instance.AttackButton.interactable = false;
             if (Game.Instance.attackDiceHolder.Dices.Count == 0)
             {
-                EndTurn().Forget();
+                await EndTurn();
+                isBusy = false;
+                Game.Instance.AttackButton.gameObject.SetActive(true);
+                Game.Instance.AttackButton.interactable = true;
+
                 return;
             }
+            
 
             Game.Instance.DialoguePanel.Clear();
-
+            Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.interactable = false;
+            isBusy = true;
 
             var game = Game.Instance;
             var attackAmount = 0;
             var calculatedDices = new List<DiceState>();
+            game.damageText.gameObject.SetActive(true);
             for (var i = 0; i < game.attackDiceHolder.Dices.Count; i++)
             {
                 var dice = game.attackDiceHolder.Dices[i];
@@ -124,8 +140,12 @@ namespace Code.States
                                         new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                 fx.transform.position = fx.transform.position.WithZ(-0.1f);
                 var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.25f)
-                    .SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
-                    .ContinueWith(() => { Object.Destroy(fx); });
+                    .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1f)).ToUniTask()
+                    .ContinueWith(() =>
+                    {
+                        SoundController.Instance.PlaySound("hit", 0.1f);
+                        Object.Destroy(fx);
+                    });
                 tasks.Add(task);
             }
 
@@ -149,10 +169,13 @@ namespace Code.States
                 dice.DiceState.DestroyDice().Forget();
             }
 
-            if (gameFlow.GameState.Hand.Count == 0 || enemies.Count == 0)
+            // if (gameFlow.GameState.Hand.Count == 0 || enemies.Count == 0)
                 await EndTurn();
 
             Game.Instance.AttackButton.interactable = true;
+            
+            game.damageText.gameObject.SetActive(false);
+            isBusy = false;
         }
 
         private async UniTask StartTurn()
@@ -179,6 +202,9 @@ namespace Code.States
             {
                 enemy.OnRoundStart();
             }
+            
+            Game.Instance.AttackButton.gameObject.SetActive(true);
+            Game.Instance.AttackHolder.gameObject.SetActive(true);
         }
 
         private async UniTask EndTurn()
@@ -223,8 +249,12 @@ namespace Code.States
                     fx.transform.position = fx.transform.position.WithZ(-0.1f);
                     var nextDice = gameFlow.GameState.Buddy.GetNextDice();
                     var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f)
-                        .SetEase(Ease.InSine).SetDelay(Random.Range(0, 0.2f)).ToUniTask()
-                        .ContinueWith(() => { Object.Destroy(fx); });
+                        .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1)).ToUniTask()
+                        .ContinueWith(() =>
+                        {
+                            SoundController.Instance.PlaySound("hit", 0.1f);
+                            Object.Destroy(fx);
+                        });
                     tasks.Add(task);
                 }
 

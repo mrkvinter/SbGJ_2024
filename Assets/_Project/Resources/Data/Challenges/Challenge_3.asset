@@ -15,9 +15,9 @@ MonoBehaviour:
   content:
     <Id>k__BackingField: 3
     <FrontEnemy>k__BackingField:
-      id: Spider
+      id: Skull
     <LeftEnemy>k__BackingField:
-      id: Spider
+      id: 
     <RightEnemy>k__BackingField:
-      id: Spider
+      id: 
     <CoinsReward>k__BackingField: 2

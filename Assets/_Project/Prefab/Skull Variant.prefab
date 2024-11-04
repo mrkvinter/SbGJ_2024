@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: -7082244, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     - target: {fileID: 6033241221203813070, guid: e98c1dcd802d39345829b92b160c4958, type: 3}
       propertyPath: m_Name
-      value: Skull
+      value: Skull Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6623224783168617434, guid: e98c1dcd802d39345829b92b160c4958, type: 3}
       propertyPath: m_Sprite

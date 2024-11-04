@@ -49,7 +49,7 @@ namespace KvinterGames
         }
 
         public AudioClip PlaySound(string soundName, float pitchRandomness = 0, float volume = 1,
-            bool fadeOut = false, float pitch = 1)
+            bool fadeOut = false, float pitch = 1, bool fadeIn = false)
         {
             if (soundDictionary.TryGetValue(soundName, out var soundInfo))
             {
@@ -64,6 +64,11 @@ namespace KvinterGames
                 {
                     audioSource.DOFade(0, 1)
                         .SetDelay(clip.length - 1);
+                }
+                if (fadeIn)
+                {
+                    audioSource.volume = 0;
+                    audioSource.DOFade(volume, 1);
                 }
                 return clip;
             }

@@ -44,7 +44,7 @@ namespace Code.States
         public void OnPointerEnter(PointerEventData eventData)
         {
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine(DiceSetShopEntry.Name);
+            sb.AppendLine($"<size=+15><b>{DiceSetShopEntry.Name}</b></size>");
             sb.AppendLine(DiceSetShopEntry.Description);
             Game.Instance.TooltipService.ShowTooltip(sb.ToString(), transform, new Vector2(-50, 150));
         }

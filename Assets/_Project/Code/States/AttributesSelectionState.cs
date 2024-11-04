@@ -13,6 +13,8 @@ namespace Code.States
         private GameFlow gameFlow;
         private GameRunState gameRunState;
 
+        private bool isBusy;
+
         public AttributesSelectionState(GameFlow gameFlow, GameRunState gameRunState)
         {
             this.gameFlow = gameFlow;
@@ -21,8 +23,6 @@ namespace Code.States
 
         protected override async UniTask OnEnter()
         {
-            Game.Instance.AttackButton.gameObject.SetActive(true);
-            Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
 
             gameFlow.GameState.Bag.Clear();
             gameFlow.GameState.Bag.AddRange(gameFlow.GameState.Dices);
@@ -57,6 +57,9 @@ namespace Code.States
                     dice.Occupy(buddy.BuddyView.ShieldDiceHandHolder);
                 }
             }
+            
+            Game.Instance.AttackButton.gameObject.SetActive(true);
+            Game.Instance.AttackButton.onClick.AddListener(OnAttackButtonClicked);
         }
 
         protected override async UniTask OnExit()
@@ -69,6 +72,10 @@ namespace Code.States
 
         private void OnAttackButtonClicked() => UniTask.Create(async () =>
         {
+            if (isBusy)
+                return;
+            
+
             if (!gameRunState.Buddy.BuddyView.HpDiceHandHolder.IsFull())
             {
                 Debug.Log("HP dice hand is not full");
@@ -83,6 +90,7 @@ namespace Code.States
                 return;
             }
             
+            isBusy = true;
             gameRunState.Buddy.BuddyView.HpDiceHandHolder.Lock();
             gameRunState.Buddy.BuddyView.ShieldDiceHandHolder.Lock();
             
@@ -96,6 +104,7 @@ namespace Code.States
             
             gameFlow.GameState.Hand.Clear();
             gameRunState.EnterFightState();
+            isBusy = false;
         });
     }
 }

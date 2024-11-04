@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 1374934741, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     - target: {fileID: 2247539880357830830, guid: d577b28ca20ff42479396056294c2f27, type: 3}
       propertyPath: m_Name
-      value: Buddy Variant 1
+      value: RemainsBuddy
       objectReference: {fileID: 0}
     - target: {fileID: 4077266187971889971, guid: d577b28ca20ff42479396056294c2f27, type: 3}
       propertyPath: m_LocalPosition.y

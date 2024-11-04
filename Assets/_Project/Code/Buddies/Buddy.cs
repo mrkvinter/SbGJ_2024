@@ -58,6 +58,7 @@ namespace Code.Buddies
                     var healthDiceValue = healthDice.DiceState.Value;
                     var damageToTake = Mathf.Min(healthDiceValue, damage);
                     damage -= damageToTake;
+                    healthDice.DiceState.BreakLevel -= damageToTake;
                     healthDice.DiceState.SetValue(healthDiceValue - damageToTake);
                     await healthDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (healthDice.DiceState.Value == 0)
@@ -97,7 +98,7 @@ namespace Code.Buddies
 
             foreach (var dice in shieldDiceHandHolder.Dices)
             {
-                dice.SetValue(dice.DiceState.DiceEntry.MaxDiceValue);
+                dice.SetValue(dice.DiceState.MaxDiceValue);
             }
             shieldDiceHandHolder.Lock();
         }

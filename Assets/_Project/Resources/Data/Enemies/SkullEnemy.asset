@@ -16,7 +16,7 @@ MonoBehaviour:
     <Id>k__BackingField: Skull
     <Name>k__BackingField: Flying Skull
     <NameRus>k__BackingField: "\u041B\u0435\u0442\u0430\u044E\u0449\u0438\u0439 \u0427\u0435\u0440\u0435\u043F"
-    <HealthCount>k__BackingField: 5
-    <DamageCount>k__BackingField: 1
+    <HealthCount>k__BackingField: 10
+    <DamageCount>k__BackingField: 3
     <Prefab>k__BackingField: {fileID: 6365332263122346569, guid: 6f1cae17c2d6d204cb567c32e33aab1a, type: 3}
     <MakeDiceHot>k__BackingField: 0

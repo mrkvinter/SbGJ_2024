@@ -1,6 +1,8 @@
+using System.Text;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering.Universal;
@@ -66,11 +68,37 @@ namespace Code.Enemies
         public void OnPointerEnter(PointerEventData eventData) 
         {
             hoverIndicator.SetActive(true);
+
+            var sb = new StringBuilder();
+            sb.AppendLine($"<size=+15>{Enemy.EnemyEntry.NameLocalized}</size>");
+            if (LanguageController.Current == Language.Russian)
+            {
+                sb.AppendLine($"Урон: {Enemy.EnemyEntry.DamageCount}");
+            }
+            else
+            {
+                sb.AppendLine($"Damage: {Enemy.EnemyEntry.DamageCount}");
+            }
+
+            if (Enemy.EnemyEntry.MakeDiceHot)
+            {
+                if (LanguageController.Current == Language.Russian)
+                {
+                    sb.AppendLine($"Одна лучайная кость становится: {Texts.Hot}");
+                }
+                else
+                {
+                    sb.AppendLine($"Makes a random die {Texts.Hot}");
+                }
+            }
+
+            Game.Instance.TooltipService.ShowTooltip(sb.ToString(), transform, new Vector2(50, 50));
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             hoverIndicator.SetActive(false);
+            Game.Instance.TooltipService.HideTooltip();
         }
     }
 }

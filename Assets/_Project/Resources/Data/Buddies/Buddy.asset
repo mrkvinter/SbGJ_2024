@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   content:
     <Id>k__BackingField: Buddy
-    <HealthDiceCount>k__BackingField: 3
+    <HealthDiceCount>k__BackingField: 2
     <ShieldDiceCount>k__BackingField: 2
     <AttackDiceCount>k__BackingField: 3
     <Prefab>k__BackingField: {fileID: 73135397112920765, guid: 6101e0492d884e74d99fb647eeb6396d, type: 3}
@@ -26,3 +26,4 @@ MonoBehaviour:
     - id: 1
     - id: 2
     - id: 3
+    - id: DataClock_chalnge

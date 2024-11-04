@@ -21,6 +21,7 @@ namespace Code.States
         {
             var buddyCompleted = PlayerPrefs.GetInt("BuddyCompleted", 0);
 
+            Game.Instance.LangButtons.gameObject.SetActive(true);
             Game.Instance.BuddySelectorRoot.gameObject.SetActive(true);
 
             Game.Instance.TutorialBuddySelector.NotOpenedContent.gameObject.SetActive(false);
@@ -41,6 +42,7 @@ namespace Code.States
 
         protected override async UniTask OnExit()
         {
+            Game.Instance.LangButtons.gameObject.SetActive(false);
             Game.Instance.BuddySelectorRoot.gameObject.SetActive(false);
             Game.Instance.TutorialBuddySelector.SelectButton.onClick.RemoveListener(OnTutorialBuddyClicked);
             Game.Instance.FirstBuddySelector.SelectButton.onClick.RemoveListener(OnFirstBuddyClicked);

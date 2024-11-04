@@ -17,10 +17,10 @@ namespace Code.States
         private IFsm fsm;
 
         private GameSettings gameSettings;
-        
-        private bool isFirstShop;
 
         public Buddy Buddy { get; private set; }
+        public bool IsFirstShop { get; private set; }
+
 
         public GameRunState(GameFlow gameFlow)
         {
@@ -36,8 +36,9 @@ namespace Code.States
         protected override async UniTask OnEnter()
         {
             Game.Instance.GameUIRoot.gameObject.SetActive(true);
+            gameFlow.ClearState();
             gameFlow.GameState.Coins = gameSettings.StartCoins;
-            isFirstShop = true;
+            IsFirstShop = true;
             Game.Instance.GoldCountText.text = gameFlow.GameState.Coins.ToString();
             
             var buddyEntry = ContentManager.GetContent(Arguments);
@@ -79,7 +80,6 @@ namespace Code.States
             }
             
             await UniTask.Delay(500);
-            await gameFlow.ShowBlackScreen();
             gameFlow.GameState.ChallengeIndex++;
 
             if (gameFlow.GameState.ChallengeIndex == buddyEntry.Challenges.Length) //win
@@ -91,27 +91,41 @@ namespace Code.States
                     PlayerPrefs.SetInt("BuddyCompleted", currentBuddy);
                 }
 
-                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.BuddyWinDialogue);
                 var hasTwist = buddyEntry.HasTwist;
-                gameFlow.fsm.ToState<SelectBuddyState>().Forget();
-                await gameFlow.HideBlackScreen();
-                
                 if (hasTwist)
                 {
                     await Game.Instance.RealWorldService.ShowRealWorld(buddyEntry.TwistIndex);
+                    
+                    gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+
                 }
+                else
+                {
+                    await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.BuddyWinDialogue);
+                    
+                    await gameFlow.ShowBlackScreen();
+                    gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+                    await gameFlow.HideBlackScreen();
+                }
+
+                // await gameFlow.ShowBlackScreen();
+                // gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+                // await gameFlow.HideBlackScreen();
+
                 return;
             }
 
-            fsm.ToState<FightState>().Forget();
+            await gameFlow.ShowBlackScreen();
+            var shop = ContentManager.GetContentMap<DiceSetShopEntry>().ContentEntries.ToArray();
+            fsm.ToStateWithParams<ShopState>(shop).Forget();
             await gameFlow.HideBlackScreen();
         }
         
         public void OnShopClosed()
         {
-            if (isFirstShop)
+            if (IsFirstShop)
             {
-                isFirstShop = false;
+                IsFirstShop = false;
                 fsm.ToState<AttributesSelectionState>();
             }
             else

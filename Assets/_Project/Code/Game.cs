@@ -41,6 +41,8 @@ namespace Code
         [SerializeField] public Transform GameUIRoot;
         [SerializeField] public TMP_Text GoldCountText;
 
+        [SerializeField] public Transform LangButtons;
+
         [Space] 
         public Transform BuddySelectorRoot;
         public BuddySelector TutorialBuddySelector;
@@ -60,6 +62,10 @@ namespace Code
 
         [Button]
         public void ShowRealWorld() => RealWorldService.ShowRealWorld().Forget();
+
+        public void SelectRussianLanguage() => LanguageController.SetLanguage(Language.Russian);
+        
+        public void SelectEnglishLanguage() => LanguageController.SetLanguage(Language.English);
 
         private void Awake()
         {
@@ -88,15 +94,17 @@ namespace Code
 
         private void Update()
         {
+            gameFlow?.Tick();
+
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Restart();
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                gameFlow.RollDice().Forget();
-            }
+            // if (Input.GetKeyDown(KeyCode.F))
+            // {
+            //     gameFlow.RollDice().Forget();
+            // }
             
             //если щелчоек мыши или нажали на экран
             if (Input.GetMouseButtonDown(0) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)

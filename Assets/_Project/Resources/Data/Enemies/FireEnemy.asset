@@ -17,6 +17,6 @@ MonoBehaviour:
     <Name>k__BackingField: Flaming  Skull
     <NameRus>k__BackingField: "\u0413\u043E\u0440\u044F\u0449\u0438\u0439 \u0427\u0435\u0440\u0435\u043F"
     <HealthCount>k__BackingField: 7
-    <DamageCount>k__BackingField: 1
+    <DamageCount>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 1649490456197159498, guid: e98c1dcd802d39345829b92b160c4958, type: 3}
-    <MakeDiceHot>k__BackingField: 0
+    <MakeDiceHot>k__BackingField: 1

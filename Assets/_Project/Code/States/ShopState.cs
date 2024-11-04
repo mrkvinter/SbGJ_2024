@@ -20,6 +20,8 @@ namespace Code.States
         private GameRunState gameRunState;
         private IFsm fsm;
         private List<ShopItem> shopItems;
+        
+        private List<DiceState> currentDices = new List<DiceState>();
 
         public ShopState(GameFlow gameFlow, GameRunState gameRunState)
         {
@@ -32,15 +34,25 @@ namespace Code.States
 
         protected override async UniTask OnEnter()
         {
-            if (gameFlow.GameState.Buddy.BuddyEntry.IsTutorialBuddy)
+            if (gameFlow.GameState.Buddy.BuddyEntry.IsTutorialBuddy && gameRunState.IsFirstShop)
             {
                 await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.tutor_first);
+            }
+
+            currentDices.Clear();
+            if (!gameRunState.IsFirstShop)
+            {
+                await gameFlow.DrawHand(5, true);
+                currentDices.AddRange(gameFlow.GameState.Dices);
             }
 
             Game.Instance.AttackButton.gameObject.SetActive(true);
             // Game.Instance.AttackButton.GetComponentInChildren<TMP_Text>()
             Game.Instance.AttackButton.onClick.AddListener(HandleAttackButton);
             Game.Instance.SetTextToButton(Texts.BattleButton);
+            
+            gameFlow.GameState.Buddy.BuddyView.HpDiceHandHolder.Unlock();
+            gameFlow.GameState.Buddy.BuddyView.ShieldDiceHandHolder.Unlock();
 
             shopItems = new List<ShopItem>();
             for (var i = 0; i < Arguments.Length; i++)
@@ -57,6 +69,11 @@ namespace Code.States
 
         private void HandleAttackButton()
         {
+            if (!gameRunState.IsFirstShop && gameFlow.GameState.Buddy.BuddyView.HpDiceHandHolder.Dices.Count == 0)
+            {
+                Game.Instance.DialoguePanel.ShowDialogue(GameTexts.no_hp_dice);
+                return;
+            }
             gameRunState.OnShopClosed();
         }
 
@@ -65,14 +82,20 @@ namespace Code.States
             Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.onClick.RemoveListener(HandleAttackButton);
             Game.Instance.DialoguePanel.Clear();
-            
+
             for (var i = 0; i < Game.Instance.ShopSlots.Length; i++)
             {
                 Game.Instance.ShopSlots[i].gameObject.SetActive(false);
             }
+            
+            for (var i = Game.Instance.handDiceHolder.Dices.Count - 1; i >= 0; i--)
+            {
+                var currentDice = Game.Instance.handDiceHolder.Dices[i];
+                await currentDice.DiceState.DestroyDice();
+            }
         }
 
-        public void OnDiceSetSelected(ShopItem shopItem)
+        public void OnDiceSetSelected(ShopItem shopItem) => UniTask.Create(async () =>
         {
             if (Game.Instance.GameFlow.GameState.Coins < shopItem.DiceSetShopEntry.Price)
             {
@@ -90,9 +113,18 @@ namespace Code.States
             gameFlow.GameState.Coins -= shopItem.DiceSetShopEntry.Price;
             Game.Instance.GoldCountText.text = gameFlow.GameState.Coins.ToString();
             SoundController.Instance.PlaySound("coin", 0.1f, pitch: 0.7f);
+
+            currentDices.Clear();
+            currentDices.AddRange(Game.Instance.handDiceHolder.Dices.Select(e => e.DiceState));
+            for (var i = Game.Instance.handDiceHolder.Dices.Count - 1; i >= 0; i--)
+            {
+                var currentDice = Game.Instance.handDiceHolder.Dices[i];
+                await currentDice.DiceState.DestroyDice();
+            }
+
             var diceSetEntry = shopItem.DiceSetShopEntry;
             fsm.ToStateWithParams<SelectDiceFromDiceSet>(diceSetEntry);
-        }
+        });
 
         public void AllDiceSelected()
         {
@@ -104,6 +136,13 @@ namespace Code.States
                 shopItems[i].gameObject.SetActive(true);
                 shopItems[i].UpdateColorPrice();
             }
+
+            foreach (var currentDice in currentDices)
+            {
+                currentDice.SetView(Object.Instantiate(currentDice.DiceEntry.DicePrefab));
+                currentDice.DiceView.SetDiceHolderParent(Game.Instance.handDiceHolder);
+                Game.Instance.handDiceHolder.Occupy(currentDice.DiceView);
+            }
         }
     }
 
@@ -112,6 +151,7 @@ namespace Code.States
         private GameFlow gameFlow;
         private ShopState shopState;
         private GameRunState gameRunState;
+        private List<DiceState> currentDices;
 
         private int countToSelect;
 
@@ -128,6 +168,8 @@ namespace Code.States
             var dices = new List<DiceState>();
             countToSelect = Arguments.DiceToSelect;
             var fullProbability = Arguments.Probabilities.Sum(e => e.Probability);
+            
+            currentDices = dices;
 
             for (var i = 0; i < Arguments.DiceCount; i++)
             {
@@ -148,7 +190,9 @@ namespace Code.States
                 var diceState = new DiceState(selectedDice);
                 diceState.SetView(Object.Instantiate(diceState.DiceEntry.DicePrefab));
                 dices.Add(diceState);
+                diceState.DiceView.IsDraggable = false;
                 diceState.OnClick += OnDiceSelected;
+                currentDices.Add(diceState);
 
                 diceState.DiceView.SetDiceHolderParent(Game.Instance.handDiceHolder);
                 Game.Instance.handDiceHolder.Occupy(diceState.DiceView);
@@ -157,6 +201,11 @@ namespace Code.States
 
         protected override async UniTask OnExit()
         {
+            for (var i = 0; i < currentDices.Count; i++)
+            {
+                currentDices[i].OnClick -= OnDiceSelected;
+            }
+
             for (var i = Game.Instance.handDiceHolder.Dices.Count - 1; i >= 0; i--)
             {
                 var dice = Game.Instance.handDiceHolder.Dices[i];
@@ -166,6 +215,8 @@ namespace Code.States
 
         protected void OnDiceSelected(DiceState diceState)
         {
+            SoundController.Instance.PlaySound("dice_deal", 0.1f, 0.7f);
+
             countToSelect--;
             gameFlow.GameState.Dices.Add(diceState);
             diceState.DestroyDice().Forget();

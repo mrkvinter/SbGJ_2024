@@ -16,7 +16,7 @@ MonoBehaviour:
     <Id>k__BackingField: Spider
     <Name>k__BackingField: Spider
     <NameRus>k__BackingField: "\u041F\u0430\u0443\u043A"
-    <HealthCount>k__BackingField: 10
+    <HealthCount>k__BackingField: 15
     <DamageCount>k__BackingField: 2
     <Prefab>k__BackingField: {fileID: 3202769899048978820, guid: 5bb12db096cf62241aae74d4d757a459, type: 3}
     <MakeDiceHot>k__BackingField: 0

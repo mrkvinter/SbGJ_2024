@@ -22,6 +22,7 @@ namespace Code
         public int CurrentDrawnDicesCount = 0;
         public int ChallengeIndex = 0;
         public int Coins = 0;
+        public bool EmptyCupTipShown = false;
         
         public void ShuffleBag()
         {
@@ -45,6 +46,16 @@ namespace Code
             this.game = game;
         }
 
+        public void Tick()
+        {
+            var damage = 0;
+            foreach (var dice in game.attackDiceHolder.Dices)
+            {
+                damage += dice.DiceState.Value;
+            }
+            game.damageText.text = damage.ToString();
+        }
+
         public void StartGame()
         {
             ambientNoise = SoundController.Instance.PlayLoop("amb_noise");
@@ -55,6 +66,7 @@ namespace Code
 
             gameSettings = ContentManager.GetSettings<GameSettings>();
             gameState = new GameState();
+            gameState.EmptyCupTipShown = PlayerPrefs.GetInt("EmptyCupTipShown", 0) == 1;
             fsm = new Fsm();
             // fsm.RegistryState(new FightState(this));
             // fsm.RegistryState(new AttributesSelectionState(this));
@@ -69,6 +81,17 @@ namespace Code
             fsm.ToState<SelectBuddyState>().Forget();
             HideBlackScreen().Forget();
             // fsm.ToStateWithParams<AttributesSelectionState>(new ContentRef<BuddyEntry>("BuddyHeart")).Forget();
+        }
+
+        public void ClearState()
+        {
+            gameState = new GameState();
+            foreach (var dice in ContentManager.GetSettings<GameSettings>().StartingDiceSet.Unwrap().DiceEntries)
+            {
+                gameState.Dices.Add(new DiceState(dice.Unwrap()));
+            }
+            
+            gameState.EmptyCupTipShown = PlayerPrefs.GetInt("EmptyCupTipShown", 0) == 1;
         }
 
         private void ChangePitch()
@@ -96,14 +119,29 @@ namespace Code
             }
         }
         
+        public async UniTask DrawHand(int count, bool rollMaxValue = false)
+        {
+            for (var i = 0; i < count; i++)
+            {
+                await RollDice(rollMaxValue);
+            }
+        }
+        
         private async UniTask ReturnDicesToBag(List<DiceState> playedDices)
         {
             Debug.Log("ReturnDicesToBag");
 
             //показать впервый раз текст: ты опустошил мешок, я перемешаю его, но теперь ты будешь тянуть на 1 кубик меньше
+            if (!gameState.EmptyCupTipShown)
+            {
+                gameState.EmptyCupTipShown = true;
+                PlayerPrefs.SetInt("EmptyCupTipShown", 1);
+                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.no_dices);
+            }
+
             foreach (var diceState in gameState.Dices)
             {
-                if (!playedDices.Contains(diceState))
+                if (!playedDices.Contains(diceState) && diceState.CanBePlayed)
                 {
                     gameState.Bag.Add(diceState);
                 }
@@ -128,7 +166,7 @@ namespace Code
                 
             diceState.SetView(Object.Instantiate(diceState.DiceEntry.DicePrefab));
             
-            var diceValue = rollMaxValue ? diceState.DiceEntry.MaxDiceValue : Random.Range(1, diceState.DiceEntry.MaxDiceValue + 1);
+            var diceValue = rollMaxValue ? diceState.MaxDiceValue : Random.Range(1, diceState.MaxDiceValue + 1);
             if (diceState.DiceEntry.Duplicator)
             {
                 diceValue = 0;

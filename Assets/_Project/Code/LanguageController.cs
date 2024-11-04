@@ -1,4 +1,6 @@
-﻿namespace Code
+﻿using System;
+
+namespace Code
 {
     public static class LanguageController
     {
