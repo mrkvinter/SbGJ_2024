@@ -25,7 +25,7 @@ namespace Code.States
         {
             DiceSetShopEntry = shopEntry;
             Icon.sprite = shopEntry.Icon;
-            Title.text = shopEntry.Name;
+            Title.text = shopEntry.GetName();
             Price.text = shopEntry.Price.ToString();
             UpdateColorPrice();
         }
@@ -44,8 +44,8 @@ namespace Code.States
         public void OnPointerEnter(PointerEventData eventData)
         {
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine($"<size=+15><b>{DiceSetShopEntry.Name}</b></size>");
-            sb.AppendLine(DiceSetShopEntry.Description);
+            sb.AppendLine($"<size=+15><b>{DiceSetShopEntry.GetName()}</b></size>");
+            sb.AppendLine(DiceSetShopEntry.GetDescription());
             Game.Instance.TooltipService.ShowTooltip(sb.ToString(), transform, new Vector2(-50, 150));
         }
 

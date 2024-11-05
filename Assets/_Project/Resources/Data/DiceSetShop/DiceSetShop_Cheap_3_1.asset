@@ -15,7 +15,11 @@ MonoBehaviour:
   content:
     <Id>k__BackingField: Cheap_3_1
     <Icon>k__BackingField: {fileID: -342345063, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
+    <NameRu>k__BackingField: "\u0411\u0430\u0437\u043E\u0432\u044B\u0439 \u041D\u0430\u0431\u043E\u0440"
     <Name>k__BackingField: Basic Set
+    <DescriptionRu>k__BackingField: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C 1 \u043A\u043E\u0441\u0442\u044C
+      \u0438\u0437 3"
     <Description>k__BackingField: You can choose 1 die out of 3
     <Price>k__BackingField: 3
     <DiceCount>k__BackingField: 3

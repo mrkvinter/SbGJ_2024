@@ -159,6 +159,12 @@ namespace Code
                 await ReturnDicesToBag(gameState.Hand);
             }
             
+            if (gameState.Bag.Count == 0)
+            {
+                Debug.Log("Not enough dices in bag");
+                return;
+            }
+
             SoundController.Instance.PlaySound("dice_deal", 0.1f, 0.7f, pitch: 1.25f);
             var diceState = gameState.Bag[^1];
             gameState.Bag.RemoveAt(gameState.Bag.Count - 1);

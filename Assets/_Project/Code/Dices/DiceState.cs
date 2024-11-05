@@ -130,7 +130,15 @@ namespace Code.Dices
         public string GetTooltip()
         {
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine($"<size=+15><b>d{DiceEntry.MaxDiceValue}</b></size>");
+            if (LanguageController.Current == Language.Russian)
+            {
+                sb.AppendLine($"<size=+15><b>к{DiceEntry.MaxDiceValue}</b></size>");
+            }
+            else
+            {
+                sb.AppendLine($"<size=+15><b>d{DiceEntry.MaxDiceValue}</b></size>");
+            }
+
             sb.AppendLine($"<size=-5>{Texts.MaxValue}: {MaxDiceValue}</size>\n");
             
             if (DiceEntry.LoneWolf)
@@ -214,7 +222,7 @@ namespace Code.Dices
             {
                 if (LanguageController.Current == Language.Russian)
                 {
-                    sb.AppendLine($"{Texts.Name("Горячий")} - Этот кубик нанесёт 1 урон вашему бадди.");
+                    sb.AppendLine($"{Texts.Hot} - Этот кубик нанесёт 1 урон вашему бадди.");
                 }
                 else
                 {
@@ -361,6 +369,14 @@ namespace Code.Dices
         {
             wasRerolledOnThisTurn = false;
             wasStrongCubeOnThisTurn = false;
+            IsHot = false;
+        }
+        
+        public void OnEndBattle()
+        {
+            wasRerolledOnThisTurn = false;
+            wasStrongCubeOnThisTurn = false;
+            IsHot = false;
             WasPlayed = false;
         }
 
@@ -386,6 +402,15 @@ namespace Code.Dices
         {
             Game.Instance.TooltipService.HideTooltip();
         }
+
+        public override string ToString() => $"{DiceEntry} {Value}\n"
+        + (IsHot ? " HOT\n" : "")
+        + (BreakLevel > 0 ? $" Broken {BreakLevel}\n" : "")
+        + (WasPlayed ? " Played\n" : "")
+        + (DiceView == null ? " NoView\n" : "") 
+        + (DiceView?.DiceHolderParent == null ? " NoHolder\n" : "")
+        + (DiceView?.DiceHolderParent?.Dices.IndexOf(DiceView) ?? -1) + " index in holder\n";
+        
     }
     
     public enum DiceRank

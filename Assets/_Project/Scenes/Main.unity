@@ -1857,6 +1857,7 @@ GameObject:
   - component: {fileID: 249818021}
   - component: {fileID: 249818023}
   - component: {fileID: 249818022}
+  - component: {fileID: 249818024}
   m_Layer: 5
   m_Name: DiceCountText (1)
   m_TagString: Untagged
@@ -1933,7 +1934,7 @@ MonoBehaviour:
   m_fontSize: 48
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -1982,6 +1983,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249818020}
   m_CullTransparentMesh: 1
+--- !u!114 &249818024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249818020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02015cff06dc4943bad300986f1c0ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  russianText: "\u041A\u043E\u0441\u0442\u0435\u0439 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C"
+  englishText: 'Dice remaning:'
 --- !u!1001 &251104202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7294,7 +7309,7 @@ RectTransform:
   m_GameObject: {fileID: 823842239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 421137344}
@@ -11621,7 +11636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -124.948875, y: 33.986023}
+  m_AnchoredPosition: {x: -124.94888, y: 33.986023}
   m_SizeDelta: {x: 250, y: 68}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1469393192
@@ -13341,6 +13356,7 @@ GameObject:
   - component: {fileID: 1760902565}
   - component: {fileID: 1760902567}
   - component: {fileID: 1760902566}
+  - component: {fileID: 1760902568}
   m_Layer: 5
   m_Name: DiceCountText
   m_TagString: Untagged
@@ -13362,10 +13378,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1601219756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20, y: 948}
-  m_SizeDelta: {x: 220, y: 120}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -100}
+  m_SizeDelta: {x: 320, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1760902566
 MonoBehaviour:
@@ -13414,7 +13430,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.8
+  m_fontSize: 35.85
   m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13422,7 +13438,7 @@ MonoBehaviour:
   m_fontSizeMax: 64
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13466,6 +13482,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760902564}
   m_CullTransparentMesh: 1
+--- !u!114 &1760902568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760902564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02015cff06dc4943bad300986f1c0ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  russianText: "R: \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u043A \u0438\u0433\u0440\u044B"
+  englishText: 'R: restart game'
 --- !u!1 &1767468720
 GameObject:
   m_ObjectHideFlags: 0

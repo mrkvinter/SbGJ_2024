@@ -51,6 +51,7 @@ namespace Game.Scripts.Effects
             {
                 var t = timer / glitchDuration;
                 var glitchCount = Mathf.RoundToInt(Mathf.Lerp(minGlitchCount, maxGlitchCount, t));
+                glitchCount = Mathf.Clamp(glitchCount, 0, glitchObjects.Length - 1);
                 var glitchInterval = Mathf.Lerp(minGlitchInterval, maxGlitchInterval, glitchIntervalCurve.Evaluate(t));
                 for (var i = 0; i < glitchObjects.Length; i++)
                 {

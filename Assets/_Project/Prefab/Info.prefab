@@ -162,7 +162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3639090694410692771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8518212822119479242
 RectTransform:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8719150334297524475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -787,12 +787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02015cff06dc4943bad300986f1c0ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  russianText: "\u0422\u0430\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435
-    \u0438\u0441\u0447\u0435\u0437\u043D\u043E\u0432\u0435\u043D\u0438\u0435 \u0434\u0435\u0442\u0435\u0439:
-    \u0430\u0440\u0435\u0441\u0442 \u043F\u043E\u0434\u043E\u0437\u0440\u0435\u0432\u0430\u0435\u043C\u043E\u0433\u043E
-    \u0438 \u0435\u0433\u043E \u0441\u043C\u0435\u0440\u0442\u044C  "
-  englishText: 'Mysterious disappearance of children: arrest of a suspect and his
-    death  '
+  russianText: MISSING
+  englishText: MISSING
 --- !u!1 &6711969033799533883
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,14 +855,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Yesterday, police arrested a 62-year-old war veteran, formerly a radio
-    operator, on suspicion of child abduction. The man, who lost his own son in a
-    car accident, confessed to the crime after he was caught trying to lure another
-    child. However, the other missing children have not been found \u2013 the suspect
-    was later found dead in his cell under unclear circumstances. The search continues.
-    Recall that the first case of disappearance associated with Pekka Korhonen, occurred
-    2.5 years ago. Since then, such tragedies have become more frequent, causing
-    alarm among residents."
+  m_text: "Yesterday, police arrested a 62-year-old war veteran on suspicion of kidnapping
+    children. The man confessed to the crimes after attempting to lure another child.
+    \n\nThe other children have not been found \u2014 the suspect was found dead
+    in his cell. The search continues. \n\nThe first disappearance linked to Pekka
+    Korhonen occurred 2.5 years ago, and since then, such tragedies have become more
+    frequent."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a15238258cd1f614289a9ab954bbbafd, type: 2}
   m_sharedMaterial: {fileID: 3924012081596348094, guid: a15238258cd1f614289a9ab954bbbafd, type: 2}
@@ -896,9 +890,9 @@ MonoBehaviour:
   m_fontSize: 8
   m_fontSizeBase: 8
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 7
+  m_fontSizeMax: 8
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -951,41 +945,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   russianText: "\u0412\u0447\u0435\u0440\u0430 \u043F\u043E\u043B\u0438\u0446\u0438\u044F
     \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043B\u0430 62-\u043B\u0435\u0442\u043D\u0435\u0433\u043E
-    \u0432\u0435\u0442\u0435\u0440\u0430\u043D\u0430 \u0432\u043E\u0439\u043D\u044B,
-    \u0440\u0430\u043D\u0435\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0432\u0448\u0435\u0433\u043E
-    \u0440\u0430\u0434\u0438\u0441\u0442\u043E\u043C, \u043F\u043E \u043F\u043E\u0434\u043E\u0437\u0440\u0435\u043D\u0438\u044E
-    \u0432 \u043F\u043E\u0445\u0438\u0449\u0435\u043D\u0438\u0438 \u0434\u0435\u0442\u0435\u0439.
-    \u041C\u0443\u0436\u0447\u0438\u043D\u0430, \u043F\u043E\u0442\u0435\u0440\u044F\u0432\u0448\u0438\u0439
-    \u0441\u044B\u043D\u0430 \u0432 \u0430\u0432\u0442\u043E\u043A\u0430\u0442\u0430\u0441\u0442\u0440\u043E\u0444\u0435,
-    \u043F\u0440\u0438\u0437\u043D\u0430\u043B\u0441\u044F \u0432 \u0441\u043E\u0432\u0435\u0440\u0448\u0451\u043D\u043D\u044B\u0445
-    \u043F\u0440\u0435\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u044F\u0445
-    \u043F\u043E\u0441\u043B\u0435 \u0442\u043E\u0433\u043E, \u043A\u0430\u043A \u0435\u0433\u043E
-    \u043F\u043E\u0439\u043C\u0430\u043B\u0438 \u043F\u0440\u0438 \u043F\u043E\u043F\u044B\u0442\u043A\u0435
-    \u0437\u0430\u043C\u0430\u043D\u0438\u0442\u044C \u043E\u0447\u0435\u0440\u0435\u0434\u043D\u043E\u0433\u043E
-    \u0440\u0435\u0431\u0451\u043D\u043A\u0430. \u041E\u0434\u043D\u0430\u043A\u043E
-    \u043D\u0430\u0439\u0442\u0438 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0445
+    \u0432\u0435\u0442\u0435\u0440\u0430\u043D\u0430 \u0432\u043E\u0439\u043D\u044B
+    \u043F\u043E \u043F\u043E\u0434\u043E\u0437\u0440\u0435\u043D\u0438\u044E \u0432
+    \u043F\u043E\u0445\u0438\u0449\u0435\u043D\u0438\u0438 \u0434\u0435\u0442\u0435\u0439.
+    \u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u043F\u0440\u0438\u0437\u043D\u0430\u043B\u0441\u044F
+    \u0432 \u043F\u0440\u0435\u0441\u0442\u0443\u043F\u043B\u0435\u043D\u0438\u044F\u0445
+    \u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0438 \u0437\u0430\u043C\u0430\u043D\u0438\u0442\u044C
+    \u043E\u0447\u0435\u0440\u0435\u0434\u043D\u043E\u0433\u043E \u0440\u0435\u0431\u0451\u043D\u043A\u0430.  
+    \u041D\u0430\u0439\u0442\u0438 \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0445
     \u0434\u0435\u0442\u0435\u0439 \u043D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C
     \u2014 \u043F\u043E\u0434\u043E\u0437\u0440\u0435\u0432\u0430\u0435\u043C\u043E\u0433\u043E
-    \u043E\u0431\u043D\u0430\u0440\u0443\u0436\u0438\u043B\u0438 \u043C\u0451\u0440\u0442\u0432\u044B\u043C
-    \u0432 \u043A\u0430\u043C\u0435\u0440\u0435 \u043F\u0440\u0438 \u043D\u0435\u0432\u044B\u044F\u0441\u043D\u0435\u043D\u043D\u044B\u0445
-    \u043E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430\u0445.
-    \u041F\u043E\u0438\u0441\u043A\u0438 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044E\u0442\u0441\u044F.
-    \u041D\u0430\u043F\u043E\u043C\u043D\u0438\u043C, \u0447\u0442\u043E \u043F\u0435\u0440\u0432\u044B\u0439
-    \u0441\u043B\u0443\u0447\u0430\u0439 \u0438\u0441\u0447\u0435\u0437\u043D\u043E\u0432\u0435\u043D\u0438\u044F,
+    \u043D\u0430\u0448\u043B\u0438 \u043C\u0451\u0440\u0442\u0432\u044B\u043C \u0432
+    \u043A\u0430\u043C\u0435\u0440\u0435. \u041F\u043E\u0438\u0441\u043A\u0438 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044E\u0442\u0441\u044F.  
+    \u041F\u0435\u0440\u0432\u044B\u0439 \u0441\u043B\u0443\u0447\u0430\u0439 \u0438\u0441\u0447\u0435\u0437\u043D\u043E\u0432\u0435\u043D\u0438\u044F,
     \u0441\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0439 \u0441 \u041F\u0435\u043A\u043A\u043E\u0439
     \u041A\u043E\u0440\u0445\u043E\u043D\u0435\u043D\u043E\u043C, \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u0435\u043B
-    2,5 \u0433\u043E\u0434\u0430 \u043D\u0430\u0437\u0430\u0434. \u0421 \u0442\u0435\u0445
-    \u043F\u043E\u0440 \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u0435 \u0442\u0440\u0430\u0433\u0435\u0434\u0438\u0438
-    \u0443\u0447\u0430\u0441\u0442\u0438\u043B\u0438\u0441\u044C, \u0432\u044B\u0437\u044B\u0432\u0430\u044F
-    \u0442\u0440\u0435\u0432\u043E\u0433\u0443 \u0443 \u0436\u0438\u0442\u0435\u043B\u0435\u0439."
-  englishText: "Yesterday, police arrested a 62-year-old war veteran, formerly a
-    radio operator, on suspicion of child abduction. The man, who lost his own son
-    in a car accident, confessed to the crime after he was caught trying to lure
-    another child. However, the other missing children have not been found \u2013
-    the suspect was later found dead in his cell under unclear circumstances. The
-    search continues. Recall that the first case of disappearance associated with
-    Pekka Korhonen, occurred 2.5 years ago. Since then, such tragedies have become
-    more frequent, causing alarm among residents."
+    2,5 \u0433\u043E\u0434\u0430 \u043D\u0430\u0437\u0430\u0434, \u0441 \u0442\u0435\u0445
+    \u043F\u043E\u0440 \u0442\u0440\u0430\u0433\u0435\u0434\u0438\u0438 \u0443\u0447\u0430\u0441\u0442\u0438\u043B\u0438\u0441\u044C."
+  englishText: "Yesterday, police arrested a 62-year-old war veteran on suspicion
+    of kidnapping children. The man confessed to the crimes after attempting to lure
+    another child.   The other children have not been found \u2014 the suspect was
+    found dead in his cell. The search continues.   The first disappearance linked
+    to Pekka Korhonen occurred 2.5 years ago, and since then, such tragedies have
+    become more frequent."
 --- !u!1 &7636375755711424768
 GameObject:
   m_ObjectHideFlags: 0

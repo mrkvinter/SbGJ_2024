@@ -79,6 +79,7 @@ namespace Code.States
             if (!gameRunState.Buddy.BuddyView.HpDiceHandHolder.IsFull())
             {
                 Debug.Log("HP dice hand is not full");
+                Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.not_enough_hp_dice);
                 //TODO: Show error message
                 return;
             }
@@ -86,6 +87,7 @@ namespace Code.States
             if (!gameRunState.Buddy.BuddyView.ShieldDiceHandHolder.IsFull())
             {
                 Debug.Log("Shield dice hand is not full");
+                Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.not_enough_shield_dice);
                 //TODO: Show error message
                 return;
             }

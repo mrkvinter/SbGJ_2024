@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Code.Buddies;
 using Code.DiceSets;
 using Code.Utilities;
@@ -130,8 +131,17 @@ namespace Code.States
             }
             else
             {
+                gameFlow.GameState.Buddy.BuddyView.HpDiceHandHolder.Lock();
+                gameFlow.GameState.Buddy.BuddyView.ShieldDiceHandHolder.Lock();
                 fsm.ToState<FightState>();
             }
+        }
+
+        public async Task LoseFightState()
+        {
+            await gameFlow.ShowBlackScreen();
+            gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+            await gameFlow.HideBlackScreen();
         }
     }
 }

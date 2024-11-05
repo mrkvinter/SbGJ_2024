@@ -58,7 +58,7 @@ namespace Code.Buddies
                     var healthDiceValue = healthDice.DiceState.Value;
                     var damageToTake = Mathf.Min(healthDiceValue, damage);
                     damage -= damageToTake;
-                    healthDice.DiceState.BreakLevel -= damageToTake;
+                    healthDice.DiceState.BreakLevel += damageToTake;
                     healthDice.DiceState.SetValue(healthDiceValue - damageToTake);
                     await healthDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (healthDice.DiceState.Value == 0)
@@ -76,14 +76,19 @@ namespace Code.Buddies
         {
             if (shieldDiceHandHolder.Dices.Count > 0)
             {
-                return shieldDiceHandHolder.Dices[^1].DiceState;
+                var diceState = shieldDiceHandHolder.Dices[^1].DiceState;
+                Debug.Log($"Shield dice was returned. {diceState}");
+                return diceState;
             }
 
             if (healthDiceHandHolder.Dices.Count > 0)
             {
-                return healthDiceHandHolder.Dices[^1].DiceState;
+                var diceState = healthDiceHandHolder.Dices[^1].DiceState;
+                Debug.Log("Health dice was returned. " + diceState);
+                return diceState;
             }
 
+            Debug.Log("No dice was returned");
             return null;
         }
         
@@ -93,6 +98,7 @@ namespace Code.Buddies
             foreach (var usedShieldDice in usedShieldDices)
             {
                 usedShieldDice.SetView(Object.Instantiate(usedShieldDice.DiceEntry.DicePrefab));
+                usedShieldDice.SetValue(usedShieldDice.MaxDiceValue);
                 shieldDiceHandHolder.Occupy(usedShieldDice.DiceView);
             }
 
@@ -100,6 +106,8 @@ namespace Code.Buddies
             {
                 dice.SetValue(dice.DiceState.MaxDiceValue);
             }
+            
+            usedShieldDices.Clear();
             shieldDiceHandHolder.Lock();
         }
     }

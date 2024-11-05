@@ -4,6 +4,26 @@ namespace Code
 {
     public static class GameTexts
     {
+        public static Dialogue death => LanguageController.Current switch
+        {
+            Language.Russian => Dialogue.Create().Text("Ваш бади погиб...").Delay(Dialogue.LongDelay).Clear(),
+            _ => Dialogue.Create().Text("Your buddy has died...").Delay(Dialogue.LongDelay).Clear()
+        };
+
+        public static Dialogue not_enough_shield_dice => LanguageController.Current switch
+        {
+            Language.Russian => 
+                Dialogue.Create().Text("Недостаточно кубиков в щите. Заполните щит полностью.").Delay(Dialogue.LongDelay).Clear(),
+            _ => Dialogue.Create().Text("Not enough dice in shield. Fill shield completely.").Delay(Dialogue.LongDelay).Clear()
+        };
+
+        public static Dialogue not_enough_hp_dice => LanguageController.Current switch
+        {
+            Language.Russian => 
+                Dialogue.Create().Text("Недостаточно кубиков в здоровье. Заполните здоровье полностью.").Delay(Dialogue.LongDelay).Clear(),
+            _ => Dialogue.Create().Text("Not enough dice in health. Fill health completely.").Delay(Dialogue.LongDelay).Clear()
+        };
+
         public static Dialogue no_hp_dice => LanguageController.Current switch
         {
             Language.Russian => 

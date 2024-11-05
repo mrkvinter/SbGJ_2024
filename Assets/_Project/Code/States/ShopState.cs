@@ -91,7 +91,23 @@ namespace Code.States
             for (var i = Game.Instance.handDiceHolder.Dices.Count - 1; i >= 0; i--)
             {
                 var currentDice = Game.Instance.handDiceHolder.Dices[i];
+                if (!gameFlow.GameState.Dices.Contains(currentDice.DiceState))
+                {
+                    gameFlow.GameState.Dices.Add(currentDice.DiceState);
+                }
+                
                 await currentDice.DiceState.DestroyDice();
+            }
+
+            var buddy = gameFlow.GameState.Buddy;
+            foreach (var dice in buddy.BuddyView.HpDiceHandHolder.Dices)
+            {
+                gameFlow.GameState.Dices.Remove(dice.DiceState);
+            }
+            
+            foreach (var dice in buddy.BuddyView.ShieldDiceHandHolder.Dices)
+            {
+                gameFlow.GameState.Dices.Remove(dice.DiceState);
             }
         }
 
@@ -108,6 +124,9 @@ namespace Code.States
             {
                 Game.Instance.ShopSlots[i].gameObject.SetActive(false);
             }
+            
+            gameFlow.GameState.Buddy.BuddyView.HpDiceHandHolder.Lock();
+            gameFlow.GameState.Buddy.BuddyView.ShieldDiceHandHolder.Lock();
 
             shopItems.Remove(shopItem);
             gameFlow.GameState.Coins -= shopItem.DiceSetShopEntry.Price;
@@ -143,6 +162,9 @@ namespace Code.States
                 currentDice.DiceView.SetDiceHolderParent(Game.Instance.handDiceHolder);
                 Game.Instance.handDiceHolder.Occupy(currentDice.DiceView);
             }
+            
+            gameFlow.GameState.Buddy.BuddyView.HpDiceHandHolder.Unlock();
+            gameFlow.GameState.Buddy.BuddyView.ShieldDiceHandHolder.Unlock();
         }
     }
 

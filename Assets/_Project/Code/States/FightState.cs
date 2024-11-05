@@ -124,7 +124,6 @@ namespace Code.States
                 await dice.DiceState.CalculateValue(() =>
                 {
                     attackAmount = calculatedDices.Sum(d => d.Value);
-                    game.damageText.text = attackAmount.ToString();
                 });
 
                 // attackAmount = calculatedDices.Sum(d => d.Value);
@@ -196,6 +195,13 @@ namespace Code.States
             if (selectedEnemy == null)
                 OnEnemyClicked(enemies[0]);
 
+            if (gameFlow.GameState.Buddy.Health <= 0)
+            {
+                await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.death);
+                await gameRunState.LoseFightState();
+                return;
+            }
+
             await gameFlow.DrawHand();
             
             foreach (var enemy in enemies)
@@ -224,6 +230,11 @@ namespace Code.States
             if (enemies.Count == 0)
             {
                 gameFlow.GameState.Buddy.OnFightEnd();
+                foreach (var dice in gameFlow.GameState.Dices)
+                {
+                    dice.OnEndBattle();
+                }
+
                 await gameRunState.WinFightState();
                 return;
             }
@@ -248,6 +259,9 @@ namespace Code.States
                                             new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                     fx.transform.position = fx.transform.position.WithZ(-0.1f);
                     var nextDice = gameFlow.GameState.Buddy.GetNextDice();
+                    if (nextDice == null)
+                        break;
+
                     var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f)
                         .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1)).ToUniTask()
                         .ContinueWith(() =>
