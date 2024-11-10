@@ -1,5 +1,4 @@
 using Code.DiceSets;
-using RG.ContentSystem.Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -44,14 +43,19 @@ namespace Code.States
         public void OnPointerEnter(PointerEventData eventData)
         {
             var sb = new System.Text.StringBuilder();
-            sb.AppendLine($"<size=+15><b>{DiceSetShopEntry.GetName()}</b></size>");
+            sb.AppendLine($"<size=+10><b>{DiceSetShopEntry.GetName()}</b></size>");
             sb.AppendLine(DiceSetShopEntry.GetDescription());
             Game.Instance.TooltipService.ShowTooltip(sb.ToString(), transform, new Vector2(-50, 150));
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            Game.Instance.TooltipService.HideTooltip();
+            Game.Instance.TooltipService.HideTooltip(transform);
+        }
+
+        private void OnDisable()
+        {
+            Game.Instance.TooltipService.HideTooltip(transform);
         }
     }
 }

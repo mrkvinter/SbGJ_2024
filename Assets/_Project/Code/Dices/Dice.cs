@@ -174,7 +174,13 @@ namespace Code.Dices
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            diceState.OnPointerExit();
+            diceState.OnPointerExit(transform);
+            
+        }
+
+        private void OnDisable()
+        {
+            diceState.OnPointerExit(transform);
         }
 
         public void OnPointerClick(PointerEventData eventData)

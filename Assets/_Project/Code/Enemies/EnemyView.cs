@@ -98,7 +98,12 @@ namespace Code.Enemies
         public void OnPointerExit(PointerEventData eventData)
         {
             hoverIndicator.SetActive(false);
-            Game.Instance.TooltipService.HideTooltip();
+            Game.Instance.TooltipService.HideTooltip(transform);
+        }
+
+        private void OnDisable()
+        {
+            Game.Instance.TooltipService.HideTooltip(transform);
         }
     }
 }

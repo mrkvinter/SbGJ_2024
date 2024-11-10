@@ -11,8 +11,11 @@ namespace Code.Visual
     
     public class TooltipService
     {
+        private Transform lastTarget;
+
         public void ShowTooltip(string text, Transform target, Vector2 offset)
         {
+            lastTarget = target;
             var tooltip = Game.Instance.Tooltip;
             tooltip.TextComponent.text = text;
             tooltip.gameObject.SetActive(true);
@@ -24,9 +27,12 @@ namespace Code.Visual
         }
         
         
-        public void HideTooltip()
+        public void HideTooltip(Transform target)
         {
-            Game.Instance.Tooltip.gameObject.SetActive(false);
+            if (lastTarget == target)
+            {
+                Game.Instance.Tooltip.gameObject.SetActive(false);
+            }
         }
     }
 }
