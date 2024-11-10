@@ -14,6 +14,7 @@ namespace Game.Core.FinalStateMachine
         UniTask ToState<TState>() where TState : IState;
         UniTask ToStateWithParams<TState>(object parameters) where TState : IState;
         UniTask Exit();
+        T GetState<T>();
     }
 
     [UsedImplicitly]
@@ -78,6 +79,11 @@ namespace Game.Core.FinalStateMachine
             if (currentState != null) await currentState.Exit();
 
             currentState = null;
+        }
+
+        public T GetState<T>()
+        {
+            return (T) states[typeof(T)];
         }
     }
 }

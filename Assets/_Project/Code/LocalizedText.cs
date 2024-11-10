@@ -5,8 +5,8 @@ namespace Code
 {
     public class LocalizedText : MonoBehaviour
     {
-        [SerializeField] private string russianText;
-        [SerializeField] private string englishText;
+        [SerializeField, TextArea] private string russianText;
+        [SerializeField, TextArea] private string englishText;
         
         private TMP_Text text;
 

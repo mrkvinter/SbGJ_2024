@@ -101,10 +101,18 @@ namespace Code
                 Restart();
             }
 
-            // if (Input.GetKeyDown(KeyCode.F))
-            // {
-            //     gameFlow.RollDice().Forget();
-            // }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                gameFlow.RollDice().Forget();
+            }
+            
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                foreach (var enemy in gameFlow.fsm.GetState<GameRunState>().fsm.GetState<FightState>().Enemies)
+                {
+                    enemy.TakeDamage(100);
+                }
+            }
             
             //если щелчоек мыши или нажали на экран
             if (Input.GetMouseButtonDown(0) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)

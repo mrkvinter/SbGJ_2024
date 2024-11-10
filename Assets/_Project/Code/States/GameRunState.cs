@@ -15,7 +15,7 @@ namespace Code.States
     public class GameRunState : BaseState<ContentRef<BuddyEntry>>
     {
         private GameFlow gameFlow;
-        private IFsm fsm;
+        public IFsm fsm;
 
         private GameSettings gameSettings;
 

@@ -671,7 +671,7 @@ TextureImporter:
         width: 53
         height: 49
       alignment: 9
-      pivot: {x: 0.509434, y: 0.5714286}
+      pivot: {x: 0.49056605, y: 0.5102041}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1155,7 +1155,7 @@ TextureImporter:
         width: 91
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1177,7 +1177,7 @@ TextureImporter:
         width: 95
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1186,6 +1186,28 @@ TextureImporter:
       bones: []
       spriteID: bdd9311d90f70284592ff8beb9171907
       internalID: -1775383660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSheet_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 16
+        width: 20
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06382979}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b284380be964b448bdb660a9ef7e42
+      internalID: 152722887
       vertices: []
       indices: 
       edges: []
@@ -1222,6 +1244,7 @@ TextureImporter:
       Dice_d6: 6994111720309722666
       FireSkull: -579399765
       FireSkull_Selection: -593146168
+      GameSheet_0: 152722887
       GameSheet_2: -1506290788
       Painting: -1118719202
       PaintingEnemy: 1821435391
