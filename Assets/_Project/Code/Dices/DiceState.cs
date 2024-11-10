@@ -65,7 +65,7 @@ namespace Code.Dices
             if (DiceView != null)
             {
                 DiceView.Hot.sprite = isHot ? GetHotSprite() : null;
-                DiceView.Hot.DOFade(isHot ? 1 : 0, 0.2f)
+                DiceView.Hot.DOFade(isHot ? 1 : 0, 0.1f)
                     .OnComplete(() => DiceView.Hot.gameObject.SetActive(isHot));
             }
 
@@ -123,7 +123,7 @@ namespace Code.Dices
             var diceHolder = diceView.DiceHolderParent;
             diceHolder.DeOccupy(diceView);
             diceView.transform.DOKill();
-            await diceView.transform.DOScale(Vector3.zero, 0.15f).ToUniTask(); 
+            await diceView.transform.DOScale(Vector3.zero, 0.1f).ToUniTask(); 
             Object.Destroy(diceView.gameObject);
         }
         
@@ -284,7 +284,7 @@ namespace Code.Dices
                 if (DiceView.DiceHolderParent.Dices.Count == 1)
                 {
                     var tween = ShakeDice();
-                    await UniTask.Delay(200);
+                    await UniTask.Delay(150);
                     SetValue(MaxDiceValue);
                     await tween;
                 }
@@ -293,7 +293,7 @@ namespace Code.Dices
             if (DiceEntry.IsEpicCube)
             {
                 var tween = ShakeDice();
-                await UniTask.Delay(200);
+                await UniTask.Delay(150);
                 SetValue(MaxDiceValue);
                 await tween;
 
@@ -302,7 +302,7 @@ namespace Code.Dices
             if (IsHot)
             {
                 var tween = ShakeDice();
-                await UniTask.Delay(200);
+                await UniTask.Delay(150);
                 SoundController.Instance.PlaySound("hot");
                 await Game.Instance.GameFlow.GameState.Buddy.TakeDamage(1);
                 SetIsHot(false);
@@ -310,7 +310,7 @@ namespace Code.Dices
             }
             
             updater?.Invoke();
-            await UniTask.Delay(500);
+            await UniTask.Delay(300);
 
             if (DiceEntry.Reroller && !wasRerolledOnThisTurn)
             {
@@ -320,7 +320,7 @@ namespace Code.Dices
                 {
                     var leftDice = DiceView.DiceHolderParent.Dices[index - 1];
                     var tween = leftDice.DiceState.ShakeDice();
-                    await UniTask.Delay(200);
+                    await UniTask.Delay(150);
                     leftDice.DiceState.Reroll();
                     await tween;
                     await leftDice.DiceState.CalculateValue(updater);
@@ -337,7 +337,7 @@ namespace Code.Dices
                     }
 
                     var tween = dice.DiceState.ShakeDice();
-                    await UniTask.Delay(200);
+                    await UniTask.Delay(150);
                     dice.DiceState.SetValue(dice.DiceState.MaxDiceValue);
                     await tween;
                     await dice.DiceState.CalculateValue(updater);
@@ -355,14 +355,14 @@ namespace Code.Dices
                     // }
 
                     var tween = dice.DiceState.ShakeDice();
-                    await UniTask.Delay(200);
+                    await UniTask.Delay(150);
                     dice.DiceState.SetValue(dice.DiceState.Value + 1);
                     await tween;
                     await dice.DiceState.CalculateValue(updater);
                 }
             }
             
-            await DiceView.transform.DOLocalMoveY(0, 0.1f).ToUniTask();
+            await DiceView.transform.DOLocalMoveY(0, 0.05f).ToUniTask();
         }
         
         public void OnEndTurn()
@@ -383,9 +383,9 @@ namespace Code.Dices
         private UniTask ShakeDice()
         {
             return DOTween.Sequence()
-                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.1f))
-                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, -10), 0.1f))
-                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.1f))
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 10), 0.05f))
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, -10), 0.05f))
+                .Append(DiceView.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.05f))
                 .SetLoops(2).ToUniTask();
 
         }
@@ -398,9 +398,9 @@ namespace Code.Dices
             Game.Instance.TooltipService.ShowTooltip(GetTooltip(), DiceView.transform, new Vector2(-10f, 20f));
         }
 
-        public void OnPointerExit()
+        public void OnPointerExit(Transform transform)
         {
-            Game.Instance.TooltipService.HideTooltip();
+            Game.Instance.TooltipService.HideTooltip(transform);
         }
 
         public override string ToString() => $"{DiceEntry} {Value}\n"

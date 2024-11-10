@@ -23,7 +23,7 @@ namespace Code
         public int ChallengeIndex = 0;
         public int Coins = 0;
         public bool EmptyCupTipShown = false;
-        
+
         public void ShuffleBag()
         {
             Bag.Sort((_, _) => Random.Range(-1, 1));
@@ -184,7 +184,7 @@ namespace Code
             game.handDiceHolder.Occupy(diceState.DiceView);
             game.DiceInBagText.text = gameState.Bag.Count.ToString();
 
-            await UniTask.Delay(150);
+            await UniTask.Delay(50);
         }
         
 

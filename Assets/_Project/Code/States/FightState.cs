@@ -21,6 +21,8 @@ namespace Code.States
         private List<Enemy> enemies = new();
 
         private bool isBusy;
+        
+        public IReadOnlyCollection<Enemy> Enemies => enemies;
 
         public FightState(GameFlow gameFlow, GameRunState gameRunState)
         {
@@ -138,7 +140,7 @@ namespace Code.States
                 fx.transform.position = game.attackPoint.position +
                                         new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0);
                 fx.transform.position = fx.transform.position.WithZ(-0.1f);
-                var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.25f)
+                var task = fx.transform.DOMove(selectedEnemy.View.transform.position.WithZ(-0.1f), 0.2f)
                     .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1f)).ToUniTask()
                     .ContinueWith(() =>
                     {
@@ -240,7 +242,7 @@ namespace Code.States
             }
 
             await EnemyTurn();
-            await UniTask.Delay(1000);
+            await UniTask.Delay(500);
 
             await StartNextTurn();
         }
@@ -262,7 +264,7 @@ namespace Code.States
                     if (nextDice == null)
                         break;
 
-                    var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.35f)
+                    var task = fx.transform.DOMove(nextDice.DiceView.transform.position.WithZ(-0.1f), 0.2f)
                         .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1)).ToUniTask()
                         .ContinueWith(() =>
                         {
