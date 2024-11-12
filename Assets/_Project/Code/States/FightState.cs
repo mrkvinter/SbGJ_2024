@@ -6,6 +6,7 @@ using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Game.Core.FinalStateMachine;
+using GameAnalyticsSDK;
 using KvinterGames;
 using RG.ContentSystem.Core;
 using UnityEngine;
@@ -20,7 +21,9 @@ namespace Code.States
 
         private List<Enemy> enemies = new();
 
+        private ChallengeEntry challengeEntry;
         private bool isBusy;
+        private bool isWin;
         
         public IReadOnlyCollection<Enemy> Enemies => enemies;
 
@@ -34,9 +37,12 @@ namespace Code.States
         {
             Debug.Log("FightState OnEnter");
             
+            
+            isWin = false;
             Game.Instance.SetTextToButton(Texts.EndRoundButton);
             var challenge = gameFlow.GameState.ChallengeIndex;
-            var challengeEntry = ContentManager.GetContent(gameFlow.GameState.Buddy.BuddyEntry.Challenges[challenge]);
+            challengeEntry = ContentManager.GetContent(gameFlow.GameState.Buddy.BuddyEntry.Challenges[challenge]);
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, gameRunState.Buddy.BuddyEntry.Id, challengeEntry.Id);
 
             if (!challengeEntry.FrontEnemy.IsEmpty)
                 SpawnEnemy(challengeEntry.FrontEnemy, Game.Instance.FrontEnemyPoint);
@@ -81,6 +87,9 @@ namespace Code.States
 
         protected override async UniTask OnExit()
         {
+            GameAnalytics.NewProgressionEvent(isWin ? GAProgressionStatus.Complete : GAProgressionStatus.Fail,
+                gameRunState.Buddy.BuddyEntry.Id, challengeEntry.Id);
+
             Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.onClick.RemoveListener(OnAttackButtonClicked);
             Game.Instance.AttackHolder.gameObject.SetActive(false);
@@ -144,6 +153,7 @@ namespace Code.States
                     .SetEase(Ease.InSine).SetDelay(Random.Range(0, 1f)).ToUniTask()
                     .ContinueWith(() =>
                     {
+                        selectedEnemy.View.OnDamage();
                         SoundController.Instance.PlaySound("hit", 0.1f);
                         Object.Destroy(fx);
                     });
@@ -199,6 +209,7 @@ namespace Code.States
 
             if (gameFlow.GameState.Buddy.Health <= 0)
             {
+                isWin = false;
                 await Game.Instance.DialoguePanel.ShowDialogueAsync(GameTexts.death);
                 await gameRunState.LoseFightState();
                 return;
@@ -231,6 +242,7 @@ namespace Code.States
 
             if (enemies.Count == 0)
             {
+                isWin = true;
                 gameFlow.GameState.Buddy.OnFightEnd();
                 foreach (var dice in gameFlow.GameState.Dices)
                 {

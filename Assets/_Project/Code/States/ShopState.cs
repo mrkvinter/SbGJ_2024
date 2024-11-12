@@ -1,15 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Code.Buddies;
 using Code.Dices;
 using Code.DiceSets;
-using Code.UI;
 using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using Game.Core.FinalStateMachine;
+using GameAnalyticsSDK;
 using KvinterGames;
 using RG.ContentSystem.Core;
-using TMPro;
 using UnityEngine;
 
 namespace Code.States
@@ -119,6 +117,7 @@ namespace Code.States
             }
 
             Game.Instance.AttackButton.gameObject.SetActive(false);
+            GameAnalytics.NewDesignEvent($"shop:dice_set_selected:{shopItem.DiceSetShopEntry.Id}");
 
             for (var i = 0; i < Game.Instance.ShopSlots.Length; i++)
             {
@@ -238,6 +237,7 @@ namespace Code.States
         protected void OnDiceSelected(DiceState diceState)
         {
             SoundController.Instance.PlaySound("dice_deal", 0.1f, 0.7f);
+            GameAnalytics.NewDesignEvent($"shop:dice_selected:{diceState.DiceEntry.Id}");
 
             countToSelect--;
             gameFlow.GameState.Dices.Add(diceState);

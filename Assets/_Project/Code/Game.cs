@@ -5,6 +5,7 @@ using Code.UI;
 using Code.Utilities;
 using Code.Visual;
 using Cysharp.Threading.Tasks;
+using GameAnalyticsSDK;
 using RG.ContentSystem.UnityAdapter;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -69,6 +70,7 @@ namespace Code
 
         private void Awake()
         {
+            GameAnalytics.Initialize();
             if (Instance != null)
             {
                 Destroy(gameObject);
