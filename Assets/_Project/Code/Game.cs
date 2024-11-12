@@ -1,5 +1,6 @@
 using Code.Buddies;
 using Code.Dices;
+using Code.Enemies.Modifiers;
 using Code.States;
 using Code.UI;
 using Code.Utilities;
@@ -57,6 +58,7 @@ namespace Code
 
         public TooltipService TooltipService { get; } = new();
         public RealWorldService RealWorldService { get; } = new();
+        public EnemyDiceModifierSystem EnemyDiceModifierSystem { get; } = new();
         public GameFlow GameFlow => gameFlow;
 
         private GameFlow gameFlow;
@@ -71,11 +73,11 @@ namespace Code
         private void Awake()
         {
             GameAnalytics.Initialize();
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            // if (Instance != null)
+            // {
+            //     Destroy(gameObject);
+            //     return;
+            // }
             
             Instance = this;
         }

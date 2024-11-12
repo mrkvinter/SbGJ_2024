@@ -1,4 +1,5 @@
 using System.Text;
+using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using TMPro;
@@ -22,6 +23,7 @@ namespace Code.Enemies
         [SerializeField] private Transform visualRoot;
         [SerializeField] private SpriteRenderer shadowSpriteRenderer;
         [SerializeField] private SpriteRenderer damageFlashSpriteRenderer;
+        [SerializeField] private SpriteRenderer modifierIconSpriteRenderer;
 
         private Material dissolveMaterial;
         private float dissolveAmount = 1.6f;
@@ -40,6 +42,16 @@ namespace Code.Enemies
         {
             Enemy = enemy;
             nameText.text = enemy.EnemyEntry.NameLocalized;
+            if (!enemy.EnemyEntry.Modifier.IsEmpty)
+            {
+                modifierIconSpriteRenderer.gameObject.SetActive(true);
+                modifierIconSpriteRenderer.sprite = enemy.EnemyEntry.Modifier.Unwrap().Icon;
+            }
+            else
+            {
+                modifierIconSpriteRenderer.gameObject.SetActive(false);
+            }
+
             UpdateHealth(enemy.EnemyEntry.HealthCount);
             Deselect();
         }

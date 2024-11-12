@@ -30,4 +30,4 @@ MonoBehaviour:
     D8HotModifierSprite: {fileID: 291259, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     D12HotModifierSprite: {fileID: 851481272, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
     D20HotModifierSprite: {fileID: -1365973868, guid: 03a58dacccf744c488cb5dc682cdd419, type: 3}
-    AutoSelectHpAndShield: 0
+    AutoSelectHpAndShield: 1

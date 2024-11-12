@@ -1212,6 +1212,94 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GameSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 602
+        width: 104
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01bb5c6681497d40841a4a64b2989a0
+      internalID: -256322274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSheet_2
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 654
+        width: 17
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94cc93e663e7614cb31f35ff3267bd6
+      internalID: -1506290788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 516
+        width: 19
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee6479df5e18d749b12a4841a19f598
+      internalID: -108010549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_mod_icon
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 100
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e384f10bdeb134f8d127e957c3b013
+      internalID: -503948496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1244,8 +1332,11 @@ TextureImporter:
       Dice_d6: 6994111720309722666
       FireSkull: -579399765
       FireSkull_Selection: -593146168
+      Fire_mod_icon: -503948496
       GameSheet_0: 152722887
+      GameSheet_1: -256322274
       GameSheet_2: -1506290788
+      GameSheet_3: -108010549
       Painting: -1118719202
       PaintingEnemy: 1821435391
       PaintingEnemy_Selection: 2139644579

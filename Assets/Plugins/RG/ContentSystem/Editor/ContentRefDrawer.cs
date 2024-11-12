@@ -178,5 +178,22 @@ namespace RG.ContentSystem.Editor
 
             return type;
         }
+        
+        // private Type GetScriptableObjectType()
+        // {
+        //     var objectType = typeof(BaseScriptableContentObject); //.MakeGenericType(typeof(TContent));
+        //     var type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(e => e.GetTypes())
+        //         .Where(t =>
+        //         {
+        //             if (! (t.IsClass && !t.IsAbstract) || !objectType.IsAssignableFrom(typeof(BaseScriptableContentObject)))
+        //                 return false;
+        //           
+        //             var dummy = (BaseScriptableContentObject)Activator.CreateInstance(t);
+        //             return dummy.ContentType == typeof(TContent);
+        //             // .FirstOrDefault(e => e.IsSubclassOf(objectType));
+        //         };
+        //
+        //     return type;
+        // }
     }
 }

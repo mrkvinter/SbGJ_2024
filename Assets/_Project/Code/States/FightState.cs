@@ -90,6 +90,12 @@ namespace Code.States
             GameAnalytics.NewProgressionEvent(isWin ? GAProgressionStatus.Complete : GAProgressionStatus.Fail,
                 gameRunState.Buddy.BuddyEntry.Id, challengeEntry.Id);
 
+            for (var i = 0; i < enemies.Count; i++)
+            {
+                Object.Destroy(enemies[i].View.gameObject);
+            }
+            
+            enemies.Clear();
             Game.Instance.AttackButton.gameObject.SetActive(false);
             Game.Instance.AttackButton.onClick.RemoveListener(OnAttackButtonClicked);
             Game.Instance.AttackHolder.gameObject.SetActive(false);

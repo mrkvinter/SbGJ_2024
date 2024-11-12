@@ -53,11 +53,12 @@ namespace Code.States
         
         protected override async UniTask OnExit()
         {
+            await fsm.Exit();
+
             Object.Destroy(Buddy.BuddyView.gameObject);
             Buddy = null;
             gameFlow.GameState.Buddy = null;
             Game.Instance.GameUIRoot.gameObject.SetActive(false);
-            fsm.Exit();
         }
 
         public void EnterFightState() => UniTask.Create(async () =>
@@ -139,7 +140,7 @@ namespace Code.States
         public async Task LoseFightState()
         {
             await gameFlow.ShowBlackScreen();
-            gameFlow.fsm.ToState<SelectBuddyState>().Forget();
+            await gameFlow.fsm.ToState<SelectBuddyState>();
             await gameFlow.HideBlackScreen();
         }
     }

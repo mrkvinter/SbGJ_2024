@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Linq;
+using Code.Enemies.Modifiers;
+using Code.Utilities;
 using Cysharp.Threading.Tasks;
 using RG.ContentSystem.Core;
 using UnityEngine;
 using Object = UnityEngine.Object;
-using Random = UnityEngine.Random;
 
 namespace Code.Enemies
 {
@@ -15,12 +15,12 @@ namespace Code.Enemies
         public bool IsDead => health <= 0;
 
         private int health;
-        
+
         public Enemy(EnemyEntry enemyEntry, EnemyView view)
         {
             EnemyEntry = enemyEntry;
             View = view;
-            
+
             health = enemyEntry.HealthCount;
             view.Init(this);
         }
@@ -29,32 +29,27 @@ namespace Code.Enemies
         {
             health -= attackAmount;
             health = Mathf.Max(0, health);
-            
+
             View.UpdateHealth(health);
         }
-        
+
         public async UniTask Die()
         {
             await View.Die();
             Object.Destroy(View.gameObject);
             View = null;
         }
-        
+
         public void OnRoundStart()
         {
-            if (EnemyEntry.MakeDiceHot)
+            if (!EnemyEntry.Modifier.IsEmpty)
             {
-                var hand = Game.Instance.GameFlow.GameState.Hand.Where(d => !d.IsHot).ToList();
-                if (hand.Count == 0)
-                {
-                    return;
-                }
-                var dice = hand[Random.Range(0, hand.Count)];
-                dice.SetIsHot(true);
+                var modifier = EnemyEntry.Modifier.Unwrap();
+                Game.Instance.EnemyDiceModifierSystem.ApplyModifier(modifier);
             }
         }
     }
-    
+
     [Serializable]
     public class EnemyEntry : ContentEntry
     {
@@ -64,6 +59,8 @@ namespace Code.Enemies
         [field: SerializeField] public int DamageCount { get; private set; }
         [field: SerializeField] public EnemyView Prefab { get; private set; }
         [field: SerializeField] public bool MakeDiceHot { get; private set; }
+        [field: SerializeField] public ContentRef<MakeDiceHotModifier> MakeDeviceHotModifier { get; private set; }
+        public ContentRef<BaseEnemyModifier> Modifier => !MakeDeviceHotModifier.IsEmpty ? MakeDeviceHotModifier.Id : new ContentRef<BaseEnemyModifier>();
 
         public string NameLocalized => LanguageController.Current switch
         {
@@ -71,7 +68,7 @@ namespace Code.Enemies
             _ => Name
         };
     }
-    
+
     [Serializable]
     public class ChallengeEntry : ContentEntry
     {

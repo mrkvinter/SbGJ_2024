@@ -21,3 +21,5 @@ MonoBehaviour:
     <DamageCount>k__BackingField: 0
     <Prefab>k__BackingField: {fileID: 1649490456197159498, guid: e98c1dcd802d39345829b92b160c4958, type: 3}
     <MakeDiceHot>k__BackingField: 1
+    <MakeDeviceHotModifier>k__BackingField:
+      id: MakeDiceHot
