@@ -75,6 +75,9 @@ namespace Code.Enemies
         {
             DOTween.To(() => dissolveAmount, SetDissolveAmount, 0, 2f);
             shadowSpriteRenderer.DOFade(0, 2f);
+            modifierIconSpriteRenderer.DOFade(0, 2f);
+            nameText.DOFade(0, 1f);
+            healthText.DOFade(0, 1f);
             await DOTween.Sequence()
                 .Append(DOTween.To(() => light2D.intensity, x => light2D.intensity = x, 1, 0.4f))
                 .Append(DOTween.To(() => light2D.intensity, x => light2D.intensity = x, 0, 1.6f))
