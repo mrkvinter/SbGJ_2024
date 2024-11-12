@@ -44,6 +44,7 @@ namespace Code.Buddies
                     var damageToTake = Mathf.Min(shieldDiceValue, damage);
                     damage -= damageToTake;
                     shieldDice.DiceState.SetValue(shieldDiceValue - damageToTake);
+                    shieldDice.ShowFlash();
                     await shieldDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (shieldDice.DiceState.Value == 0)
                     {
@@ -60,6 +61,7 @@ namespace Code.Buddies
                     damage -= damageToTake;
                     healthDice.DiceState.BreakLevel += damageToTake;
                     healthDice.DiceState.SetValue(healthDiceValue - damageToTake);
+                    healthDice.ShowFlash();
                     await healthDice.transform.DOShakePosition(0.5f, 0.1f, 10, 90f, false).AsyncWaitForCompletion();
                     if (healthDice.DiceState.Value == 0)
                     {

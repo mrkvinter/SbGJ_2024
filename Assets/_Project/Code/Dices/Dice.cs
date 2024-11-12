@@ -15,6 +15,9 @@ namespace Code.Dices
         public SpriteRenderer DiceSpriteRenderer;
         public SpriteRenderer LeftIndicator;
         public SpriteRenderer Hot;
+        public SpriteRenderer Flash;
+        public Transform VisualRoot;
+
         private DiceState diceState;
 
         private Vector3 shift;
@@ -43,6 +46,7 @@ namespace Code.Dices
             LeftIndicator.gameObject.SetActive(false);
             
             Hot.color = Hot.color.WithAlpha(0);
+            
         }
         
         public void Init(DiceState diceState)
@@ -50,8 +54,15 @@ namespace Code.Dices
             this.diceState = diceState;
             DiceSpriteRenderer.sprite = diceState.DiceEntry.DiceSprite;
             DiceSpriteRenderer.color = diceState.DiceEntry.DiceColor;
+            Flash.sprite = diceState.DiceEntry.DiceSprite;
             diceCountText.fontSizeMax = diceState.DiceEntry.FontSize;
             diceCountText.color = diceState.DiceEntry.DiceTextColor;
+        }
+
+        public void ShowFlash()
+        {
+            Flash.DOKill();
+            Flash.DOFade(1, 0.1f).OnComplete(() => Flash.DOFade(0, 0.1f));
         }
 
         public void SetDiceHolderParent(DiceHandHolder diceHolder)
@@ -64,6 +75,7 @@ namespace Code.Dices
             diceHolderParent = diceHolder;
         }
 
+        private bool isDragging;
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (diceHolderParent?.IsLocked == true || !IsDraggable)
@@ -71,6 +83,7 @@ namespace Code.Dices
                 return;
             }
 
+            isDragging = true;
             sortingGroup.sortingOrder = 1000;
             if (diceState.HaveToShowLeftIndicator)
             {
@@ -86,6 +99,15 @@ namespace Code.Dices
             transform.position = pos + shift;
         }
 
+        private void LateUpdate()
+        {
+            if (isDragging)
+            {
+                var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+                transform.position = pos + shift;
+            }
+        }
+
         public void OnDrag(PointerEventData eventData)
         {
             if (diceHolderParent?.IsLocked == true || !IsDraggable)
@@ -94,8 +116,8 @@ namespace Code.Dices
             }
 
             diceState.OnPointerEnter();
-            var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = pos + shift;
+            // var pos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+            // transform.position = pos + shift;
             
             var diceHolder = FindDiceHolderParent();
             // if (diceHolder == diceHolderParent)
@@ -119,6 +141,8 @@ namespace Code.Dices
                 return;
             }
 
+            isDragging = false;
+            diceState.OnPointerExit(transform);
             sortingGroup.sortingOrder = sortingOrder;
             if (diceState.HaveToShowLeftIndicator)
             {
@@ -170,12 +194,15 @@ namespace Code.Dices
         public void OnPointerEnter(PointerEventData eventData)
         {
             diceState.OnPointerEnter();
+            VisualRoot.DOKill();
+            VisualRoot.DOScale(Vector3.one * 1.2f, 0.2f);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             diceState.OnPointerExit(transform);
-            
+            VisualRoot.DOKill();
+            VisualRoot.DOScale(Vector3.one, 0.2f);
         }
 
         private void OnDisable()

@@ -207,12 +207,12 @@ namespace Code
                 return;
             }
             game.BlackScreen.gameObject.SetActive(true);
-            await game.BlackScreen.DOFade(1, 1).SetEase(Ease.Linear).ToUniTask();
+            await game.BlackScreen.DOFade(1, .5f).SetEase(Ease.Linear).ToUniTask();
         }
         
         public async UniTask HideBlackScreen()
         {
-            await game.BlackScreen.DOFade(0, 1).SetEase(Ease.Linear).ToUniTask();
+            await game.BlackScreen.DOFade(0, .5f).SetEase(Ease.Linear).ToUniTask();
             game.BlackScreen.gameObject.SetActive(false);
         }
     }

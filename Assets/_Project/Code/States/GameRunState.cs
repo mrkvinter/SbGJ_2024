@@ -22,7 +22,6 @@ namespace Code.States
         public Buddy Buddy { get; private set; }
         public bool IsFirstShop { get; private set; }
 
-
         public GameRunState(GameFlow gameFlow)
         {
             this.gameFlow = gameFlow;

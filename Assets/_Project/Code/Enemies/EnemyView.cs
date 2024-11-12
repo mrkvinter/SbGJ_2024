@@ -19,7 +19,9 @@ namespace Code.Enemies
         [SerializeField] private TMP_Text nameText;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Light2D light2D;
+        [SerializeField] private Transform visualRoot;
         [SerializeField] private SpriteRenderer shadowSpriteRenderer;
+        [SerializeField] private SpriteRenderer damageFlashSpriteRenderer;
 
         private Material dissolveMaterial;
         private float dissolveAmount = 1.6f;
@@ -31,6 +33,7 @@ namespace Code.Enemies
         private void Start()
         {
             dissolveMaterial = spriteRenderer.material;
+            damageFlashSpriteRenderer.sprite = spriteRenderer.sprite;
         }
 
         public void Init(Enemy enemy)
@@ -48,6 +51,13 @@ namespace Code.Enemies
         public void Deselect() => selectionIndicator.SetActive(false);
         
         public void Select() => selectionIndicator.SetActive(true);
+        
+        public void OnDamage()
+        {
+            visualRoot.DOKill();
+            visualRoot.DOShakePosition(0.2f, 0.1f, 10, 90, false);
+            damageFlashSpriteRenderer.DOFade(1, 0.1f).OnComplete(() => damageFlashSpriteRenderer.DOFade(0, 0.1f));
+        }
 
         public async UniTask Die()
         {

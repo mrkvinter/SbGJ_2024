@@ -4,8 +4,8 @@
     {
         public static string MaxValue => LanguageController.Current switch
         {
-            Language.Russian => "<color=#58800a><b>Максимальное значение<b></color>",
-            _ => "<color=#58800a><b>Max Value<b></color>"
+            Language.Russian => "<color=#154010><b>Максимальное значение<b></color>",
+            _ => "<color=#154010><b>Max Value<b></color>"
         };
         
         public static string Name(string name) => $"<color=#4765b5><b>{name}<b></color>";
